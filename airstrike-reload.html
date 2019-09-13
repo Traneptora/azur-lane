@@ -46,7 +46,7 @@
 	<main>
 		<p>Instructions: Enter the absolute cooldown for each plane slot (in seconds), as well as the planecount for that slot. If a carrier only has two plane slots, or has two identical planes in different slots, feel free to leave the third plane type out of the calculation simply by setting the planecount to zero. Also enter the raw reload stat for the carrier in question, and the percentage reload buff, if any.</p>
 		<form action="javascript:calculate_reload();">
-		<p><div style="display: table;">
+		<p><div style="display: table;"><div style="display: table-row;"><div style="display: table-cell; padding-right: 15px; width: 50%;"><div style="display: table;">
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Reload Stat:</div>
 				<div style="display: table-cell; text-align: right;"><input type="text" id="reloadstattextfield" style="margin-top: 5px; margin-bottom: 5px;" value="132"></div>
@@ -79,9 +79,37 @@
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Second Plane Count:</div>
 				<div style="display: table-cell; text-align: right;"><input type="text" id="plane3counttextfield" style="margin-top: 5px; margin-bottom: 5px;" value="2"></div>
 			</div></p>
-		</div></p>
-		<p>Airstrike Cooldown: <span id="finalcooldown"></span></p>
-		<p><input type="submit" value="Calculate Airstrike Cooldown"></p>
+			<p>
+				<p>Airstrike Cooldown: <span id="finalcooldown"></span></p>
+				<p><input type="submit" value="Calculate Airstrike Cooldown"></p>
+			</p>
+		</div></div>
+		<div style="display: table-cell; padding-left: 15px; text-align: right; width: 50%;"><div style="margin: 0 auto; text-align: left;">
+			<p>Common Plane Base Cooldowns (at +10)</p>
+			<p>Fighters:
+			<ul>
+				<li>Gold F6F Hellcat: 10.90 seconds</li>
+				<li>Gold Seafang: 10.60 seconds</li>
+				<li>Gold A7M Reppuu: 10.44 seconds</li>
+				<li>Purple F4U Corsair: 11.03 seconds</li>
+				<li>Gold A6M5 Zero: 9.52 seconds</li>
+			</ul></p>
+			<p>Dive Bombers:
+			<ul>
+				<li>Purple SB2C Helldiver: 11.88 seconds</li>
+				<li>Gold Comet / D4Y Suisei: 10.44 seconds</li>
+				<li>Gold Fairey Firefly: 11.44 seconds</li>
+				<li>Purple Fairey Fulmar: 9.18 seconds</li>
+			</ul></p>
+			<p>Torpedo Bombers:
+			<ul>
+				<li>Gold Barracuda: 10.31 seconds</li>
+				<li>Purple Fairey Albacore: 9.98 seconds</li>
+				<li>Gold Aichi B7A Ryusei: 11.37 seconds</li>
+				<li>Purple Barracuda: 10.64 seconds</li>
+				<li>Purple Nakajima B6N Tenzan: 11.63 seconds</li>
+			</ul></p>
+		</div></div></div></div></p>
 		</form>
 	</main>
 	</div>
