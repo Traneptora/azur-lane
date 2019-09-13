@@ -6,12 +6,16 @@ function get_experience_to_next_level(level){
 		return 100 * level;
 	} else if (level <= 60){
 		return 4000 + 200 * (level - 40)
-	} else if (level <= 70){
+	} else if (level <= 69){
 		return 8000 + 300 * (level - 60);
-	} else if (level <= 80){
+	} else if (level <= 70){
+		return 10700 + 1400 * (level - 69);
+	} else if (level <= 79){
 		return 12100 + 440 * (level - 70);
-	} else if (level <= 90){
+	} else if (level <= 89){
 		return 17250 + 575 * (level - 80);
+	} else if (level <= 90){
+		return 22425 + 1575 * (level - 89);
 	} else if (level <= 92){
 		return 24000 + 1200 * (level - 90);
 	} else if (level <= 94){
