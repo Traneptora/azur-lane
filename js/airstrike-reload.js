@@ -1,12 +1,16 @@
-function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count, plane3time, plane3count, reloadstat, reloadbuff){
+function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count, plane3time, plane3count, reloadstat, reloadbuff, beacon){
 	let plane_count = plane1count * 1.0 + plane2count * 1.0 + plane3count * 1.0;
 	if (plane_count <= 0){
 		return -1.0;
 	}
 	let weighted_cooldown_average = (plane1time * plane1count + plane2time * plane2count + plane3time * plane3count ) / plane_count;
 	let adjusted_reload = (1 + reloadstat / 100.0 * (1 + reloadbuff / 100.0));
-	let cooldown = Math.pow(adjusted_reload, -0.5) * 3.111269837 * weighted_cooldown_average + 0.1;
-	if (cooldown > 0.0 && cooldown < 300.0){
+	let cooldown = Math.pow(adjusted_reload, -0.5) * 3.111269837 * weighted_cooldown_average;
+	if (beacon){
+		cooldown = cooldown * 0.96;
+	}
+	cooldown = cooldown + 0.1;
+	if (cooldown > 0.0 && cooldown < 300.00){
 		return Math.round(cooldown * 100) / 100.00;
 	} else {
 		return -1.0;
@@ -22,7 +26,8 @@ function calculate_reload(){
 	let plane2count = $("#plane2counttextfield").prop("value");
 	let plane3time = $("#plane3cdtextfield").prop("value");
 	let plane3count = $("#plane3counttextfield").prop("value");
-	let cooldown = get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count, plane3time, plane3count, reloadstat, reloadbuff);
+	let beacon = $("#beaconbox").is(":checked");
+	let cooldown = get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count, plane3time, plane3count, reloadstat, reloadbuff, beacon);
 	if (cooldown > 0.0){
 		$("#finalcooldown").prop("innerHTML", cooldown + "s");
 	} else {
