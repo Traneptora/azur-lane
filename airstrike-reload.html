@@ -36,6 +36,17 @@
 		});
 	</script>
 	<script src="js/airstrike-reload.js"></script>
+	<script>
+		$(function(){
+			$('#plane1cddropdown').html($('#planeselect').html());
+			$('#plane2cddropdown').html($('#planeselect').html());
+			$('#plane3cddropdown').html($('#planeselect').html());
+			$('#plane1cddropdown > option[name=hellcat]').prop("selected", true);
+			$('#plane2cddropdown > option[name=helldiver]').prop("selected", true);
+			$('#plane3cddropdown > option[name=ryusei]').prop("selected", true);
+			calculate_reload();
+		});
+	</script>
 </head>
 <body>
 	<div id="wrapper">
@@ -44,9 +55,31 @@
 		</header>
 	<hr>
 	<main>
+		<select id="planeselect" style="display: none;">
+			<option value="F" disabled class="disabled-option">Fighters</option>
+			<option name='hellcat' value="10.90">F6F Hellcat</option>
+			<option value="10.60">Seafang</option>
+			<option value="10.44">A7M Reppuu</option>
+			<option value="8.98">XF5F Skyrocket</option>
+			<option value="9.24">Messerschmitt Me-155A</option>
+			<option value="10.20">VF-17 Pirate Squad</option>
+			<option value="DB" disabled class="disabled-option">Dive Bombers</option>
+			<option name='helldiver' value="11.88">SB2C Helldiver</option>
+			<option value="10.44">Comet / D4Y Suisei</option>
+			<option value="11.44">Fairey Firefly</option>
+			<option value="10.38">Fairey Barracuda (831 Squadron)</option>
+			<option value="9.18">Fairey Fulmar</option>
+			<option value="TB" disabled class="disabled-option">Torpedo Bombers</option>
+			<option value="10.31">Barracuda</option>
+			<option value="9.98">Fairey Albacore</option>
+			<option name='ryusei' value="11.37">Aichi B7A Ryusei</option>
+			<option value="10.97">Swordfish (818 Squadron)</option>
+			<option value="">Other</option>
+		</select>
 		<p>Instructions: Enter the absolute cooldown for each plane slot (in seconds), as well as the planecount for that slot. If a carrier only has two plane slots, or has two identical planes in different slots, feel free to leave the third plane type out of the calculation simply by setting the planecount to zero. Also enter the raw reload stat for the carrier in question, and the percentage reload buff, if any.</p>
 		<form action="javascript:calculate_reload();">
-		<p><div style="display: table;"><div style="display: table-row;"><div style="display: table-cell; padding-right: 15px; width: 50%;"><div style="display: table;">
+		<div style="text-align: center; width: 80%; margin: 0 auto;">
+		<p><div style="display: table; width: 100%; text-align: left;">
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Reload Stat:</div>
 				<div style="display: table-cell; text-align: right;"><input type="text" id="reloadstattextfield" style="margin-top: 5px; margin-bottom: 5px;" value="132"></div>
@@ -57,7 +90,10 @@
 			</div></p>
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">First Plane Cooldown:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="plane1cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="10.90"></div>
+				<div style="display: table-cell; text-align: right;">
+					<select id="plane1cddropdown" onchange="$('#plane1cdtextfield').prop('value', $('#plane1cddropdown').prop('value'));calculate_reload();"></select>
+					<input type="text" id="plane1cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="10.90">
+				</div>
 			</div>
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">First Plane Count:</div>
@@ -65,7 +101,9 @@
 			</div></p>
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Second Plane Cooldown:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="plane2cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="11.88"></div>
+				<div style="display: table-cell; text-align: right;">
+					<select id="plane2cddropdown" onchange="$('#plane2cdtextfield').prop('value', $('#plane2cddropdown').prop('value'));calculate_reload();"></select>
+					<input type="text" id="plane2cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="11.88"></div>
 			</div>
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Second Plane Count:</div>
@@ -73,7 +111,10 @@
 			</div></p>
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Third Plane Cooldown:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="plane3cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="11.37"></div>
+				<div style="display: table-cell; text-align: right;">
+					<select id="plane3cddropdown" onchange="$('#plane3cdtextfield').prop('value', $('#plane3cddropdown').prop('value'));calculate_reload();"></select>
+					<input type="text" id="plane3cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="11.37">
+				</div>
 			</div>
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Third Plane Count:</div>
@@ -84,36 +125,7 @@
 				<p>Airstrike Cooldown: <span id="finalcooldown"></span></p>
 				<p><input type="submit" value="Calculate Airstrike Cooldown"></p>
 			</p>
-		</div></div>
-		<div style="display: table-cell; padding-left: 15px; text-align: right; width: 50%;"><div style="margin: 0 auto; text-align: left;">
-			<p>Common Plane Base Cooldowns (at +10)</p>
-			<p><a href="https://azurlane.koumakan.jp/List_of_Fighters#Max_Rarity">Fighters</a>:
-			<ul>
-				<li><a href="https://azurlane.koumakan.jp/Grumman_F6F_Hellcat#Type_3">Gold F6F Hellcat</a>: 10.90 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Supermarine_Seafang#Type_3">Gold Seafang</a>: 10.60 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Mitsubishi_A7M_Reppuu#Type_3">Gold A7M Reppuu</a>: 10.44 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Grumman_XF5F_Skyrocket">XF5F Skyrocket</a>: 8.98 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Messerschmitt_Me-155A#Type_3">Gold Messerschmitt Me-155A</a>: 9.24 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Vought_F4U_Corsair_(VF-17_Squadron)">VF-17 Pirate Squad</a>: 10.20 seconds</li>
-			</ul></p>
-			<p><a href="https://azurlane.koumakan.jp/List_of_Dive_Bombers#Max_Rarity">Dive Bombers</a>:
-			<ul>
-				<li><a href="https://azurlane.koumakan.jp/Curtiss_SB2C_Helldiver#Type_3">Purple SB2C Helldiver</a>: 11.88 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Yokosuka_D4Y_Suisei#Type_3">Gold Comet / D4Y Suisei</a>: 10.44 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Fairey_Firefly">Fairey Firefly</a>: 11.44 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Fairey_Fulmar#Type_3">Purple Fairey Fulmar</a>: 9.18 seconds</li>
-			</ul></p>
-			<p><a href="https://azurlane.koumakan.jp/List_of_Torpedo_Bombers#Max_Rarity">Torpedo Bombers</a>:
-			<ul>
-				<li><a href="https://azurlane.koumakan.jp/Fairey_Barracuda#Type_3">Gold Barracuda</a>: 10.31 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Fairey_Albacore#Type_3">Fairey Albacore</a>: 9.98 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Aichi_B7A_Ryuusei#Type_3">Gold Aichi B7A Ryusei</a>: 11.37 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Fairey_Swordfish_(818_Squadron)">818 Swordfish</a>: 10.97 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Fairey_Barracuda#Type_2">Purple Barracuda</a>: 10.64 seconds</li>
-				<li><a href="https://azurlane.koumakan.jp/Nakajima_B6N_Tenzan#Type_3">Purple Nakajima B6N Tenzan</a>: 11.63 seconds</li>
-			</ul></p>
-		</div></div></div></div></p>
-		</form>
+		</div></p></div></form>
 	</main>
 	</div>
 </body>
