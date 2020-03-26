@@ -7,7 +7,7 @@ function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count
 	let adjusted_reload = (1 + reloadstat / 100.0 * (1 + reloadbuff / 100.0));
 	let cooldown = Math.pow(adjusted_reload, -0.5) * 3.111269837 * weighted_cooldown_average;
 	if (beacon){
-		cooldown_reduction += 4.00;
+		cooldown_reduction = +cooldown_reduction + 4.00;
 	}
 	cooldown = 0.1 + cooldown * (1 - cooldown_reduction / 100.00);
 	if (cooldown > 0.0 && cooldown < 300.00){
