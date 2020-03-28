@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "nineo",
     "ArtistLink": "[https://www.weibo.com/p/1005051869856223 \u9000\u5802\u9f13\u624bnineo]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2827978 nineo]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Tomori_Kusunoki|Tomori Kusunoki]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

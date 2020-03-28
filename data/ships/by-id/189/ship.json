@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "realmbw",
     "ArtistLink": "[https://weibo.com/realmbw realmbw_\u778c\u7761\u9b54]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=529070 RJ]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "163",
     "Type": "Light Cruiser",
-    "VA": "[https://myanimelist.net/people/49110/Anna_Yamaki Anna Yamaki]",
+    "VA": "[https://www.imdb.com/name/nm10868602/ Anna Yamaki]",
     "Voiced": "1"
 }

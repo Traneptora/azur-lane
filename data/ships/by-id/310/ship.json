@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u5351\u3057\u3044\u4eba\u95f4",
     "ArtistLink": "[https://weibo.com/u/1847715713 \u4eba\u95f4\u6c6a\u6c6a]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1584611 \u5351\u3057\u3044\u4eba\u95f4]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "308",
     "Type": "Light Cruiser",
-    "VA": "[https://myanimelist.net/people/20787/Konomi_Fujimura Konomi Fujimura]",
+    "VA": "[https://www.imdb.com/name/nm8187824/ Konomi Fujimura]",
     "Voiced": "1"
 }

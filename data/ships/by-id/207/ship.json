@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "Criin",
     "ArtistLink": "[https://weibo.com/cirini Hanasa_\u82b1\u6d12]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=4460847 Criin]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "0",
     "Type": "Battlecruiser",
-    "VA": "[https://myanimelist.net/people/6172/Chie_Matsuura Chie Matsuura]",
-    "Voiced": "1"
+    "VA": "[https://www.imdb.com/name/nm3040274/ Chie Matsuura]",
+    "Voiced": ""
 }

@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Heavy",
-    "ArmorKai": "",
+    "ArmorKai": "Heavy",
     "Artist": "\u6728shiyo",
     "ArtistLink": "[https://weibo.com/u/2481339344 \u6728shiyo]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=40222 \u6728shiyo]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "0",
     "Type": "Battleship",
-    "VA": "[https://myanimelist.net/people/36750/Rika_Abe Rika Abe]",
-    "Voiced": "1"
+    "VA": "[https://www.imdb.com/name/nm11062264/ Rika Abe]",
+    "Voiced": ""
 }

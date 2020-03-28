@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "AO\u51f9\u51f9\u51f9",
     "ArtistLink": "[https://www.weibo.com/ultramnnice AO\u51f9\u51f9\u51f9]",
     "ArtistPixiv": "[https://www.pixiv.net/member_illust.php?id=1248744 AO\u51f9\u541b]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "320",
     "Type": "Destroyer",
-    "VA": "[https://myanimelist.net/people/25179/Mizuki_Yuina Mizuki Yuina]",
+    "VA": "[https://www.imdb.com/name/nm9806312/ Mizuki Yuina]",
     "Voiced": "1"
 }

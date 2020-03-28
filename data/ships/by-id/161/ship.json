@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u5927\u6708\u7d05\u8449",
     "ArtistLink": "[http://weibo.com/ootsukimomiji \u5927\u6708\u7d05\u8449]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=591937 \u5927\u6708\u7d05\u8449]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "448",
     "Type": "Destroyer",
-    "VA": "[https://myanimelist.net/people/11304/Kazusa_Aranami Kazusa Aranami]",
+    "VA": "[https://www.imdb.com/name/nm5877942/ Kazusa Aranami]",
     "Voiced": "1"
 }

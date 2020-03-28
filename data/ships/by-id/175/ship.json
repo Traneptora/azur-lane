@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u6d45\u8471\u3086\u306a",
     "ArtistLink": "",
     "ArtistPixiv": "[https://www.pixiv.net/fanbox/creator/21526260 \u6d45\u8471\u3086\u306a]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "435",
     "Type": "Destroyer",
-    "VA": "[https://myanimelist.net/people/37014/Karin_Isobe Karin Isobe]",
+    "VA": "[https://www.imdb.com/name/nm9345796/ Karin Isobe]",
     "Voiced": "1"
 }

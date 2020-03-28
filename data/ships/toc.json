@@ -1971,6 +1971,41 @@
             "dataJSON": "ships/by-id/441/ship.json"
         },
         {
+            "Name": "Intrepid",
+            "ShipID": "442",
+            "dataJSON": "ships/by-id/442/ship.json"
+        },
+        {
+            "Name": "Bremerton",
+            "ShipID": "443",
+            "dataJSON": "ships/by-id/443/ship.json"
+        },
+        {
+            "Name": "Cooper",
+            "ShipID": "444",
+            "dataJSON": "ships/by-id/444/ship.json"
+        },
+        {
+            "Name": "Reno",
+            "ShipID": "445",
+            "dataJSON": "ships/by-id/445/ship.json"
+        },
+        {
+            "Name": "Bluegill",
+            "ShipID": "446",
+            "dataJSON": "ships/by-id/446/ship.json"
+        },
+        {
+            "Name": "Casablanca",
+            "ShipID": "447",
+            "dataJSON": "ships/by-id/447/ship.json"
+        },
+        {
+            "Name": "Marblehead",
+            "ShipID": "448",
+            "dataJSON": "ships/by-id/448/ship.json"
+        },
+        {
             "Name": "Tone",
             "ShipID": "9001",
             "dataJSON": "ships/by-id/9001/ship.json"

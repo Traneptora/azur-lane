@@ -25,11 +25,11 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u6c34\u718a",
     "ArtistLink": "[https://www.artstation.com/mokutan Waterkuma]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1077075 Waterkuma]",
-    "ArtistTwitter": "[https://twitter.com/waterkuma0?lang=en Waterkuma]",
+    "ArtistTwitter": "[https://twitter.com/waterkuma0 Waterkuma]",
     "CNName": "\u8d1d\u5947",
     "Class": "Fletcher",
     "ConstructTime": "00:28:00",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "248",
     "Type": "Destroyer",
-    "VA": "[https://myanimelist.net/people/40913/Sayaka_Kaneko Sayaka Kaneko]",
-    "Voiced": "1"
+    "VA": "[https://www.imdb.com/name/nm10116901/ Sayaka Kaneko]",
+    "Voiced": ""
 }

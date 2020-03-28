@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "2",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u591c\u30ce\u307f\u3064\u304d",
     "ArtistLink": "",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=44234 \u591c\u30ce\u307f\u3064\u304d]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "475",
     "Type": "Submarine",
-    "VA": "[http://asianwiki.com/Rimo_Hasegawa Rimo Hasegawa]",
-    "Voiced": "1"
+    "VA": "[https://www.imdb.com/name/nm7727921/ Rimo Hasegawa]",
+    "Voiced": ""
 }

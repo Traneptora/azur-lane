@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u3057\u3089\u305f\u307e",
     "ArtistLink": "[http://shiratamaco.com/ \u3057\u3089\u305f\u307e\u3053]",
     "ArtistPixiv": "[https://www.pixiv.net/fanbox/creator/705370 \u3057\u3089\u305f\u307e]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "396",
     "Type": "Destroyer",
-    "VA": "[https://myanimelist.net/people/19391/Chiyo_Ousaki Chiyo Ousaki]",
+    "VA": "[https://www.imdb.com/name/nm6929961/ Chiyo Ousaki]",
     "Voiced": "1"
 }

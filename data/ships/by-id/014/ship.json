@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "Lino(\u756a\u8304)",
     "ArtistLink": "[http://weibo.com/p/1005051859846292 \u756a\u8304\u6559\u7236__Lino]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=238071 Lino@\u30ec\u30e0\u75c7\u672b\u671f]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "248",
     "Type": "Destroyer",
-    "VA": "[https://myanimelist.net/people/38948/Ruka_Nemoto Ruka Nemoto]",
-    "Voiced": "1"
+    "VA": "[https://www.imdb.com/name/nm10221517/ Ruka Nemoto]",
+    "Voiced": ""
 }

@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Heavy",
-    "ArmorKai": "",
+    "ArmorKai": "Heavy",
     "Artist": "SA",
     "ArtistLink": "[http://weibo.com/u/3405529060 SA_\u6ca1\u65f6\u95f4\u6478\u9c7c\u7684\u6478\u9c7c\u72c2\u9b54]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=5529284 S A~]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "0",
     "Type": "Battleship",
-    "VA": "[https://myanimelist.net/people/34545/Nozomi_Yamane Nozomi Yamane]",
-    "Voiced": "1"
+    "VA": "[https://www.imdb.com/name/nm6806421/ Nozomi Yamane]",
+    "Voiced": ""
 }

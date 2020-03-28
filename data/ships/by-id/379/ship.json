@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "Mkiiiiii33",
     "ArtistLink": "[https://weibo.com/kawa33 MKiiiiii_\u4e09\u4e09]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=661601 MKiiiiii]",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "391",
     "Type": "Destroyer",
-    "VA": "[https://myanimelist.net/people/46800/Maki_Kawase Maki Kawase]",
+    "VA": "[https://www.imdb.com/name/nm10017584/ Maki Kawase]",
     "Voiced": "1"
 }
