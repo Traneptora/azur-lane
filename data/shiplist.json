@@ -3334,7 +3334,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "\u739b\u96c5G",
                 "ArtistLink": "[http://weibo.com/p/1005051970961102 -\u739b\u96c5G-]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1287983 mayag\uff08\u746a\u96c5G)]",
@@ -3417,7 +3417,7 @@
                 "TorpMax": "254",
                 "Type": "Heavy Cruiser",
                 "VA": "[[:wikipedia:Misato_Fukuen|Misato Fukuen]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -4246,7 +4246,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Heavy",
-                "ArmorKai": "",
+                "ArmorKai": "Heavy",
                 "Artist": "",
                 "ArtistLink": "",
                 "ArtistPixiv": "",
@@ -4329,7 +4329,7 @@
                 "TorpMax": "0",
                 "Type": "Battleship",
                 "VA": "[[:wikipedia:Hitomi_Nabatame|Hitomi Nabatame]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -6609,7 +6609,7 @@
                 "TorpMax": "251",
                 "Type": "Destroyer",
                 "VA": "[https://anidb.net/perl-bin/animedb.pl?show=creator&amp;creatorid=12596 Asuka Itou]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -9034,7 +9034,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u68a6\u54b2\u67ab",
                 "ArtistLink": "[http://weibo.com/u/3558369570 \u68a6\u54b2\u67ab]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1023957 \u304b\u3048\u3067]",
@@ -9117,7 +9117,7 @@
                 "TorpMax": "0",
                 "Type": "Heavy Cruiser",
                 "VA": "[[:wikipedia:Nozomi_Yamamoto|Nozomi Yamamoto]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -11314,7 +11314,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "\u516b\u624d\u63d0\u7763",
                 "ArtistLink": "[http://weibo.com/vihao \u516b\u624d\u63d0\u7763]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1393609 \u30cf\u30aa]",
@@ -11397,7 +11397,7 @@
                 "TorpMax": "0",
                 "Type": "Aircraft Carrier",
                 "VA": "[[:wikipedia:Kana_Y%C5%ABki|Kana Yuuki]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -15304,7 +15304,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u65f6\u8fb0",
                 "ArtistLink": "[https://weibo.com/u/3042386674 \u65f6\u8fb0]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=7514361 \u65f6\u8fb0]",
@@ -15387,7 +15387,7 @@
                 "TorpMax": "187",
                 "Type": "Heavy Cruiser",
                 "VA": "[[:wikipedia:Ibuki_Kido|Ibuki Kido]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -17439,7 +17439,7 @@
                 "TorpMax": "0",
                 "Type": "Light Aircraft Carrier",
                 "VA": "[[:wikipedia:Ai_Kakuma|Ai Kakuma]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -17584,7 +17584,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Heavy",
-                "ArmorKai": "",
+                "ArmorKai": "Heavy",
                 "Artist": "\u68a6\u54b2\u67ab",
                 "ArtistLink": "[http://weibo.com/u/3558369570 \u68a6\u54b2\u67ab]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1023957 \u304b\u3048\u3067]",
@@ -17667,7 +17667,7 @@
                 "TorpMax": "0",
                 "Type": "Aircraft Carrier",
                 "VA": "[[:wikipedia:Sora_Amamiya|Sora Amamiya]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -17812,7 +17812,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Heavy",
-                "ArmorKai": "",
+                "ArmorKai": "Heavy",
                 "Artist": "Kincora",
                 "ArtistLink": "[http://weibo.com/u/2061731981 KIncora]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=3054186 KIn]",
@@ -17895,7 +17895,7 @@
                 "TorpMax": "0",
                 "Type": "Aircraft Carrier",
                 "VA": "[[:wikipedia:Rie_Kugimiya|Rie Kugimiya]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -19605,7 +19605,7 @@
                 "TorpMax": "456",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:jp:\u7b4f\u4e95\u304b\u306a\u3048|Kanae Ikadai]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -23139,7 +23139,7 @@
                 "TorpMax": "0",
                 "Type": "Battleship",
                 "VA": "[[:wikipedia:Ami_Koshimizu|Ami Koshimizu]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -25191,7 +25191,7 @@
                 "TorpMax": "0",
                 "Type": "Repair Ship",
                 "VA": "[[:wikipedia:Sumire_Uesaka|Sumire Uesaka]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -26103,7 +26103,7 @@
                 "TorpMax": "165",
                 "Type": "Heavy Cruiser",
                 "VA": "[[:wikipedia:Yuri_Yamaoka|Yuri Yamaoka]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -33544,7 +33544,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "ALLENES",
                 "ArtistLink": "[https://weibo.com/u/3818062182 ALLENES-\u8d76\u7a3f\u4e2d]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=8217405 ALLENES]",
@@ -33627,7 +33627,7 @@
                 "TorpMax": "187",
                 "Type": "Heavy Cruiser",
                 "VA": "[http://www.rme.jp/talent/women/hikaru-aono.html Hikaru Aono]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {

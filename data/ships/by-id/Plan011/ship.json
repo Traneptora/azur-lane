@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Heavy",
-    "ArmorKai": "",
+    "ArmorKai": "Heavy",
     "Artist": "",
     "ArtistLink": "",
     "ArtistPixiv": "",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Battleship",
     "VA": "[[:wikipedia:Hitomi_Nabatame|Hitomi Nabatame]]",
-    "Voiced": "1"
+    "Voiced": ""
 }
