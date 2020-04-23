@@ -25,14 +25,14 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u9ebb\u9171",
     "ArtistLink": "[http://weibo.com/u/3032064021 \u795e\u5317\u5c0f\u6bec_]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1480584 \u795e\u5317\u5c0f\u6bec]",
     "ArtistTwitter": "[https://twitter.com/shenbeixiaoqiu \u4eee\u9762\u30e9\u30a4\u30c0\u30fc\u30b3\u30de\u30ea]",
     "CNName": "\u683c\u91cc\u5fb7\u5229",
     "Class": "Gridley",
-    "ConstructTime": "00:25:00",
+    "ConstructTime": "Drop Only",
     "Consumption120": "8",
     "ConsumptionInitial": "2",
     "ConsumptionKai": "0",
@@ -108,5 +108,5 @@
     "TorpMax": "396",
     "Type": "Destroyer",
     "VA": "[https://twitter.com/narumi_Shino Narumi Shinohara]",
-    "Voiced": "1"
+    "Voiced": ""
 }

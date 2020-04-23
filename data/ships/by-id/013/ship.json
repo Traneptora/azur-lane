@@ -25,14 +25,14 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "Lino(\u756a\u8304)",
     "ArtistLink": "[http://weibo.com/p/1005051859846292 \u756a\u8304\u6559\u7236__Lino]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=238071 Lino@\u30ec\u30e0\u75c7\u672b\u671f]",
     "ArtistTwitter": "[https://twitter.com/lino__ Lino]",
     "CNName": "\u67e5\u5c14\u65af\u00b7\u5965\u65af\u672c",
     "Class": "Fletcher",
-    "ConstructTime": "00:28:00",
+    "ConstructTime": "Drop Only",
     "Consumption120": "9",
     "ConsumptionInitial": "2",
     "ConsumptionKai": "0",
@@ -108,5 +108,5 @@
     "TorpMax": "255",
     "Type": "Destroyer",
     "VA": "[https://twitter.com/m_satsuki_ Satsuki Morita]",
-    "Voiced": "1"
+    "Voiced": ""
 }

@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "\u96eb\u7dba\u4e00\u751f",
     "ArtistLink": "[https://weibo.com/u/7208541982 \u96eb\u7dba\u4e00\u751f]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2799637 \u3081\u3075\u3043\u3059\u3068]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Y%C5%AB_Shimamura|Yu Shimamura]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

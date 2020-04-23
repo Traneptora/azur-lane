@@ -32,7 +32,7 @@
     "ArtistTwitter": "[https://twitter.com/lino__ Lino]",
     "CNName": "\u8424\u706b\u866b",
     "Class": "G",
-    "ConstructTime": "00:25:00",
+    "ConstructTime": "Drop Only",
     "Consumption120": "9",
     "ConsumptionInitial": "2",
     "ConsumptionKai": "0",
@@ -108,5 +108,5 @@
     "TorpMax": "330",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Hiromi_Igarashi|Hiromi Igarashi]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

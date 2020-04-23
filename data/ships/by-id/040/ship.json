@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u7d2b\u745f",
     "ArtistLink": "[http://weibo.com/u/2193276854 \u7d2b\u745f\u4e5f\u60f3\u4e0d\u5230\u4f1a\u8fd9\u6837]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2893535 \u7d2b\u745f]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Manaka_Iwami|Manaka Iwami]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

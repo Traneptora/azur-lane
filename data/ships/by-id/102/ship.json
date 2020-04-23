@@ -25,14 +25,14 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u68a6\u54b2\u67ab",
     "ArtistLink": "[http://weibo.com/u/3558369570 \u68a6\u54b2\u67ab]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1023957 \u304b\u3048\u3067]",
     "ArtistTwitter": "[https://twitter.com/yumesaki_kaede/ \u304b\u3048\u3067]",
     "CNName": "\u5929\u540e",
     "Class": "J",
-    "ConstructTime": "00:27:00",
+    "ConstructTime": "Drop Only",
     "Consumption120": "8",
     "ConsumptionInitial": "2",
     "ConsumptionKai": "0",
@@ -108,5 +108,5 @@
     "TorpMax": "324",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:ja:\u767d\u58c1\u723d\u5b50|Sawako Shirakabe]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

@@ -32,7 +32,7 @@
     "ArtistTwitter": "[https://twitter.com/kishiyo1943 \u6728shiyo]",
     "CNName": "\u5317\u5361\u7f57\u6765\u7eb3",
     "Class": "North Carolina",
-    "ConstructTime": "Cannot Be Constructed",
+    "ConstructTime": "04:50:00",
     "Consumption120": "15",
     "ConsumptionInitial": "5",
     "ConsumptionKai": "0",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Battleship",
     "VA": "[[:wikipedia:Yui_Horie|Yui Horie]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

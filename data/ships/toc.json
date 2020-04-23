@@ -2044,6 +2044,11 @@
             "Name": "Sovetsky Soyuz",
             "ShipID": "9009",
             "dataJSON": "ships/by-id/9009/ship.json"
+        },
+        {
+            "Name": "Little Renown",
+            "ShipID": "",
+            "dataJSON": "ships/by-id//ship.json"
         }
     ]
 }

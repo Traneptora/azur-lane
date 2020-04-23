@@ -25,14 +25,14 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u9a6c\u7532",
     "ArtistLink": "",
     "ArtistPixiv": "",
     "ArtistTwitter": "",
     "CNName": "\u52a0\u62c9\u8482\u4e9a",
     "Class": "Arethusa",
-    "ConstructTime": "01:20:00",
+    "ConstructTime": "Drop Only",
     "Consumption120": "9",
     "ConsumptionInitial": "2",
     "ConsumptionKai": "0",
@@ -108,5 +108,5 @@
     "TorpMax": "236",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Ayaka_Suwa|Ayaka Suwa]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

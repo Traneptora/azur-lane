@@ -32,7 +32,7 @@
     "ArtistTwitter": "[https://twitter.com/yumesaki_kaede/ \u304b\u3048\u3067]",
     "CNName": "\u897f\u59c6\u65af",
     "Class": "Sims",
-    "ConstructTime": "00:26:00",
+    "ConstructTime": "Drop Only",
     "Consumption120": "8",
     "ConsumptionInitial": "2",
     "ConsumptionKai": "8",
@@ -108,5 +108,5 @@
     "TorpMax": "251",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Mikako_Komatsu|Mikako Komatsu]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

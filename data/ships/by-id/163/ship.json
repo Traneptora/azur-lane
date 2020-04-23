@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "Saru(\u7334\u5988)",
     "ArtistLink": "[http://weibo.com/p/1005051054234800 \u6d45\u4e95\u7334\u7334_Saru]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1422579 Saru]",
@@ -108,5 +108,5 @@
     "TorpMax": "463",
     "Type": "Destroyer",
     "VA": "[https://twitter.com/narumi_Shino Narumi Shinohara]",
-    "Voiced": "1"
+    "Voiced": ""
 }
