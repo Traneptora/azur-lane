@@ -1041,6 +1041,11 @@
             "dataJSON": "ships/by-id/213/ship.json"
         },
         {
+            "Name": "Tosa",
+            "ShipID": "215",
+            "dataJSON": "ships/by-id/215/ship.json"
+        },
+        {
             "Name": "Hiyou",
             "ShipID": "218",
             "dataJSON": "ships/by-id/218/ship.json"
@@ -2006,6 +2011,21 @@
             "dataJSON": "ships/by-id/448/ship.json"
         },
         {
+            "Name": "Hanazuki",
+            "ShipID": "449",
+            "dataJSON": "ships/by-id/449/ship.json"
+        },
+        {
+            "Name": "Naganami",
+            "ShipID": "450",
+            "dataJSON": "ships/by-id/450/ship.json"
+        },
+        {
+            "Name": "Little Renown",
+            "ShipID": "451",
+            "dataJSON": "ships/by-id/451/ship.json"
+        },
+        {
             "Name": "Tone",
             "ShipID": "9001",
             "dataJSON": "ships/by-id/9001/ship.json"
@@ -2044,11 +2064,6 @@
             "Name": "Sovetsky Soyuz",
             "ShipID": "9009",
             "dataJSON": "ships/by-id/9009/ship.json"
-        },
-        {
-            "Name": "Little Renown",
-            "ShipID": "",
-            "dataJSON": "ships/by-id//ship.json"
         }
     ]
 }
