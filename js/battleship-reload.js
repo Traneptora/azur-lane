@@ -1,5 +1,5 @@
 function get_speed(weapon_cooldown, reload_stat, reload_percent_buff){
-	return (1.0 + reload_stat / 100.0 * (1 + reload_percent_buff / 100.0)) * Math.SQRT1_2 / weapon_cooldown; 
+	return Math.sqrt(1.0 + reload_stat / 100.0 * (1 + reload_percent_buff / 100.0)) * Math.SQRT1_2 / weapon_cooldown; 
 }
 
 function get_cooldown(weapon_cooldown, reload_stat, reload_percent_buff, timed_reload_percent_buff, timed_reload_buff_duration){
