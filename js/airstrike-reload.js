@@ -35,3 +35,14 @@ function calculate_reload(){
 		$("#finalcooldown").prop("innerHTML", "Some Error Occurred :(");
 	}
 }
+
+// Load This After JQuery
+$(function(){
+	$('#plane1cddropdown').html($('#planeselect').html());
+	$('#plane2cddropdown').html($('#planeselect').html());
+	$('#plane3cddropdown').html($('#planeselect').html());
+	$('#plane1cddropdown > option[name=hellcat]').prop("selected", true);
+	$('#plane2cddropdown > option[name=helldiver]').prop("selected", true);
+	$('#plane3cddropdown > option[name=ryusei]').prop("selected", true);
+	calculate_reload();
+});
