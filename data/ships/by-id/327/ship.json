@@ -32,7 +32,7 @@
     "ArtistTwitter": "[https://twitter.com/yurang92 \u3086\u3089\u3093]",
     "CNName": "\u6590\u6d4e",
     "Class": "Crown Colony",
-    "ConstructTime": "Drop Only",
+    "ConstructTime": "Cannot Be Constructed",
     "Consumption120": "9",
     "ConsumptionInitial": "2",
     "ConsumptionKai": "0",
@@ -108,5 +108,5 @@
     "TorpMax": "235",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Sawako_Hata|Sawako Hata]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

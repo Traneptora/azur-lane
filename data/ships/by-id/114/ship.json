@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u6df1\u84dd\u7684\u6770\u514b",
     "ArtistLink": "[https://weibo.com/u/1889884713 \u706fand\u6df1\u84dd\u6770\u514b]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1562284 JackNavy]",
@@ -108,5 +108,5 @@
     "TorpMax": "246",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Y%C5%ABko_Got%C5%8D|Yuuko Gotou]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

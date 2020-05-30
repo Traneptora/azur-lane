@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "realmbw",
     "ArtistLink": "[https://weibo.com/realmbw realmbw_\u778c\u7761\u9b54]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=529070 RJ]",
@@ -108,5 +108,5 @@
     "TorpMax": "133",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Ayane_Sakura|Ayane Sakura]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

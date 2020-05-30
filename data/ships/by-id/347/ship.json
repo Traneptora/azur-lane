@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u3086\u30fc\u3052\u3093",
     "ArtistLink": "[http://yuugen.hiyamugi.com/ \u30ad\u30e3\u30c3\u30b9\u30eb\u30c8\u30f3]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=806502 \u3086\u30fc\u3052\u3093]",
@@ -108,5 +108,5 @@
     "TorpMax": "233",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Sora_Amamiya|Sora Amamiya]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

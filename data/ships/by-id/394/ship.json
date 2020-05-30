@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "Kincora",
     "ArtistLink": "[http://weibo.com/u/2061731981 KIncora]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=3054186 KIn]",
@@ -108,5 +108,5 @@
     "TorpMax": "239",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Haruka_Shiraishi|Haruka Shiraishi]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

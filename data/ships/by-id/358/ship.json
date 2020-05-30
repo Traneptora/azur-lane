@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "2",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u304b\u306b\u30d3\u30fc\u30e0",
     "ArtistLink": "[http://lumino.sakura.ne.jp/ \u30eb\u30df\u30ce\u30b7\u30c6\u30a3]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=3439325 \u304b\u306b\u30d3\u30fc\u30e0]",
@@ -108,5 +108,5 @@
     "TorpMax": "478",
     "Type": "Submarine",
     "VA": "[[:wikipedia:Atsumi_Tanezaki|Atsumi Tanezaki]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

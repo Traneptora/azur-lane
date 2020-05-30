@@ -25,11 +25,11 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Heavy",
-    "ArmorKai": "",
+    "ArmorKai": "Heavy",
     "Artist": "Ask",
     "ArtistLink": "[https://www.weibo.com/askzy -Ask--]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1980643 ASK]",
-    "ArtistTwitter": "[https://twitter.com/asukaziye1 ASK]",
+    "ArtistTwitter": "[https://twitter.com/askziye ASK]",
     "CNName": "\u8ba9\u00b7\u5df4\u5c14",
     "Class": "Richelieu",
     "ConstructTime": "05:50:00",
@@ -77,7 +77,7 @@
     "ImageShipyardIconKai": "",
     "JPName": "\u30b8\u30e3\u30f3\u30fb\u30d0\u30fc\u30eb",
     "KRName": "\uc7a5 \ubc14\ub974",
-    "LB1": "Pre-loaded Main Gun +1 / Main Gun Efficiency +10%",
+    "LB1": "Pre-loaded Main Gun +1 / Main Gun Efficiency +5%",
     "LB2": "Secondary Gun Mount +2 / Main Gun Efficiency +10%",
     "LB3": "Main Gun Mount +1 / Main Gun Efficiency +15%",
     "Luck": "17",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Battleship",
     "VA": "[[:wikipedia:Marina_Inoue|Marina Inoue]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

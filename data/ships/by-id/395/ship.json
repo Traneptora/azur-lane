@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u308a\u3044\u3061\u3085",
     "ArtistLink": "",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=159905 \u308a\u3044\u3061\u3085]",
@@ -108,5 +108,5 @@
     "TorpMax": "329",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Mai_Goto_(voice_actress)| Mai Goto]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

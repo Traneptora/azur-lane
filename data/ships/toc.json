@@ -196,12 +196,12 @@
             "dataJSON": "ships/by-id/Plan012/ship.json"
         },
         {
-            "Name": "Universal Bullin",
+            "Name": "Universal Bulin",
             "ShipID": "001",
             "dataJSON": "ships/by-id/001/ship.json"
         },
         {
-            "Name": "Trial Bullin MKII",
+            "Name": "Prototype Bulin MKII",
             "ShipID": "002",
             "dataJSON": "ships/by-id/002/ship.json"
         },
@@ -1536,7 +1536,7 @@
             "dataJSON": "ships/by-id/348/ship.json"
         },
         {
-            "Name": "Emile Bertin",
+            "Name": "\u00c9mile Bertin",
             "ShipID": "349",
             "dataJSON": "ships/by-id/349/ship.json"
         },
@@ -1586,7 +1586,7 @@
             "dataJSON": "ships/by-id/358/ship.json"
         },
         {
-            "Name": "Le Temeraire",
+            "Name": "Le T\u00e9m\u00e9raire",
             "ShipID": "359",
             "dataJSON": "ships/by-id/359/ship.json"
         },
@@ -2026,6 +2026,46 @@
             "dataJSON": "ships/by-id/451/ship.json"
         },
         {
+            "Name": "Tartu",
+            "ShipID": "452",
+            "dataJSON": "ships/by-id/452/ship.json"
+        },
+        {
+            "Name": "Richelieu",
+            "ShipID": "453",
+            "dataJSON": "ships/by-id/453/ship.json"
+        },
+        {
+            "Name": "Jeanne d&amp;#39;Arc",
+            "ShipID": "454",
+            "dataJSON": "ships/by-id/454/ship.json"
+        },
+        {
+            "Name": "Alg\u00e9rie",
+            "ShipID": "455",
+            "dataJSON": "ships/by-id/455/ship.json"
+        },
+        {
+            "Name": "La Galissonni\u00e8re",
+            "ShipID": "456",
+            "dataJSON": "ships/by-id/456/ship.json"
+        },
+        {
+            "Name": "Vauquelin",
+            "ShipID": "457",
+            "dataJSON": "ships/by-id/457/ship.json"
+        },
+        {
+            "Name": "B\u00e9arn",
+            "ShipID": "458",
+            "dataJSON": "ships/by-id/458/ship.json"
+        },
+        {
+            "Name": "Little Illustrious",
+            "ShipID": "459",
+            "dataJSON": "ships/by-id/459/ship.json"
+        },
+        {
             "Name": "Tone",
             "ShipID": "9001",
             "dataJSON": "ships/by-id/9001/ship.json"
@@ -2034,16 +2074,6 @@
             "Name": "Chikuma",
             "ShipID": "9002",
             "dataJSON": "ships/by-id/9002/ship.json"
-        },
-        {
-            "Name": "Jeanne d&amp;#39;Arc",
-            "ShipID": "9003",
-            "dataJSON": "ships/by-id/9003/ship.json"
-        },
-        {
-            "Name": "Richelieu",
-            "ShipID": "9004",
-            "dataJSON": "ships/by-id/9004/ship.json"
         },
         {
             "Name": "Pola",
