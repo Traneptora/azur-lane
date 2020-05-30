@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+	<title>Battleship Cooldown Calculator</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta property="og:image" content="https://thebombzen.com/images/avatar-current/avatar-current_256.png">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://thebombzen.com/azur-lane/battleship-reload.html">
+	<meta property="og:title" content="Battleship Cooldown Calculator">
+	<meta property="og:description" content="Calculate the cooldown for a battleship main gun in Azur Lane.">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
+	<script src="js/battleship-reload.js"></script>
+	<script>
+		WebFont.load({
+			custom: {
+				families: ['Noto Sans Display', 'Noto Mono'],
+				urls: ['/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css', '/fonts/noto/noto-mono/noto-mono.css']
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="maintitle">
+			Battleship Cooldown Calculator
+		</header>
+	<hr>
+	<main>
+		<p>Instructions: Enter the absolute cooldown for the battleship's main gun (in seconds), as well as any any relevant cooldown reduction. Also enter the reload stat for the battleship in question (potentially including fleet tech) and the percentage reload buff, if any. If you'd like to include a temporary reload buff (e.g. Hood's buff, or Reload Order) then you can enable that as well.</p>
+		<form action="javascript:calculate_bbcooldown();">
+		<div style="text-align: center; width: 80%; margin: 0 auto;">
+		<p><div style="display: table; width: 100%; text-align: left;">
+			<p><div style="display: table-row;">
+				<div style="display: table-cell; text-align: left; padding-right: 15px;">Reload Stat:</div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="bbreloadstattextfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="146"></div>
+			</div>
+			<div style="display: table-row;">
+				<div style="display: table-cell; text-align: left; padding-right: 15px;">Reload Percentage Buff:</div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="bbreloadbufftextfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="0.0"></div>
+			</div>
+			<div style="display: table-row;">
+				<div style="display: table-cell; text-align: left; padding-right: 15px;">Cooldown Reduction Percent:</div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="cdreduction1textfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="0.0"></div>
+			</div></p>
+			<p><div style="display: table-row;">
+				<div style="display: table-cell; text-align: left; padding-right: 15px;">
+					<input type="checkbox" onchange="update_guntextfields(); calculate_bbcooldown();" id="cdred2enablecb" style="margin-top: 5px; margin-bottom: 5px;">
+					<span style="margin-left; 5px;">Temporary Reload Buff?</span>
+				</div>
+			</div>
+			<div id="cdredshowhide1" style="display: none; width: 100%;">
+				<div style="display: table-cell; text-align: left; padding-right: 15px;">Temp RLD Buff Duration:</div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="cdred2timetxtfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="8.0"></div>
+			</div><div id="cdredshowhide2" style="display: none; width: 100%;">
+				<div style="display: table-cell; text-align: left; padding-right: 15px;">Temp RLD Buff Percent:</div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="cdred2percenttxtfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="40.00"></div>
+			</div></p>
+			<p><div style="display: table-row;">
+				<div style="display: table-cell; text-align: left; padding-right: 15px;">Main Gun Cooldown:</div>
+				<div style="display: table-cell; text-align: right;">
+					<select id="maingun1cddropdown" style="width: 225px;" onchange="update_guntextfields(); calculate_bbcooldown();">
+						<option name="HE" value="HE" disabled class="disabled-option">High Explosive</option>
+						<option name="triple406mk6" value="24.02">Triple 406mm MK6</option>
+						<option name="twin406skc" selected value="19.42">Twin 406mm SKC/34</option>
+						<option name="triple381proto" value="23.14">Triple 381mm Prototype</option>
+						<option name="twin381hood" value="17.96">Twin 381mm Advanced Main Gun</option>
+						<option name="twin410purple" value="20.02">Twin 410mm Mounted</option>			
+						<option name="quad380jeanbart" value="25.80">Quadruple 380mm MLE 1935</option>
+						<option name="quad356kgv" value="29.19">Quadruple 356mm Main Gun</option>
+						<option name="triple306gangut" value="27.40">Triple 305mm (Pattern 1907)</option>
+						<option name="AP" value="AP" disabled class="disabled-option">Armor Piercing</option>
+						<option name="triple410proto" value="24.14">Triple 410mm Prototype</option>
+						<option name="twin457proto" value="20.65">Twin 457mm MK A</option>
+						<option name="triple381littorio" value="24.02">Triple 381mm Model 1934</option>
+						<option name="twin380bisko" value="18.38">Twin 380mm SKC/34</option>
+						<option name="OA" value="OA" disabled class="disabled-option">Other</option>
+						<option name="lmaoholyfuck" value="19.29">Twin 410mm Type 3 Confetti</option>
+						<option name="triple406hms" value="24.02">Triple 406mm Mk I</option>
+						<option name="triple283bbkms" value="16.63">Triple 283mm SKC/34</option>
+						<option name="quad356nomvp" value="36.87">Blue +0 Quad 356mm Main Gun</option>
+						<option name="unequipped" value="16.76">Stock Gun</option>
+						<option name="other" value="">Other</option>
+					</select>
+					<input type="text" id="maingun1cdtextfield" style="text-align: right; margin-left: 10px; margin-top: 5px; margin-bottom: 5px; width: 120px;" value="19.42">
+				</div>
+			</div></p>
+			<p>
+				<p><div style="float: left; margin: 1px;"><input type="checkbox" id="boomerfcrbox" onclick="javascript:calculate_bbcooldown();"></div><span style="margin-left: 5px;">Boomer FCR?</span></p>
+				<p>Main Gun Cooldown: <span id="finalbbcooldown"></span></p>
+				<p><input type="submit" value="Calculate Main Gun Cooldown"></p>
+			</p>
+		</div></p></div></form>
+	</main>
+	</div>
+</body>
+</html>
