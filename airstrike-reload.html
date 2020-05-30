@@ -50,12 +50,12 @@
 		<select id="planeselect" style="display: none;">
 			<option value="F" disabled class="disabled-option">Fighters</option>
 			<option name='hellcat' value="10.90">F6F Hellcat</option>
+			<option value="10.20">VF-17 Pirate Squad</option>
 			<option value="10.60">Seafang</option>
 			<option value="10.61">Sea Fury</option>
 			<option value="10.44">A7M Reppuu</option>
 			<option value="8.98">XF5F Skyrocket</option>
 			<option value="9.24">Messerschmitt Me-155A</option>
-			<option value="10.20">VF-17 Pirate Squad</option>
 			<option value="9.44">F2A Buffalo (Thatch Squadron)</option>
 			<option value="DB" disabled class="disabled-option">Dive Bombers</option>
 			<option name='helldiver' value="11.88">SB2C Helldiver</option>
@@ -70,6 +70,7 @@
 			<option value="10.97">Swordfish (818 Squadron)</option>
 			<option value="12.04">TBM Avenger (VT-18 Squadron)</option>
 			<option value="Other" disabled class="disabled-option">Other</option>
+			<option value="Don't Use Slot">Don't Use Slot</option>
 			<option value="">Other</option>
 		</select>
 		<p>Instructions: Enter the absolute cooldown for each plane slot (in seconds), as well as the planecount for that slot. If a carrier only has two plane slots, or has two identical planes in different slots, feel free to leave the third plane type out of the calculation simply by setting the planecount to zero. Also enter the raw reload stat for the carrier in question, and the percentage reload buff, if any.</p>
@@ -78,47 +79,56 @@
 		<p><div style="display: table; width: 100%; text-align: left;">
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Reload Stat:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="reloadstattextfield" style="margin-top: 5px; margin-bottom: 5px;" value="132"></div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="reloadstattextfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="132"></div>
 			</div>
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Reload Percentage Buff:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="reloadbufftextfield" style="margin-top: 5px; margin-bottom: 5px;" value="0.0"></div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="reloadbufftextfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="0.0"></div>
 			</div>
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Cooldown Reduction Percent:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="cooldownreductiontextfield" style="margin-top: 5px; margin-bottom: 5px;" value="0.0"></div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="cooldownreductiontextfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="0.0"></div>
 			</div></p>
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">First Plane Cooldown:</div>
 				<div style="display: table-cell; text-align: right;">
-					<select id="plane1cddropdown" onchange="$('#plane1cdtextfield').prop('value', $('#plane1cddropdown').prop('value'));calculate_reload();"></select>
-					<input type="text" id="plane1cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="10.90">
+					<select id="plane1cddropdown" style="width: 225px;" onchange="update_textfields(1); calculate_reload();"></select>
+					<input type="text" id="plane1cdtextfield" style="text-align: right; margin-left: 10px; margin-top: 5px; margin-bottom: 5px; width: 120px;" value="10.90">
 				</div>
 			</div>
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">First Plane Count:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="plane1counttextfield" style="margin-top: 5px; margin-bottom: 5px;" value="3"></div>
+				<div style="display: table-cell; text-align: right;">
+					<input type="text" id="plane1counttextfield" style="text-align: right; margin-left: 10px; margin-top: 5px; margin-bottom: 5px; width: 120px;" value="3">
+					<input type="hidden" style="display: none;" id="plane1countstorage" value="0">
+				</div>
 			</div></p>
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Second Plane Cooldown:</div>
 				<div style="display: table-cell; text-align: right;">
-					<select id="plane2cddropdown" onchange="$('#plane2cdtextfield').prop('value', $('#plane2cddropdown').prop('value'));calculate_reload();"></select>
-					<input type="text" id="plane2cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="11.88"></div>
+					<select id="plane2cddropdown" style="width: 225px;" onchange="update_textfields(2); calculate_reload();"></select>
+					<input type="text" id="plane2cdtextfield" style="text-align: right; margin-left: 10px; margin-top: 5px; margin-bottom: 5px; width: 120px;" value="11.88"></div>
 			</div>
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Second Plane Count:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="plane2counttextfield" style="margin-top: 5px; margin-bottom: 5px;" value="3"></div>
+				<div style="display: table-cell; text-align: right;">
+					<input type="text" id="plane2counttextfield" style="text-align: right; margin-left: 10px; margin-top: 5px; margin-bottom: 5px; width: 120px;" value="3">
+					<input type="hidden" style="display: none;" id="plane2countstorage" value="0">
+				</div>
 			</div></p>
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Third Plane Cooldown:</div>
 				<div style="display: table-cell; text-align: right;">
-					<select id="plane3cddropdown" onchange="$('#plane3cdtextfield').prop('value', $('#plane3cddropdown').prop('value'));calculate_reload();"></select>
-					<input type="text" id="plane3cdtextfield" style="margin-top: 5px; margin-bottom: 5px;" value="11.37">
+					<select id="plane3cddropdown" style="width: 225px;" onchange="update_textfields(3); calculate_reload();"></select>
+					<input type="text" id="plane3cdtextfield" style="text-align: right; margin-left: 10px; margin-top: 5px; margin-bottom: 5px; width: 120px;" value="11.37">
 				</div>
 			</div>
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Third Plane Count:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="plane3counttextfield" style="margin-top: 5px; margin-bottom: 5px;" value="2"></div>
+				<div style="display: table-cell; text-align: right;">
+					<input type="text" id="plane3counttextfield" style="text-align: right; margin-left: 10px; margin-top: 5px; margin-bottom: 5px; width: 120px;" value="2">
+					<input type="hidden" style="display: none;" id="plane3countstorage" value="0">
+				</div>
 			</div></p>
 			<p>
 				<p><div style="float: left; margin: 1px;"><input type="checkbox" id="beaconbox" onclick="javascript:calculate_reload();"></div><span style="margin-left: 5px;">Homing Beacon Equipped</span></p>
