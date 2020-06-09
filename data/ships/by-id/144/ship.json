@@ -25,11 +25,11 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "Mkiiiiii33",
     "ArtistLink": "[https://weibo.com/kawa33 MKiiiiii_\u4e09\u4e09]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=661601 MKiiiiii]",
-    "ArtistTwitter": "[https://twitter.com/33kawa MKiiiiii]",
+    "ArtistTwitter": "[https://twitter.com/ccMK33 MKiiiiii]",
     "CNName": "\u7687\u5bb6\u65b9\u821f",
     "Class": "Ark Royal",
     "ConstructTime": "04:00:00",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Aircraft Carrier",
     "VA": "[https://anidb.net/perl-bin/animedb.pl?show=creator&amp;creatorid=12596 Asuka Itou]",
-    "Voiced": "1"
+    "Voiced": ""
 }

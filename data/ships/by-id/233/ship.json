@@ -32,7 +32,7 @@
     "ArtistTwitter": "[https://twitter.com/saru_1127 Saru]",
     "CNName": "Z1",
     "Class": "Type 1934",
-    "ConstructTime": "00:29:00",
+    "ConstructTime": "Drop Only",
     "Consumption120": "9",
     "ConsumptionInitial": "2",
     "ConsumptionKai": "9",
@@ -108,5 +108,5 @@
     "TorpMax": "407",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Natsumi_Takamori|Natsumi Takamori]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

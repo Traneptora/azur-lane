@@ -25,14 +25,14 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u68a6\u54b2\u67ab",
     "ArtistLink": "[http://weibo.com/u/3558369570 \u68a6\u54b2\u67ab]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1023957 \u304b\u3048\u3067]",
     "ArtistTwitter": "[https://twitter.com/yumesaki_kaede/ \u304b\u3048\u3067]",
     "CNName": "\u5c0f\u8d1d\u6cd5",
     "Class": "Town",
-    "ConstructTime": "Cannot Be Constructed",
+    "ConstructTime": "01:20:00",
     "Consumption120": "10",
     "ConsumptionInitial": "3",
     "ConsumptionKai": "0",
@@ -108,5 +108,5 @@
     "TorpMax": "286",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Yui_Horie|Yui Horie]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

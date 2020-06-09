@@ -2066,6 +2066,11 @@
             "dataJSON": "ships/by-id/459/ship.json"
         },
         {
+            "Name": "Eskimo",
+            "ShipID": "460",
+            "dataJSON": "ships/by-id/460/ship.json"
+        },
+        {
             "Name": "Tone",
             "ShipID": "9001",
             "dataJSON": "ships/by-id/9001/ship.json"

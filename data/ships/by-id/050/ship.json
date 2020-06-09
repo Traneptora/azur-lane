@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "feng ze",
     "ArtistLink": "[http://weibo.com/u/6098698509 \u9897\u7c92\u68d2]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2117317 \u7092\u98ef\u5996\u7cbe\u738b]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Minami_Takahashi_(voice_actress)|Minami Takahashi]]",
-    "Voiced": "1"
+    "Voiced": ""
 }
