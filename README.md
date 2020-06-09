@@ -1,2 +1,3 @@
-# azur-lane-calculators
-Calculators for Azur Lane
+# azur-lane
+Stuff for Azur Lane, see index.html
+
