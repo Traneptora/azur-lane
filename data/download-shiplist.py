@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 # Query the Azur Lane Wiki Cargo Query table for a JSON database of ships
 # Please only run this when necessary
