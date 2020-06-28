@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "\u5fb7\u610f\u5fd7\u7684\u79d1\u5b66",
     "ArtistLink": "[https://www.weibo.com/onlykexue \u79d1\u5b66-\u4f59\u751f\u4e0d\u8fc7\u4e24\u4e07\u5929]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=6054803 \u79d1\u5b66]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Aircraft Carrier",
     "VA": "[[:wikipedia:Akane_Fujita|Akane Fujita]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

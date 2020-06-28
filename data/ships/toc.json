@@ -1751,7 +1751,7 @@
             "dataJSON": "ships/by-id/391/ship.json"
         },
         {
-            "Name": "Li&amp;#39;l Sandy",
+            "Name": "Li'l Sandy",
             "ShipID": "392",
             "dataJSON": "ships/by-id/392/ship.json"
         },
@@ -1766,7 +1766,7 @@
             "dataJSON": "ships/by-id/394/ship.json"
         },
         {
-            "Name": "L&amp;#39;Opini\u00e2tre",
+            "Name": "L'Opini\u00e2tre",
             "ShipID": "395",
             "dataJSON": "ships/by-id/395/ship.json"
         },
@@ -1886,22 +1886,22 @@
             "dataJSON": "ships/by-id/418/ship.json"
         },
         {
-            "Name": "Akagi (Muse)",
+            "Name": "Akagi \u00b5",
             "ShipID": "419",
             "dataJSON": "ships/by-id/419/ship.json"
         },
         {
-            "Name": "Cleveland (Muse)",
+            "Name": "Cleveland \u00b5",
             "ShipID": "420",
             "dataJSON": "ships/by-id/420/ship.json"
         },
         {
-            "Name": "Sheffield (Muse)",
+            "Name": "Sheffield \u00b5",
             "ShipID": "421",
             "dataJSON": "ships/by-id/421/ship.json"
         },
         {
-            "Name": "Admiral Hipper (Muse)",
+            "Name": "Admiral Hipper \u00b5",
             "ShipID": "422",
             "dataJSON": "ships/by-id/422/ship.json"
         },
@@ -2036,7 +2036,7 @@
             "dataJSON": "ships/by-id/453/ship.json"
         },
         {
-            "Name": "Jeanne d&amp;#39;Arc",
+            "Name": "Jeanne d'Arc",
             "ShipID": "454",
             "dataJSON": "ships/by-id/454/ship.json"
         },

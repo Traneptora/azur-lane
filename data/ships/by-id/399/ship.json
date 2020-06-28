@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "2",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u591c\u30ce\u307f\u3064\u304d",
     "ArtistLink": "[http://nanairo-box.blogspot.jp/ \u591c\u30ce\u307f\u3064\u304d]",
     "ArtistPixiv": "[https://www.pixiv.net/member_illust.php?id=44234 \u591c\u30ce\u307f\u3064\u304d]",
@@ -108,5 +108,5 @@
     "TorpMax": "482",
     "Type": "Submarine",
     "VA": "[[:wikipedia:Sayumi_Suzushiro|Sayumi Suzushiro]]",
-    "Voiced": "1"
+    "Voiced": ""
 }
