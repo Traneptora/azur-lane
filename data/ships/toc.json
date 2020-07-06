@@ -186,7 +186,7 @@
             "dataJSON": "ships/by-id/Plan010/ship.json"
         },
         {
-            "Name": "Friedrich der Grosse",
+            "Name": "Friedrich der Gro\u00dfe",
             "ShipID": "Plan011",
             "dataJSON": "ships/by-id/Plan011/ship.json"
         },

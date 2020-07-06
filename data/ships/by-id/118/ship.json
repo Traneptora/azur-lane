@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u739b\u96c5G",
     "ArtistLink": "[http://weibo.com/p/1005051970961102 -\u739b\u96c5G-]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1287983 mayag (\u746a\u96c5G)]",
@@ -108,5 +108,5 @@
     "TorpMax": "244",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Yui_Sakakibara|Yui Sakaibara]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

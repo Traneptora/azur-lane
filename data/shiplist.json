@@ -3189,7 +3189,7 @@
                 "TorpMax": "312",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:Mikako_Izawa|Mikako Izawa]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -3531,7 +3531,7 @@
                 "TorpMax": "0",
                 "Type": "Battleship",
                 "VA": "[[:wikipedia:Reina_Ueda|Reina Ueda]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -3562,7 +3562,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "Terras",
                 "ArtistLink": "[https://weibo.com/u/3086653641 \u6d32\u5dddTerras-\u9e2d\u5634\u517d]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=5968035 Terras]",
@@ -3645,7 +3645,7 @@
                 "TorpMax": "187",
                 "Type": "Heavy Cruiser",
                 "VA": "[[:wikipedia:Satomi_Sat%C5%8D|Satomi Satou]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -3987,7 +3987,7 @@
                 "TorpMax": "0",
                 "Type": "Battleship",
                 "VA": "[[:wikipedia:Shino_Shimoji|Shino Shimoji]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -4018,7 +4018,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u9ed1\u732b",
                 "ArtistLink": "[http://weibo.com/u/2959771544 \u9ed1\u732b\u6843\u56ed-\u4e13\u6ce8\u6f5c\u6c3420\u5e74]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2331978 \u8fd1\u6240\u9ed2\u30e2\u30e2]",
@@ -4101,7 +4101,7 @@
                 "TorpMax": "352",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Sakura_Tange|Sakura Tange]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -4132,7 +4132,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "\u6728shiyo",
                 "ArtistLink": "[https://weibo.com/u/2481339344 \u6728shiyo]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=40222 \u6728shiyo]",
@@ -4215,7 +4215,7 @@
                 "TorpMax": "0",
                 "Type": "Large Cruiser",
                 "VA": "[[:wikipedia:Kiyono_Yasuno|Kiyono Yasuno]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -4286,15 +4286,15 @@
                 "HealthKai": "0",
                 "HealthKai120": "0",
                 "HealthMax": "8449",
-                "Image": "Friedrich der Grosse.png",
-                "ImageBanner": "Friedrich der GrosseBanner.png",
+                "Image": "Friedrich der Gro\u00dfe.png",
+                "ImageBanner": "Friedrich der Gro\u00dfeBanner.png",
                 "ImageBannerKai": "",
-                "ImageChibi": "Friedrich der GrosseChibi.png",
+                "ImageChibi": "Friedrich der Gro\u00dfeChibi.png",
                 "ImageChibiKai": "",
-                "ImageIcon": "Friedrich der GrosseIcon.png",
+                "ImageIcon": "Friedrich der Gro\u00dfeIcon.png",
                 "ImageIconKai": "",
                 "ImageKai": "",
-                "ImageShipyardIcon": "Friedrich der GrosseShipyardIcon.png",
+                "ImageShipyardIcon": "Friedrich der Gro\u00dfeShipyardIcon.png",
                 "ImageShipyardIconKai": "",
                 "JPName": "\u30d5\u30ea\u30fc\u30c9\u30ea\u30d2\u30fb\u30c7\u30a2\u30fb\u30b0\u30ed\u30fc\u30bb",
                 "KRName": "\ud504\ub9ac\ub4dc\ub9ac\ud788 \ub370\uc5b4 \uadf8\ub85c\uc138",
@@ -4302,7 +4302,7 @@
                 "LB2": "",
                 "LB3": "",
                 "Luck": "0",
-                "Name": "Friedrich der Grosse",
+                "Name": "Friedrich der Gro\u00dfe",
                 "Nationality": "Ironblood",
                 "Oxygen120": "0",
                 "OxygenInitial": "0",
@@ -4443,7 +4443,7 @@
                 "TorpMax": "0",
                 "Type": "Battleship",
                 "VA": "[[:wikipedia:Mikako_Komatsu|Mikako Komatsu]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -6982,7 +6982,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "realmbw",
                 "ArtistLink": "[http://weibo.com/realmbw realmbw_\u778c\u7761\u9b54]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=529070 RJ]",
@@ -7065,7 +7065,7 @@
                 "TorpMax": "0",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:Lynn_(voice_actress)|Lynn]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -7407,7 +7407,7 @@
                 "TorpMax": "137",
                 "Type": "Light Cruiser",
                 "VA": "[https://www.imdb.com/name/nm5877942/ Kazusa Aranami]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -8692,7 +8692,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "Sky-FreeDom",
                 "ArtistLink": "[https://weibo.com/skyfreedom Sky-FreeDom]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1017056 \u30b9\u30ab\u30a4]",
@@ -8775,7 +8775,7 @@
                 "TorpMax": "0",
                 "Type": "Heavy Cruiser",
                 "VA": "[http://www.rme.jp/talent/women/yoshie-sakai.html Yoshie Sakai]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -12993,7 +12993,7 @@
                 "TorpMax": "318",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Y%C5%ABko_Got%C5%8D|Yuuko Gotou]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -13708,7 +13708,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "Saru(\u7334\u5988)",
                 "ArtistLink": "[http://weibo.com/p/1005051054234800 \u6d45\u4e95\u7334\u7334_Saru]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1422579 Saru]",
@@ -13791,7 +13791,7 @@
                 "TorpMax": "335",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Rie_Kugimiya|Rie Kugimiya]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -15076,7 +15076,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u739b\u96c5G",
                 "ArtistLink": "[http://weibo.com/p/1005051970961102 -\u739b\u96c5G-]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1287983 mayag (\u746a\u96c5G)]",
@@ -15159,7 +15159,7 @@
                 "TorpMax": "244",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:Yui_Sakakibara|Yui Sakaibara]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -19636,7 +19636,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "Saru(\u7334\u5988)",
                 "ArtistLink": "[http://weibo.com/p/1005051054234800 \u6d45\u4e95\u7334\u7334_Saru]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1422579 Saru]",
@@ -20175,7 +20175,7 @@
                 "TorpMax": "435",
                 "Type": "Destroyer",
                 "VA": "[https://www.imdb.com/name/nm9345796/ Karin Isobe]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -22341,7 +22341,7 @@
                 "TorpMax": "213",
                 "Type": "Heavy Cruiser",
                 "VA": "[[:wikipedia:Ai_Kayano|Ai Kayano]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -23512,7 +23512,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Heavy",
-                "ArmorKai": "",
+                "ArmorKai": "Heavy",
                 "Artist": "Alisa",
                 "ArtistLink": "[https://weibo.com/u/6056658230 \u599e\u599e\u540c\u5b66\u63d0\u4e0d\u8d77\u52b2]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1966676 \u9ed2\u306e\u685c]",
@@ -29668,7 +29668,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u51ea\u767d\u307f\u3068",
                 "ArtistLink": "[https://mito-nagishiro.tumblr.com mito-nagishiro]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=8189060 \u51ea\u767d\u307f\u3068]",
@@ -38674,7 +38674,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "2",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "Amoeba\u539f\u866b",
                 "ArtistLink": "[https://www.weibo.com/p/1005052732245883 Amoeba\u539f\u866b]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=8931555 \u963f\u7c73\u5df4\u539f\u866b]",
@@ -38788,7 +38788,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "momi",
                 "ArtistLink": "[http://currentstorage.blog.fc2.com/ Current Storage]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=117402 momi\uff08\u3082\u307f) ]",
@@ -41410,7 +41410,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "",
                 "ArtistLink": "",
                 "ArtistPixiv": "",
@@ -41493,7 +41493,7 @@
                 "TorpMax": "0",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:ja:\u6e21\u90e8\u7d17\u5f13|Sayumi Watabe]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -41524,7 +41524,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u6216\u4e00",
                 "ArtistLink": "[http://bcy.net/u/1495574 \u6216\u4e00]",
                 "ArtistPixiv": "[http://www.pixiv.net/member.php?id=1904395 \u6216\u4e00]",
@@ -41607,7 +41607,7 @@
                 "TorpMax": "244",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Ayaka_%C5%8Chashi|Ayaka Ouhashi]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {

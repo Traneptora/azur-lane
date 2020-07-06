@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "Terras",
     "ArtistLink": "[https://weibo.com/u/3086653641 \u6d32\u5dddTerras-\u9e2d\u5634\u517d]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=5968035 Terras]",
@@ -108,5 +108,5 @@
     "TorpMax": "187",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Satomi_Sat%C5%8D|Satomi Satou]]",
-    "Voiced": "1"
+    "Voiced": ""
 }
