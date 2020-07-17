@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u6797\u5927B",
     "ArtistLink": "[https://weibo.com/312444618 \u6797\u5927B]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1245646 \u6797\u5927B]",
@@ -108,5 +108,5 @@
     "TorpMax": "315",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Eri_Suzuki|Eri Suzuki]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

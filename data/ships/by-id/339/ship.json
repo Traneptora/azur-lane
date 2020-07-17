@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "2",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u714e\u8def",
     "ArtistLink": "[http://tegone.sblo.jp/ TegoneSpike]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=47406 \u714e\u8def(\u305b\u3093\u3058)]",
@@ -108,5 +108,5 @@
     "TorpMax": "472",
     "Type": "Submarine",
     "VA": "[[:wikipedia:Kaori_Ishihara|Kaori Ishihara]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

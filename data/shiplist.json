@@ -2080,7 +2080,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "Morikura En",
                 "ArtistLink": "[http://2st.jp/canvas/ Morikura En]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=177784 Morikura En]",
@@ -2163,7 +2163,7 @@
                 "TorpMax": "0",
                 "Type": "Aircraft Carrier",
                 "VA": "[[:wikipedia:Kizuna_AI|Kizuna AI]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -2391,7 +2391,7 @@
                 "TorpMax": "440",
                 "Type": "Destroyer",
                 "VA": "Shirakami Fubuki",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -4448,6 +4448,576 @@
         },
         {
             "title": {
+                "AA120": "409",
+                "AAInitial": "79",
+                "AAKai": "0",
+                "AAKai120": "0",
+                "AAMax": "368",
+                "ASW120": "0",
+                "ASWInitial": "0",
+                "ASWKai": "0",
+                "ASWKai120": "0",
+                "ASWMax": "0",
+                "Acc120": "130",
+                "AccInitial": "43",
+                "AccKai": "0",
+                "AccKai120": "0",
+                "AccMax": "111",
+                "Air120": "0",
+                "AirInitial": "0",
+                "AirKai": "0",
+                "AirKai120": "0",
+                "AirMax": "0",
+                "Ammo120": "0",
+                "AmmoInitial": "0",
+                "AmmoKai": "0",
+                "AmmoKai120": "0",
+                "AmmoMax": "0",
+                "Armor": "Medium",
+                "ArmorKai": "Medium",
+                "Artist": "",
+                "ArtistLink": "[https://weibo.com/u/7477949468 \u5168\u73ed\u6700\u83dc\u5624\u5624\u5624]",
+                "ArtistPixiv": "",
+                "ArtistTwitter": "[https://twitter.com/zelda10010 zelda10010]",
+                "CNName": "",
+                "Class": "",
+                "ConstructTime": "Research",
+                "Consumption120": "13",
+                "ConsumptionInitial": "7",
+                "ConsumptionKai": "0",
+                "ConsumptionKai120": "0",
+                "ConsumptionMax": "13",
+                "Eq1EffInit": "120%",
+                "Eq1EffInitKai": "",
+                "Eq1EffInitMax": "140%",
+                "Eq1Type": "CA Main Guns",
+                "Eq2EffInit": "150%",
+                "Eq2EffInitKai": "",
+                "Eq2EffInitMax": "155%",
+                "Eq2Type": "Torpedoes",
+                "Eq3EffInit": "150%",
+                "Eq3EffInitKai": "",
+                "Eq3EffInitMax": "165%",
+                "Eq3Type": "Anti-Air Guns",
+                "Evade120": "76",
+                "EvadeInitial": "6",
+                "EvadeKai": "0",
+                "EvadeKai120": "0",
+                "EvadeMax": "32",
+                "Fire120": "282",
+                "FireInitial": "53",
+                "FireKai": "0",
+                "FireKai120": "0",
+                "FireMax": "247",
+                "Health120": "5141",
+                "HealthInitial": "888",
+                "HealthKai": "0",
+                "HealthKai120": "0",
+                "HealthMax": "4590",
+                "Image": "Cheshire.png",
+                "ImageBanner": "CheshireBanner.png",
+                "ImageBannerKai": "",
+                "ImageChibi": "CheshireChibi.png",
+                "ImageChibiKai": "",
+                "ImageIcon": "CheshireIcon.png",
+                "ImageIconKai": "",
+                "ImageKai": "",
+                "ImageShipyardIcon": "CheshireShipyardIcon.png",
+                "ImageShipyardIconKai": "",
+                "JPName": "",
+                "KRName": "",
+                "LB1": "",
+                "LB2": "",
+                "LB3": "",
+                "Luck": "0",
+                "Name": "Cheshire",
+                "Nationality": "Royal Navy",
+                "Oxygen120": "0",
+                "OxygenInitial": "0",
+                "OxygenKai": "0",
+                "OxygenKai120": "0",
+                "OxygenMax": "0",
+                "Rarity": "Priority",
+                "Reload120": "156",
+                "ReloadInitial": "57",
+                "ReloadKai": "0",
+                "ReloadKai120": "0",
+                "ReloadMax": "136",
+                "Remodel": "f",
+                "RemodelId": "",
+                "ShipGroup": "Research",
+                "ShipID": "Plan013",
+                "Speed": "27",
+                "SpeedKai": "0",
+                "SubtypeRetro": "",
+                "Torp120": "208",
+                "TorpInitial": "39",
+                "TorpKai": "0",
+                "TorpKai120": "0",
+                "TorpMax": "181",
+                "Type": "Heavy Cruiser",
+                "VA": "[https://en.wikipedia.org/wiki/Shizuka_Ishigami Ishigami Shizuka]",
+                "Voiced": ""
+            }
+        },
+        {
+            "title": {
+                "AA120": "289",
+                "AAInitial": "54",
+                "AAKai": "0",
+                "AAKai120": "0",
+                "AAMax": "254",
+                "ASW120": "0",
+                "ASWInitial": "0",
+                "ASWKai": "0",
+                "ASWKai120": "0",
+                "ASWMax": "0",
+                "Acc120": "145",
+                "AccInitial": "48",
+                "AccKai": "0",
+                "AccKai120": "0",
+                "AccMax": "125",
+                "Air120": "0",
+                "AirInitial": "0",
+                "AirKai": "0",
+                "AirKai120": "0",
+                "AirMax": "0",
+                "Ammo120": "0",
+                "AmmoInitial": "0",
+                "AmmoKai": "0",
+                "AmmoKai120": "0",
+                "AmmoMax": "0",
+                "Armor": "Medium",
+                "ArmorKai": "Medium",
+                "Artist": "",
+                "ArtistLink": "",
+                "ArtistPixiv": "",
+                "ArtistTwitter": "",
+                "CNName": "",
+                "Class": "",
+                "ConstructTime": "Research",
+                "Consumption120": "15",
+                "ConsumptionInitial": "8",
+                "ConsumptionKai": "0",
+                "ConsumptionKai120": "0",
+                "ConsumptionMax": "15",
+                "Eq1EffInit": "100%",
+                "Eq1EffInitKai": "",
+                "Eq1EffInitMax": "130%",
+                "Eq1Type": "CA Guns",
+                "Eq2EffInit": "110%",
+                "Eq2EffInitKai": "",
+                "Eq2EffInitMax": "120%",
+                "Eq2Type": "Torpedoes",
+                "Eq3EffInit": "125%",
+                "Eq3EffInitKai": "",
+                "Eq3EffInitMax": "125%",
+                "Eq3Type": "Anti-Air Guns",
+                "Evade120": "75",
+                "EvadeInitial": "6",
+                "EvadeKai": "0",
+                "EvadeKai120": "0",
+                "EvadeMax": "31",
+                "Fire120": "289",
+                "FireInitial": "54",
+                "FireKai": "0",
+                "FireKai120": "0",
+                "FireMax": "254",
+                "Health120": "5668",
+                "HealthInitial": "970",
+                "HealthKai": "0",
+                "HealthKai120": "0",
+                "HealthMax": "5016",
+                "Image": "Drake.png",
+                "ImageBanner": "DrakeBanner.png",
+                "ImageBannerKai": "",
+                "ImageChibi": "DrakeChibi.png",
+                "ImageChibiKai": "",
+                "ImageIcon": "DrakeIcon.png",
+                "ImageIconKai": "",
+                "ImageKai": "",
+                "ImageShipyardIcon": "DrakeShipyardIcon.png",
+                "ImageShipyardIconKai": "",
+                "JPName": "",
+                "KRName": "",
+                "LB1": "",
+                "LB2": "",
+                "LB3": "",
+                "Luck": "0",
+                "Name": "Drake",
+                "Nationality": "Royal Navy",
+                "Oxygen120": "0",
+                "OxygenInitial": "0",
+                "OxygenKai": "0",
+                "OxygenKai120": "0",
+                "OxygenMax": "0",
+                "Rarity": "Decisive",
+                "Reload120": "139",
+                "ReloadInitial": "51",
+                "ReloadKai": "0",
+                "ReloadKai120": "0",
+                "ReloadMax": "120",
+                "Remodel": "f",
+                "RemodelId": "",
+                "ShipGroup": "Research",
+                "ShipID": "Plan014",
+                "Speed": "26",
+                "SpeedKai": "0",
+                "SubtypeRetro": "",
+                "Torp120": "245",
+                "TorpInitial": "46",
+                "TorpKai": "0",
+                "TorpKai120": "0",
+                "TorpMax": "213",
+                "Type": "Heavy Cruiser",
+                "VA": "[https://en.wikipedia.org/wiki/Asami_Imai Imai Asami]",
+                "Voiced": ""
+            }
+        },
+        {
+            "title": {
+                "AA120": "354",
+                "AAInitial": "67",
+                "AAKai": "0",
+                "AAKai120": "0",
+                "AAMax": "314",
+                "ASW120": "120",
+                "ASWInitial": "36",
+                "ASWKai": "0",
+                "ASWKai120": "0",
+                "ASWMax": "106",
+                "Acc120": "128",
+                "AccInitial": "44",
+                "AccKai": "0",
+                "AccKai120": "0",
+                "AccMax": "114",
+                "Air120": "0",
+                "AirInitial": "0",
+                "AirKai": "0",
+                "AirKai120": "0",
+                "AirMax": "0",
+                "Ammo120": "0",
+                "AmmoInitial": "0",
+                "AmmoKai": "0",
+                "AmmoKai120": "0",
+                "AmmoMax": "0",
+                "Armor": "Medium",
+                "ArmorKai": "Medium",
+                "Artist": "Liduke(\u65e5\u5b50)",
+                "ArtistLink": "[https://weibo.com/liduke \u9ebb\u75f9\u7684\u5c0f\u65e5\u5b50]",
+                "ArtistPixiv": "[https://www.pixiv.net/member.php?id=38088 Liduke(\u65e5\u5b50)]",
+                "ArtistTwitter": "[https://twitter.com/lidukelaya liduke(\u65e5\u5b50)]",
+                "CNName": "",
+                "Class": "Mainz",
+                "ConstructTime": "Research",
+                "Consumption120": "0",
+                "ConsumptionInitial": "7",
+                "ConsumptionKai": "0",
+                "ConsumptionKai120": "0",
+                "ConsumptionMax": "12",
+                "Eq1EffInit": "100%",
+                "Eq1EffInitKai": "",
+                "Eq1EffInitMax": "130%",
+                "Eq1Type": "CL Guns",
+                "Eq2EffInit": "100%",
+                "Eq2EffInitKai": "",
+                "Eq2EffInitMax": "110%",
+                "Eq2Type": "Torpedoes",
+                "Eq3EffInit": "110%",
+                "Eq3EffInitKai": "",
+                "Eq3EffInitMax": "110%",
+                "Eq3Type": "Anti-Air Guns",
+                "Evade120": "75",
+                "EvadeInitial": "15",
+                "EvadeKai": "0",
+                "EvadeKai120": "0",
+                "EvadeMax": "39",
+                "Fire120": "168",
+                "FireInitial": "31",
+                "FireKai": "0",
+                "FireKai120": "0",
+                "FireMax": "146",
+                "Health120": "5262",
+                "HealthInitial": "925",
+                "HealthKai": "0",
+                "HealthKai120": "0",
+                "HealthMax": "4784",
+                "Image": "Mainz.png",
+                "ImageBanner": "MainzBanner.png",
+                "ImageBannerKai": "",
+                "ImageChibi": "MainzChibi.png",
+                "ImageChibiKai": "",
+                "ImageIcon": "MainzIcon.png",
+                "ImageIconKai": "",
+                "ImageKai": "",
+                "ImageShipyardIcon": "MainzShipyardIcon.png",
+                "ImageShipyardIconKai": "",
+                "JPName": "",
+                "KRName": "",
+                "LB1": "",
+                "LB2": "",
+                "LB3": "",
+                "Luck": "0",
+                "Name": "Mainz",
+                "Nationality": "Ironblood",
+                "Oxygen120": "0",
+                "OxygenInitial": "0",
+                "OxygenKai": "0",
+                "OxygenKai120": "0",
+                "OxygenMax": "0",
+                "Rarity": "Priority",
+                "Reload120": "182",
+                "ReloadInitial": "67",
+                "ReloadKai": "0",
+                "ReloadKai120": "0",
+                "ReloadMax": "159",
+                "Remodel": "f",
+                "RemodelId": "",
+                "ShipGroup": "Research",
+                "ShipID": "Plan015",
+                "Speed": "25",
+                "SpeedKai": "0",
+                "SubtypeRetro": "",
+                "Torp120": "193",
+                "TorpInitial": "36",
+                "TorpKai": "0",
+                "TorpKai120": "0",
+                "TorpMax": "168",
+                "Type": "Light Cruiser",
+                "VA": "[https://en.wikipedia.org/wiki/Y%C5%ABko_Kaida Kaida Yuhko]",
+                "Voiced": ""
+            }
+        },
+        {
+            "title": {
+                "AA120": "337",
+                "AAInitial": "64",
+                "AAKai": "0",
+                "AAKai120": "0",
+                "AAMax": "299",
+                "ASW120": "0",
+                "ASWInitial": "0",
+                "ASWKai": "0",
+                "ASWKai120": "0",
+                "ASWMax": "0",
+                "Acc120": "62",
+                "AccInitial": "20",
+                "AccKai": "0",
+                "AccKai120": "0",
+                "AccMax": "52",
+                "Air120": "0",
+                "AirInitial": "0",
+                "AirKai": "0",
+                "AirKai120": "0",
+                "AirMax": "0",
+                "Ammo120": "0",
+                "AmmoInitial": "0",
+                "AmmoKai": "0",
+                "AmmoKai120": "0",
+                "AmmoMax": "0",
+                "Armor": "Heavy",
+                "ArmorKai": "Heavy",
+                "Artist": "RAN",
+                "ArtistLink": "[https://weibo.com/u/2235541213 \u4e0d\u53ef\u71c3\u7269]",
+                "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2957827 RAN]",
+                "ArtistTwitter": "[https://twitter.com/bukeranwu \u4e0d\u53ef\u71c3\u7269]",
+                "CNName": "",
+                "Class": "",
+                "ConstructTime": "Research",
+                "Consumption120": "16",
+                "ConsumptionInitial": "9",
+                "ConsumptionKai": "0",
+                "ConsumptionKai120": "0",
+                "ConsumptionMax": "16",
+                "Eq1EffInit": "100%",
+                "Eq1EffInitKai": "",
+                "Eq1EffInitMax": "140%",
+                "Eq1Type": "BB Guns",
+                "Eq2EffInit": "200%",
+                "Eq2EffInitKai": "",
+                "Eq2EffInitMax": "200%",
+                "Eq2Type": "Torpedoes",
+                "Eq3EffInit": "100%",
+                "Eq3EffInitKai": "",
+                "Eq3EffInitMax": "110%",
+                "Eq3Type": "Anti-Air Guns",
+                "Evade120": "36",
+                "EvadeInitial": "8",
+                "EvadeKai": "0",
+                "EvadeKai120": "0",
+                "EvadeMax": "21",
+                "Fire120": "361",
+                "FireInitial": "69",
+                "FireKai": "0",
+                "FireKai120": "0",
+                "FireMax": "321",
+                "Health120": "7126",
+                "HealthInitial": "1186",
+                "HealthKai": "0",
+                "HealthKai120": "0",
+                "HealthMax": "6133",
+                "Image": "Odin.png",
+                "ImageBanner": "OdinBanner.png",
+                "ImageBannerKai": "",
+                "ImageChibi": "OdinChibi.png",
+                "ImageChibiKai": "",
+                "ImageIcon": "OdinIcon.png",
+                "ImageIconKai": "",
+                "ImageKai": "",
+                "ImageShipyardIcon": "OdinShipyardIcon.png",
+                "ImageShipyardIconKai": "",
+                "JPName": "",
+                "KRName": "",
+                "LB1": "",
+                "LB2": "",
+                "LB3": "",
+                "Luck": "0",
+                "Name": "Odin",
+                "Nationality": "Ironblood",
+                "Oxygen120": "0",
+                "OxygenInitial": "0",
+                "OxygenKai": "0",
+                "OxygenKai120": "0",
+                "OxygenMax": "0",
+                "Rarity": "Priority",
+                "Reload120": "171",
+                "ReloadInitial": "63",
+                "ReloadKai": "0",
+                "ReloadKai120": "0",
+                "ReloadMax": "149",
+                "Remodel": "f",
+                "RemodelId": "",
+                "ShipGroup": "Research",
+                "ShipID": "Plan016",
+                "Speed": "30",
+                "SpeedKai": "0",
+                "SubtypeRetro": "",
+                "Torp120": "241",
+                "TorpInitial": "45",
+                "TorpKai": "0",
+                "TorpKai120": "0",
+                "TorpMax": "210",
+                "Type": "Battlecruiser",
+                "VA": "[https://en.wikipedia.org/wiki/Yuki_Matsuoka Matsuoka Yuki]",
+                "Voiced": ""
+            }
+        },
+        {
+            "title": {
+                "AA120": "241",
+                "AAInitial": "45",
+                "AAKai": "0",
+                "AAKai120": "0",
+                "AAMax": "210",
+                "ASW120": "0",
+                "ASWInitial": "0",
+                "ASWKai": "0",
+                "ASWKai120": "0",
+                "ASWMax": "0",
+                "Acc120": "77",
+                "AccInitial": "26",
+                "AccKai": "0",
+                "AccKai120": "0",
+                "AccMax": "68",
+                "Air120": "0",
+                "AirInitial": "0",
+                "AirKai": "0",
+                "AirKai120": "0",
+                "AirMax": "0",
+                "Ammo120": "0",
+                "AmmoInitial": "0",
+                "AmmoKai": "0",
+                "AmmoKai120": "0",
+                "AmmoMax": "0",
+                "Armor": "Medium",
+                "ArmorKai": "Medium",
+                "Artist": "nineo",
+                "ArtistLink": "[https://www.weibo.com/p/1005051869856223 \u9000\u5802\u9f13\u624bnineo]",
+                "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2827978 nineo]",
+                "ArtistTwitter": "[https://twitter.com/nineeeeeeeeo nineeeeeo]",
+                "CNName": "",
+                "Class": "",
+                "ConstructTime": "Research",
+                "Consumption120": "16",
+                "ConsumptionInitial": "9",
+                "ConsumptionKai": "0",
+                "ConsumptionKai120": "0",
+                "ConsumptionMax": "16",
+                "Eq1EffInit": "140%",
+                "Eq1EffInitKai": "",
+                "Eq1EffInitMax": "180%",
+                "Eq1Type": "BB Guns",
+                "Eq2EffInit": "200%",
+                "Eq2EffInitKai": "",
+                "Eq2EffInitMax": "200%",
+                "Eq2Type": "CL/DD Guns",
+                "Eq3EffInit": "70%",
+                "Eq3EffInitKai": "",
+                "Eq3EffInitMax": "80%",
+                "Eq3Type": "Anti-Air Guns",
+                "Evade120": "36",
+                "EvadeInitial": "10",
+                "EvadeKai": "0",
+                "EvadeKai120": "0",
+                "EvadeMax": "25",
+                "Fire120": "454",
+                "FireInitial": "88",
+                "FireKai": "0",
+                "FireKai120": "0",
+                "FireMax": "412",
+                "Health120": "6896",
+                "HealthInitial": "1170",
+                "HealthKai": "0",
+                "HealthKai120": "0",
+                "HealthMax": "6049",
+                "Image": "Champagne.png",
+                "ImageBanner": "ChampagneBanner.png",
+                "ImageBannerKai": "",
+                "ImageChibi": "ChampagneChibi.png",
+                "ImageChibiKai": "",
+                "ImageIcon": "ChampagneIcon.png",
+                "ImageIconKai": "",
+                "ImageKai": "",
+                "ImageShipyardIcon": "ChampagneShipyardIcon.png",
+                "ImageShipyardIconKai": "",
+                "JPName": "",
+                "KRName": "",
+                "LB1": "",
+                "LB2": "",
+                "LB3": "",
+                "Luck": "0",
+                "Name": "Champagne",
+                "Nationality": "Iris Libre",
+                "Oxygen120": "0",
+                "OxygenInitial": "0",
+                "OxygenKai": "0",
+                "OxygenKai120": "0",
+                "OxygenMax": "0",
+                "Rarity": "Priority",
+                "Reload120": "181",
+                "ReloadInitial": "66",
+                "ReloadKai": "0",
+                "ReloadKai120": "0",
+                "ReloadMax": "157",
+                "Remodel": "f",
+                "RemodelId": "",
+                "ShipGroup": "Research",
+                "ShipID": "Plan017",
+                "Speed": "32",
+                "SpeedKai": "0",
+                "SubtypeRetro": "",
+                "Torp120": "0",
+                "TorpInitial": "0",
+                "TorpKai": "0",
+                "TorpKai120": "0",
+                "TorpMax": "0",
+                "Type": "Battleship",
+                "VA": "[https://en.wikipedia.org/wiki/Lynn_(voice_actress) Lynn]",
+                "Voiced": ""
+            }
+        },
+        {
+            "title": {
                 "AA120": "23",
                 "AAInitial": "10",
                 "AAKai": "0",
@@ -5013,7 +5583,7 @@
                 "TorpMax": "248",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Ayano_Niina|Ayano Niina]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -5735,7 +6305,7 @@
                 "ArtistTwitter": "[https://twitter.com/lino__ Lino]",
                 "CNName": "\u6492\u5207\u5c14",
                 "Class": "Fletcher",
-                "ConstructTime": "00:28:00",
+                "ConstructTime": "Drop Only",
                 "Consumption120": "8",
                 "ConsumptionInitial": "2",
                 "ConsumptionKai": "0",
@@ -7780,7 +8350,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u516b\u624d\u63d0\u7763",
                 "ArtistLink": "[http://weibo.com/vihao \u516b\u624d\u63d0\u7763]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1393609 \u30cf\u30aa]",
@@ -7863,7 +8433,7 @@
                 "TorpMax": "0",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:ja:\u5800\u7c60\u6c99\u8036|Saya Horigome]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -8578,7 +9148,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "Saru(\u7334\u5988)",
                 "ArtistLink": "[http://weibo.com/p/1005051054234800 \u6d45\u4e95\u7334\u7334_Saru]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1422579 Saru]",
@@ -8661,7 +9231,7 @@
                 "TorpMax": "0",
                 "Type": "Heavy Cruiser",
                 "VA": "[http://www.rme.jp/talent/women/aya-yokota.html Aya Yokota]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -9604,7 +10174,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Heavy",
-                "ArmorKai": "",
+                "ArmorKai": "Heavy",
                 "Artist": "SA",
                 "ArtistLink": "[http://weibo.com/u/3405529060 SA_\u6ca1\u65f6\u95f4\u6478\u9c7c\u7684\u6478\u9c7c\u72c2\u9b54]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=5529284 S A~]",
@@ -9687,7 +10257,7 @@
                 "TorpMax": "0",
                 "Type": "Battleship",
                 "VA": "[[:wikipedia:ja:\u767d\u58c1\u723d\u5b50|Sawako Shirakabe]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -11625,7 +12195,7 @@
                 "TorpMax": "0",
                 "Type": "Aircraft Carrier",
                 "VA": "[[:wikipedia:Nozomi_Yamamoto|Nozomi Yamamoto]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -12081,7 +12651,7 @@
                 "TorpMax": "320",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Kaya Okuno|Kaya Okuno]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -12226,7 +12796,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u6797\u5927B",
                 "ArtistLink": "[https://weibo.com/312444618 \u6797\u5927B]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1245646 \u6797\u5927B]",
@@ -12309,7 +12879,7 @@
                 "TorpMax": "315",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Eri_Suzuki|Eri Suzuki]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -12651,7 +13221,7 @@
                 "TorpMax": "310",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Minori_Suzuki|Minori Suzuki]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -12765,7 +13335,7 @@
                 "TorpMax": "310",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Risa_Taneda|Risa Taneda]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -12917,7 +13487,7 @@
                 "ArtistTwitter": "",
                 "CNName": "\u547d\u8fd0\u5973\u795e",
                 "Class": "F",
-                "ConstructTime": "00:24:00",
+                "ConstructTime": "Drop Only",
                 "Consumption120": "8",
                 "ConsumptionInitial": "2",
                 "ConsumptionKai": "8",
@@ -13715,7 +14285,7 @@
                 "ArtistTwitter": "[https://twitter.com/saru_1127 Saru]",
                 "CNName": "\u5438\u8840\u9b3c",
                 "Class": "V",
-                "ConstructTime": "00:18:00",
+                "ConstructTime": "Cannot Be Constructed",
                 "Consumption120": "9",
                 "ConsumptionInitial": "2",
                 "ConsumptionKai": "0",
@@ -14019,7 +14589,7 @@
                 "TorpMax": "286",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:Yuri_Yamaoka|Yuri Yamaoka]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -14627,7 +15197,7 @@
                 "ArtistTwitter": "[https://twitter.com/JackNavy6 JackNavy]",
                 "CNName": "\u7231\u4e01\u5821",
                 "Class": "Town",
-                "ConstructTime": "01:25:00",
+                "ConstructTime": "Cannot Be Constructed",
                 "Consumption120": "10",
                 "ConsumptionInitial": "3",
                 "ConsumptionKai": "0",
@@ -16413,7 +16983,7 @@
                 "TorpMax": "0",
                 "Type": "Battlecruiser",
                 "VA": "[[:wikipedia:Atsuko_Tanaka_(voice_actress)|Atsuko Tanaka]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -18123,7 +18693,7 @@
                 "TorpMax": "0",
                 "Type": "Monitor",
                 "VA": "[[:wikipedia:ja:\u5800\u7c60\u6c99\u8036|Saya Horigome]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -18351,7 +18921,7 @@
                 "TorpMax": "463",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Mao_Ichimichi|M\u30fbA\u30fbO]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -18807,7 +19377,7 @@
                 "TorpMax": "448",
                 "Type": "Destroyer",
                 "VA": "[https://www.imdb.com/name/nm5877942/ Kazusa Aranami]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -18838,7 +19408,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u5927\u6708\u7d05\u8449",
                 "ArtistLink": "[http://weibo.com/ootsukimomiji \u5927\u6708\u7d05\u8449]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=591937 \u5927\u6708\u7d05\u8449]",
@@ -18921,7 +19491,7 @@
                 "TorpMax": "448",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Emiri_Kat%C5%8D|Emiri Katou]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -21574,7 +22144,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "kisetsu",
                 "ArtistLink": "[https://weibo.com/kisetsu2010 K\u7bb1junior]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=317823 K\u7bb1]",
@@ -21657,7 +22227,7 @@
                 "TorpMax": "165",
                 "Type": "Heavy Cruiser",
                 "VA": "[[:wikipedia:Akari_Kageyama|Akari Kageyama]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -22030,7 +22600,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "\u9244\u4eba\u6843\u5b50",
                 "ArtistLink": "",
                 "ArtistPixiv": "[https://www.pixiv.net/fanbox/creator/54749 \u9244\u4eba\u6843\u5b50]",
@@ -22113,7 +22683,7 @@
                 "TorpMax": "194",
                 "Type": "Heavy Cruiser",
                 "VA": "[[:wikipedia:Chiwa_Sait%C5%8D|Chiwa Saitou]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -22600,7 +23170,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "Criin",
                 "ArtistLink": "[https://weibo.com/cirini Hanasa_\u82b1\u6d12]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=4460847 Criin]",
@@ -22683,7 +23253,7 @@
                 "TorpMax": "0",
                 "Type": "Battlecruiser",
                 "VA": "[[:wikipedia:Chiwa_Sait%C5%8D|Chiwa Saitou]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -22828,7 +23398,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Medium",
-                "ArmorKai": "",
+                "ArmorKai": "Medium",
                 "Artist": "Criin",
                 "ArtistLink": "[https://weibo.com/cirini Hanasa_\u82b1\u6d12]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=4460847 Criin]",
@@ -22911,7 +23481,7 @@
                 "TorpMax": "0",
                 "Type": "Battlecruiser",
                 "VA": "[[:wikipedia:Sayaka_Harada|Sayaka Harada]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -23595,7 +24165,7 @@
                 "TorpMax": "0",
                 "Type": "Battleship",
                 "VA": "[[:wikipedia:Misaki_Kuno|Misaki Kuno]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -24849,7 +25419,7 @@
                 "TorpMax": "0",
                 "Type": "Aircraft Carrier",
                 "VA": "[[:wikipedia:Shizuka_Ishigami|Shizuka Ishigami]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -27160,7 +27730,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u9ebb\u9171",
                 "ArtistLink": "[http://weibo.com/u/3032064021 \u795e\u5317\u5c0f\u6bec_]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1480584 \u795e\u5317\u5c0f\u6bec]",
@@ -27243,7 +27813,7 @@
                 "TorpMax": "198",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Kana_Asumi|Kana Asumi]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -28041,7 +28611,7 @@
                 "TorpMax": "194",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:Marie_Miyake|Marie Miyake]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -28155,7 +28725,7 @@
                 "TorpMax": "282",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Eri_Suzuki|Eri Suzuki]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -30694,7 +31264,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u4e91\u6851",
                 "ArtistLink": "[https://weibo.com/yunsang -\u4e91\u6851]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=5358936 \u96f2\u6851]",
@@ -30777,7 +31347,7 @@
                 "TorpMax": "0",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:Y%C5%8Dko_Hikasa|Yoko Hikasa]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -32062,7 +32632,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u548c\u8336",
                 "ArtistLink": "[https://weibo.com/538001251 \u548c\u8336_]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=3312169 \u548c\u8336]",
@@ -32145,7 +32715,7 @@
                 "TorpMax": "313",
                 "Type": "Light Cruiser",
                 "VA": "[[:wikipedia:Haruka_Shiraishi|Haruka Shiraishi]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -33057,7 +33627,7 @@
                 "TorpMax": "461",
                 "Type": "Destroyer",
                 "VA": "[[:wikipedia:Yuiko_Tatsumi|Yuiko Tatsumi]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -33316,7 +33886,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "alic\u55b5",
                 "ArtistLink": "[https://weibo.com/u/5933724645 alic\u55b5]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=4605939 Alic]",
@@ -33399,7 +33969,7 @@
                 "TorpMax": "463",
                 "Type": "Destroyer",
                 "VA": "[http://www.rme.jp/talent/women/hikaru-aono.html Hikaru Aono]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -33544,7 +34114,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "0",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u9ed1\u732b",
                 "ArtistLink": "[http://weibo.com/u/2959771544 \u9ed1\u732b\u6843\u56ed-\u4e13\u6ce8\u6f5c\u6c3420\u5e74]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2331978 \u8fd1\u6240\u9ed2\u30e2\u30e2]",
@@ -33627,7 +34197,7 @@
                 "TorpMax": "0",
                 "Type": "Monitor",
                 "VA": "[[:wikipedia:Juri_Nagatsuma|Juri Nagatsuma]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -33886,7 +34456,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "2",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "\u714e\u8def",
                 "ArtistLink": "[http://tegone.sblo.jp/ TegoneSpike]",
                 "ArtistPixiv": "[https://www.pixiv.net/member.php?id=47406 \u714e\u8def(\u305b\u3093\u3058)]",
@@ -33969,7 +34539,7 @@
                 "TorpMax": "472",
                 "Type": "Submarine",
                 "VA": "[[:wikipedia:Kaori_Ishihara|Kaori Ishihara]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -41068,7 +41638,7 @@
                 "AmmoKai120": "0",
                 "AmmoMax": "2",
                 "Armor": "Light",
-                "ArmorKai": "",
+                "ArmorKai": "Light",
                 "Artist": "",
                 "ArtistLink": "",
                 "ArtistPixiv": "",
@@ -41151,7 +41721,7 @@
                 "TorpMax": "477",
                 "Type": "Submarine",
                 "VA": "[[:wikipedia:Yurika_Kubo|Yurika Kubo]]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -42291,7 +42861,7 @@
                 "TorpMax": "131",
                 "Type": "Battleship",
                 "VA": "[https://www.imdb.com/name/nm3646875/ Ayaka Shimizu]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {
@@ -46736,8 +47306,8 @@
                 "TorpKai120": "0",
                 "TorpMax": "244",
                 "Type": "Light Cruiser",
-                "VA": "",
-                "Voiced": ""
+                "VA": "[[:wikipedia:Yui_Makino|Yui Makino]]",
+                "Voiced": "1"
             }
         },
         {
@@ -46851,7 +47421,7 @@
                 "TorpMax": "244",
                 "Type": "Destroyer",
                 "VA": "[https://www.imdb.com/name/nm9806307/ Eri Yukimura]",
-                "Voiced": "1"
+                "Voiced": ""
             }
         },
         {

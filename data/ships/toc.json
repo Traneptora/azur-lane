@@ -196,6 +196,31 @@
             "dataJSON": "ships/by-id/Plan012/ship.json"
         },
         {
+            "Name": "Cheshire",
+            "ShipID": "Plan013",
+            "dataJSON": "ships/by-id/Plan013/ship.json"
+        },
+        {
+            "Name": "Drake",
+            "ShipID": "Plan014",
+            "dataJSON": "ships/by-id/Plan014/ship.json"
+        },
+        {
+            "Name": "Mainz",
+            "ShipID": "Plan015",
+            "dataJSON": "ships/by-id/Plan015/ship.json"
+        },
+        {
+            "Name": "Odin",
+            "ShipID": "Plan016",
+            "dataJSON": "ships/by-id/Plan016/ship.json"
+        },
+        {
+            "Name": "Champagne",
+            "ShipID": "Plan017",
+            "dataJSON": "ships/by-id/Plan017/ship.json"
+        },
+        {
             "Name": "Universal Bulin",
             "ShipID": "001",
             "dataJSON": "ships/by-id/001/ship.json"

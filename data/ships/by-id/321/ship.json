@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u548c\u8336",
     "ArtistLink": "[https://weibo.com/538001251 \u548c\u8336_]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=3312169 \u548c\u8336]",
@@ -108,5 +108,5 @@
     "TorpMax": "313",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Haruka_Shiraishi|Haruka Shiraishi]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

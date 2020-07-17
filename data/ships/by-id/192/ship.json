@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "kisetsu",
     "ArtistLink": "[https://weibo.com/kisetsu2010 K\u7bb1junior]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=317823 K\u7bb1]",
@@ -108,5 +108,5 @@
     "TorpMax": "165",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Akari_Kageyama|Akari Kageyama]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

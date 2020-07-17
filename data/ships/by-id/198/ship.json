@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "\u9244\u4eba\u6843\u5b50",
     "ArtistLink": "",
     "ArtistPixiv": "[https://www.pixiv.net/fanbox/creator/54749 \u9244\u4eba\u6843\u5b50]",
@@ -108,5 +108,5 @@
     "TorpMax": "194",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Chiwa_Sait%C5%8D|Chiwa Saitou]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

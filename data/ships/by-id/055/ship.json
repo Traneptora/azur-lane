@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Heavy",
-    "ArmorKai": "",
+    "ArmorKai": "Heavy",
     "Artist": "SA",
     "ArtistLink": "[http://weibo.com/u/3405529060 SA_\u6ca1\u65f6\u95f4\u6478\u9c7c\u7684\u6478\u9c7c\u72c2\u9b54]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=5529284 S A~]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Battleship",
     "VA": "[[:wikipedia:ja:\u767d\u58c1\u723d\u5b50|Sawako Shirakabe]]",
-    "Voiced": "1"
+    "Voiced": ""
 }
