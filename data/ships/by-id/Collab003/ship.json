@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u3064\u306a\u3053",
     "ArtistLink": "[http://mayo.warabimochi.net \u3064\u306a\u3053]",
     "ArtistPixiv": "",
@@ -108,5 +108,5 @@
     "TorpMax": "396",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Kana_Asumi|Kana Asumi]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

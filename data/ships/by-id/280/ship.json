@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u6708\u89c1",
     "ArtistLink": "[http://www.weibo.com/p/1005051807769224 _\u6708\u89c1__]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=786200 \u6708\u89c1]",
@@ -108,5 +108,5 @@
     "TorpMax": "385",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Mako_(voice_actress)|Mako]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

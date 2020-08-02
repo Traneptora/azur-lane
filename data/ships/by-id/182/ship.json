@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u5927\u6708\u7d05\u8449",
     "ArtistLink": "[http://weibo.com/ootsukimomiji \u5927\u6708\u7d05\u8449]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=591937 \u5927\u6708\u7d05\u8449]",
@@ -108,5 +108,5 @@
     "TorpMax": "244",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Akari_Kit%C5%8D|Akari Kitou]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

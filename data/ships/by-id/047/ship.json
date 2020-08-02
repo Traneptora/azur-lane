@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "Sky-FreeDom",
     "ArtistLink": "[https://weibo.com/skyfreedom Sky-FreeDom]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1017056 \u30b9\u30ab\u30a4]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Minami_Tsuda|Minami Tsuda]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

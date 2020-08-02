@@ -45,7 +45,7 @@
     "Eq2EffInit": "100%",
     "Eq2EffInitKai": "145%",
     "Eq2EffInitMax": "130%",
-    "Eq2Type": "DD Guns/Fighters on first Limit Break",
+    "Eq2Type": "DD Guns (Fighters on LB1)",
     "Eq3EffInit": "80%",
     "Eq3EffInitKai": "85%",
     "Eq3EffInitMax": "80%",
@@ -77,7 +77,7 @@
     "ImageShipyardIconKai": "LangleyKaiShipyardIcon.png",
     "JPName": "\u30e9\u30f3\u30b0\u30ec\u30fc",
     "KRName": "\ub7ad\uae00\ub9ac",
-    "LB1": "Number of Fighters +1 / Fighter Efficiency +3%",
+    "LB1": "Number of Fighters +1 / Fighter Efficiency +3% / Slot 2 changes from DD Guns to Fighters / Slot 2 Efficiency 115%",
     "LB2": "Hangar Capacity +1 / Number of Fighters +1 / Fighter Efficiency +5%",
     "LB3": "Number of Dive Bombers +1 / Fighter Efficiency +7%",
     "Luck": "32",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Light Aircraft Carrier",
     "VA": "[[:wikipedia:Haruka_Yoshimura|Haruka Yoshimura]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

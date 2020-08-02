@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "realmbw",
     "ArtistLink": "[http://weibo.com/realmbw realmbw_\u778c\u7761\u9b54]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=529070 RJ]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Heavy Cruiser",
     "VA": "[https://twitter.com/takao_koi Takao Koizumi]",
-    "Voiced": "1"
+    "Voiced": ""
 }

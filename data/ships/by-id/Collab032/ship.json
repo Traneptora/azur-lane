@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u7518\u9732\u6a39",
     "ArtistLink": "",
     "ArtistPixiv": "",
@@ -108,5 +108,5 @@
     "TorpMax": "316",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Inori_Minase|Inori Minase]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

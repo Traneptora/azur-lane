@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "6\u97f3",
     "ArtistLink": "",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=2118700 6\u97f3]",
@@ -108,5 +108,5 @@
     "TorpMax": "324",
     "Type": "Destroyer",
     "VA": "[http://www.rme.jp/talent/women/miho-takauma.html Miho Takauma]",
-    "Voiced": "1"
+    "Voiced": ""
 }

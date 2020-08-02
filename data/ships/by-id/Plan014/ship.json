@@ -30,7 +30,7 @@
     "ArtistLink": "",
     "ArtistPixiv": "",
     "ArtistTwitter": "",
-    "CNName": "",
+    "CNName": "\u5fb7\u96f7\u514b",
     "Class": "",
     "ConstructTime": "Research",
     "Consumption120": "15",
@@ -75,7 +75,7 @@
     "ImageKai": "",
     "ImageShipyardIcon": "DrakeShipyardIcon.png",
     "ImageShipyardIconKai": "",
-    "JPName": "",
+    "JPName": "\u30c9\u30ec\u30a4\u30af",
     "KRName": "",
     "LB1": "",
     "LB2": "",
@@ -107,6 +107,6 @@
     "TorpKai120": "0",
     "TorpMax": "213",
     "Type": "Heavy Cruiser",
-    "VA": "[https://en.wikipedia.org/wiki/Asami_Imai Imai Asami]",
+    "VA": "[[:wikipedia:Asami_Imai|Asami Imai]]",
     "Voiced": ""
 }

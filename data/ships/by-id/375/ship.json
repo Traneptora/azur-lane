@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "TwinBox",
     "ArtistLink": "[https://www.twinbox-tb.com/ Twinbox]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=264932 TwinBox]",
@@ -108,5 +108,5 @@
     "TorpMax": "255",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Asuka_%C5%8Cgame|Asuka Oogame]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

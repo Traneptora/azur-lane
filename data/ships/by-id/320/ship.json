@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Heavy",
-    "ArmorKai": "",
+    "ArmorKai": "Heavy",
     "Artist": "Criin",
     "ArtistLink": "[https://weibo.com/cirini Hanasa_\u82b1\u6d12]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=4460847 Criin]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Battleship",
     "VA": "[[:wikipedia:Sayaka_Ohara|Sayaka Ohara]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

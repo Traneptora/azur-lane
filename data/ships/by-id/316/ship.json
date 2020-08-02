@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "AO\u51f9\u51f9\u51f9",
     "ArtistLink": "[https://www.weibo.com/ultramnnice AO\u51f9\u51f9\u51f9]",
     "ArtistPixiv": "[https://www.pixiv.net/member_illust.php?id=1248744 AO\u51f9\u541b]",
@@ -108,5 +108,5 @@
     "TorpMax": "456",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Minami_Tanaka|Minami Tanaka]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

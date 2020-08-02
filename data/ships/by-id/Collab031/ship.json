@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "\u7518\u9732\u6a39",
     "ArtistLink": "",
     "ArtistPixiv": "",
@@ -108,5 +108,5 @@
     "TorpMax": "172",
     "Type": "Heavy Cruiser",
     "VA": "[[:wikipedia:Risa_Taneda|Risa Taneda]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

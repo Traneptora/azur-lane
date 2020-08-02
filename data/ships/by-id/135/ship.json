@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Heavy",
-    "ArmorKai": "",
+    "ArmorKai": "Heavy",
     "Artist": "Enka",
     "ArtistLink": "[https://weibo.com/maoqishi Enka\u63d0\u4e0d\u8d77\u52b2]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=3321609 Enka]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Battleship",
     "VA": "[[:wikipedia:Chinami_Hashimoto|Chinami Hashimoto]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

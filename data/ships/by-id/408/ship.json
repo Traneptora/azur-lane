@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u6c34\u4e4c\u9f9fXD",
     "ArtistLink": "[https://www.weibo.com/suisao \u6c34\u4e4c\u9f9fXD]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1596981 Suisai\u2764]",
@@ -108,5 +108,5 @@
     "TorpMax": "133",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Hisako_Kanemoto|Hisako Kanemoto]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

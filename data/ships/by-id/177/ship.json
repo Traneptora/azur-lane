@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u54c8\u8def\u5361",
     "ArtistLink": "[https://weibo.com/u/1952889047 \u753b\u591a\u70b9-\u54c8\u8def\u5361]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=12785336 \u54c8\u8def\u5361]",
@@ -108,5 +108,5 @@
     "TorpMax": "466",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Y%C5%ABko_%C5%8Cno|Yuuko Oono]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

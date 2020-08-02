@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "PHI",
     "ArtistLink": "[https://www.weibo.com/208827897 \u4e00PHI\u4e00]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=272220 PHI]",
@@ -108,5 +108,5 @@
     "TorpMax": "247",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Akane_Fujita|Akane Fujita]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

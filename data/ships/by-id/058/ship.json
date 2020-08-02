@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Heavy",
-    "ArmorKai": "",
+    "ArmorKai": "Heavy",
     "Artist": "\u5c0f\u53f6",
     "ArtistLink": "[http://weibo.com/u/1810348711 xiao\u8449\u6709\u56cd\u662fAI]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=617248 xiao\u8449\u6709\u56cd]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Battleship",
     "VA": "[[:wikipedia:Rina_Sat%C5%8D|Rina Satou]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

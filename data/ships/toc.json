@@ -791,6 +791,11 @@
             "dataJSON": "ships/by-id/142/ship.json"
         },
         {
+            "Name": "Eagle",
+            "ShipID": "143",
+            "dataJSON": "ships/by-id/143/ship.json"
+        },
+        {
             "Name": "Ark Royal",
             "ShipID": "144",
             "dataJSON": "ships/by-id/144/ship.json"
@@ -2094,6 +2099,31 @@
             "Name": "Eskimo",
             "ShipID": "460",
             "dataJSON": "ships/by-id/460/ship.json"
+        },
+        {
+            "Name": "Howe",
+            "ShipID": "461",
+            "dataJSON": "ships/by-id/461/ship.json"
+        },
+        {
+            "Name": "Perseus",
+            "ShipID": "462",
+            "dataJSON": "ships/by-id/462/ship.json"
+        },
+        {
+            "Name": "Hermione",
+            "ShipID": "463",
+            "dataJSON": "ships/by-id/463/ship.json"
+        },
+        {
+            "Name": "Valiant",
+            "ShipID": "464",
+            "dataJSON": "ships/by-id/464/ship.json"
+        },
+        {
+            "Name": "Icarus",
+            "ShipID": "465",
+            "dataJSON": "ships/by-id/465/ship.json"
         },
         {
             "Name": "Tone",

@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Medium",
-    "ArmorKai": "",
+    "ArmorKai": "Medium",
     "Artist": "\u86c6\u866b\u97f3",
     "ArtistLink": "[https://weibo.com/nnlsama \u86c6\u866b\u97f3POI_\u8695\u5148\u68ee]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1483756 MusyneXSK]",
@@ -108,5 +108,5 @@
     "TorpMax": "0",
     "Type": "Light Aircraft Carrier",
     "VA": "[[:wikipedia:Seiko_Yoshida|Seiko Yoshida]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u5927\u5618",
     "ArtistLink": "",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=457541 \u5927\u5618]",
@@ -108,5 +108,5 @@
     "TorpMax": "187",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Kana_Y%C5%ABki|Kana Yuuki]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

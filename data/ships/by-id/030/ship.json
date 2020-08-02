@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u9a6c\u7532",
     "ArtistLink": "",
     "ArtistPixiv": "",
@@ -108,5 +108,5 @@
     "TorpMax": "180",
     "Type": "Light Cruiser",
     "VA": "[[:wikipedia:Juri_Kimura|Juri Kimura]]",
-    "Voiced": "1"
+    "Voiced": ""
 }

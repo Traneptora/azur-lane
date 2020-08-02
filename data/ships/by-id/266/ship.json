@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "\u6a31\u5ead\u5149",
     "ArtistLink": "[https://weibo.com/u/5574429612 \u6afb\u5ead\u5149_]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=1423422 \u685c\u5ead\u3072\u304b\u308b ]",
@@ -108,5 +108,5 @@
     "TorpMax": "391",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Rina_Hidaka|Rina Hidaka]]",
-    "Voiced": "1"
+    "Voiced": ""
 }
