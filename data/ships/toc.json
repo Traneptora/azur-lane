@@ -2126,6 +2126,16 @@
             "dataJSON": "ships/by-id/465/ship.json"
         },
         {
+            "Name": "Z26",
+            "ShipID": "466",
+            "dataJSON": "ships/by-id/466/ship.json"
+        },
+        {
+            "Name": "U-96",
+            "ShipID": "467",
+            "dataJSON": "ships/by-id/467/ship.json"
+        },
+        {
             "Name": "Tone",
             "ShipID": "9001",
             "dataJSON": "ships/by-id/9001/ship.json"
@@ -2154,6 +2164,11 @@
             "Name": "Sovetsky Soyuz",
             "ShipID": "9009",
             "dataJSON": "ships/by-id/9009/ship.json"
+        },
+        {
+            "Name": "Le Terrible",
+            "ShipID": "",
+            "dataJSON": "ships/by-id//ship.json"
         }
     ]
 }
