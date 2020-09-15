@@ -25,7 +25,7 @@
     "AmmoKai120": "0",
     "AmmoMax": "0",
     "Armor": "Light",
-    "ArmorKai": "",
+    "ArmorKai": "Light",
     "Artist": "NoriZC",
     "ArtistLink": "[https://weibo.com/zicaitangxiansheng NoriZC]",
     "ArtistPixiv": "[https://www.pixiv.net/member.php?id=4592232 NoriZC]",
@@ -108,5 +108,5 @@
     "TorpMax": "362",
     "Type": "Destroyer",
     "VA": "[[:wikipedia:Madoka_Asahina|Madoka Asahina]]",
-    "Voiced": "1"
+    "Voiced": ""
 }
