@@ -78,7 +78,7 @@
     "JPName": "\u30b0\u30e9\u30fc\u30d5\u30fb\u30c4\u30a7\u30c3\u30da\u30ea\u30f3",
     "KRName": "\uadf8\ub77c\ud504 \uccb4\ud3a0\ub9b0",
     "LB1": "Number of Fighters +1 / Dive Bomber Efficiency +3%",
-    "LB2": "Hangar Capacity +1 / Number of Dive Bombers +1 / Dive Bomber Efficiency +5%",
+    "LB2": "Hangar Capacity +1 / Number of Dive Bombers +1 / &lt;div class=&quot;tooltip&quot; style=&quot;&quot;&gt;Dive Bomber Efficiency +5%&lt;div class=&quot;tooltiptext&quot; style=&quot;background-color:#202020;width:150px;top:100%;left:50%;margin-left:-75px;padding:2px 5px;font-size:80%;&quot;&gt;Game displays Fighter Efficiency +5%&lt;/div&gt;&lt;/div&gt;",
     "LB3": "Number of Dive Bombers +1 / Dive Bomber Efficiency +7%",
     "Luck": "45",
     "Name": "Graf Zeppelin",

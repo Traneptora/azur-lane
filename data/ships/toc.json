@@ -231,6 +231,11 @@
             "dataJSON": "ships/by-id/002/ship.json"
         },
         {
+            "Name": "Specialized Bulin Custom MKIII",
+            "ShipID": "003",
+            "dataJSON": "ships/by-id/003/ship.json"
+        },
+        {
             "Name": "Dewey",
             "ShipID": "004",
             "dataJSON": "ships/by-id/004/ship.json"
@@ -1071,6 +1076,11 @@
             "dataJSON": "ships/by-id/213/ship.json"
         },
         {
+            "Name": "Kii",
+            "ShipID": "214",
+            "dataJSON": "ships/by-id/214/ship.json"
+        },
+        {
             "Name": "Tosa",
             "ShipID": "215",
             "dataJSON": "ships/by-id/215/ship.json"
@@ -1134,6 +1144,11 @@
             "Name": "Taihou",
             "ShipID": "230",
             "dataJSON": "ships/by-id/230/ship.json"
+        },
+        {
+            "Name": "Shinano",
+            "ShipID": "231",
+            "dataJSON": "ships/by-id/231/ship.json"
         },
         {
             "Name": "Akashi",
@@ -2134,6 +2149,36 @@
             "Name": "U-96",
             "ShipID": "467",
             "dataJSON": "ships/by-id/467/ship.json"
+        },
+        {
+            "Name": "Suzutsuki",
+            "ShipID": "468",
+            "dataJSON": "ships/by-id/468/ship.json"
+        },
+        {
+            "Name": "Kumano",
+            "ShipID": "469",
+            "dataJSON": "ships/by-id/469/ship.json"
+        },
+        {
+            "Name": "Chitose",
+            "ShipID": "470",
+            "dataJSON": "ships/by-id/470/ship.json"
+        },
+        {
+            "Name": "Chiyoda",
+            "ShipID": "471",
+            "dataJSON": "ships/by-id/471/ship.json"
+        },
+        {
+            "Name": "Kashino",
+            "ShipID": "472",
+            "dataJSON": "ships/by-id/472/ship.json"
+        },
+        {
+            "Name": "Princeton",
+            "ShipID": "473",
+            "dataJSON": "ships/by-id/473/ship.json"
         },
         {
             "Name": "Tone",
