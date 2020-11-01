@@ -2181,6 +2181,46 @@
             "dataJSON": "ships/by-id/473/ship.json"
         },
         {
+            "Name": "Taihou \u00b5",
+            "ShipID": "474",
+            "dataJSON": "ships/by-id/474/ship.json"
+        },
+        {
+            "Name": "Tashkent \u00b5",
+            "ShipID": "475",
+            "dataJSON": "ships/by-id/475/ship.json"
+        },
+        {
+            "Name": "Dido \u00b5",
+            "ShipID": "476",
+            "dataJSON": "ships/by-id/476/ship.json"
+        },
+        {
+            "Name": "Albacore \u00b5",
+            "ShipID": "477",
+            "dataJSON": "ships/by-id/477/ship.json"
+        },
+        {
+            "Name": "Baltimore \u00b5",
+            "ShipID": "478",
+            "dataJSON": "ships/by-id/478/ship.json"
+        },
+        {
+            "Name": "Roon \u00b5",
+            "ShipID": "479",
+            "dataJSON": "ships/by-id/479/ship.json"
+        },
+        {
+            "Name": "Illustrious \u00b5",
+            "ShipID": "480",
+            "dataJSON": "ships/by-id/480/ship.json"
+        },
+        {
+            "Name": "Le Malin \u00b5",
+            "ShipID": "481",
+            "dataJSON": "ships/by-id/481/ship.json"
+        },
+        {
             "Name": "Tone",
             "ShipID": "9001",
             "dataJSON": "ships/by-id/9001/ship.json"
