@@ -26,7 +26,7 @@ function get_bbcooldown(weapon_cooldown, reload_stat, reload_percent_buff, has_t
 	}
 	init_cooldown = init_cooldown * (1.0 - init_cd_reduction / 100.0);
 	cooldown = cooldown * (1.0 - cd_reduction / 100.0);
-	init_cooldown += 2.5;
+	init_cooldown += 1.5;
 
 	if (cooldown > 0.0 && cooldown < 300.0 && init_cooldown > 0.0 && init_cooldown < 300.00){
 		let timer = init_cooldown;
