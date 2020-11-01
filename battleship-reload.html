@@ -52,21 +52,25 @@
 		<div style="text-align: center; width: 80%; margin: 0 auto;">
 		<p><div style="display: table; width: 100%; text-align: left;">
 			<p><div style="display: table-row;">
-				<div style="display: table-cell; text-align: left; padding-right: 15px;">Reload Stat:</div>
+				<div style="display: table-cell; text-align: left; padding-right: 15px;"><b>Reload Stat:</b></div>
 				<div style="display: table-cell; text-align: right;"><input type="text" id="bbreloadstattextfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="146"></div>
 			</div>
 			<div style="display: table-row;">
-				<div style="display: table-cell; text-align: left; padding-right: 15px;">Reload Percentage Buff:</div>
+				<div style="display: table-cell; text-align: left; padding-right: 15px;"><b>Reload Percentage Buff</b><br>(for example from Queen Elizabeth):</div>
 				<div style="display: table-cell; text-align: right;"><input type="text" id="bbreloadbufftextfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="0.0"></div>
 			</div>
 			<div style="display: table-row;">
-				<div style="display: table-cell; text-align: left; padding-right: 15px;">Cooldown Reduction Percent:</div>
+				<div style="display: table-cell; text-align: left; padding-right: 15px;"><b>Cooldown Reduction Percent</b><br>(for example on Champagne):</div>
 				<div style="display: table-cell; text-align: right;"><input type="text" id="cdreduction1textfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="0.0"></div>
+			</div>
+			<div style="display: table-row;">
+				<div style="display: table-cell; text-align: left; padding-right: 15px;"><b>Initial Cooldown Reduction Percent</b><br>(for example on King George V):</div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="cdreduction2textfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="0.0"></div>
 			</div></p>
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">
 					<input type="checkbox" onchange="update_guntextfields(); calculate_bbcooldown();" id="cdred2enablecb" style="margin-top: 5px; margin-bottom: 5px;">
-					<span style="margin-left; 5px;">Temporary Reload Buff?</span>
+					<span style="margin-left; 5px;"><b>Temporary Reload Buff?</b><br>(for example from Howe)</span>
 				</div>
 			</div>
 			<div id="cdredshowhide1" style="display: none; width: 100%;">
@@ -74,10 +78,10 @@
 				<div style="display: table-cell; text-align: right;"><input type="text" id="cdred2timetxtfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="8.0"></div>
 			</div><div id="cdredshowhide2" style="display: none; width: 100%;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Temp RLD Buff Percent:</div>
-				<div style="display: table-cell; text-align: right;"><input type="text" id="cdred2percenttxtfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="40.00"></div>
+				<div style="display: table-cell; text-align: right;"><input type="text" id="cdred2percenttxtfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="20.00"></div>
 			</div></p>
 			<p><div style="display: table-row;">
-				<div style="display: table-cell; text-align: left; padding-right: 15px;">Main Gun Cooldown:</div>
+				<div style="display: table-cell; text-align: left; padding-right: 15px;"><b>Main Gun Cooldown:</b></div>
 				<div style="display: table-cell; text-align: right;">
 					<select id="maingun1cddropdown" style="width: 225px;" onchange="update_guntextfields(); calculate_bbcooldown();">
 						<option name="HE" value="HE" disabled class="disabled-option">High Explosive</option>
@@ -103,13 +107,15 @@
 						<option name="quad356nomvp" value="36.87">Blue +0 Quad 356mm Main Gun</option>
 						<option name="unequipped" value="16.76">Stock Gun</option>
 						<option name="other" value="">Other</option>
-					</select>
+					</select><br>
 					<input type="text" id="maingun1cdtextfield" style="text-align: right; margin-left: 10px; margin-top: 5px; margin-bottom: 5px; width: 120px;" value="19.42">
 				</div>
 			</div></p>
 			<p>
-				<p><div style="float: left; margin: 1px;"><input type="checkbox" id="boomerfcrbox" onclick="javascript:calculate_bbcooldown();"></div><span style="margin-left: 5px;">Boomer FCR?</span></p>
-				<p>Main Gun Cooldown: <span id="finalbbcooldown"></span></p>
+				<p><div style="float: left; margin: 1px;"><input type="checkbox" id="boomerfcrbox" onclick="javascript:calculate_bbcooldown();"></div><span style="margin-left: 5px;"><b>High Standard FCR Equipped?</b></span></p>
+				<p><b>Main Gun Cooldown:</b> <span id="finalbbcooldown"></span></p>
+				<p><b>Main Gun First Cooldown:</b> <span id="initbbcooldown"></span></p>
+				<p><b>Main Gun Shot Timers:</b> <span id="finalbbshottimers"></span></p>
 				<p><input type="submit" value="Calculate Main Gun Cooldown"></p>
 			</p>
 		</div></p></div></form>
