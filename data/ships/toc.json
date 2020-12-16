@@ -1,6 +1,41 @@
 {
     "ships": [
         {
+            "Name": "Marie Rose",
+            "ShipID": "10061",
+            "dataJSON": "ships/by-id/10061/ship.json"
+        },
+        {
+            "Name": "Honoka",
+            "ShipID": "10062",
+            "dataJSON": "ships/by-id/10062/ship.json"
+        },
+        {
+            "Name": "Kasumi (DOA)",
+            "ShipID": "10063",
+            "dataJSON": "ships/by-id/10063/ship.json"
+        },
+        {
+            "Name": "Misaki",
+            "ShipID": "10064",
+            "dataJSON": "ships/by-id/10064/ship.json"
+        },
+        {
+            "Name": "Nagisa",
+            "ShipID": "10065",
+            "dataJSON": "ships/by-id/10065/ship.json"
+        },
+        {
+            "Name": "Nyotengu",
+            "ShipID": "10066",
+            "dataJSON": "ships/by-id/10066/ship.json"
+        },
+        {
+            "Name": "Monica",
+            "ShipID": "10067",
+            "dataJSON": "ships/by-id/10067/ship.json"
+        },
+        {
             "Name": "HDN Neptune",
             "ShipID": "Collab001",
             "dataJSON": "ships/by-id/Collab001/ship.json"
