@@ -10,7 +10,7 @@ jsonfile = open("shiplist.json", "w", encoding="UTF-8")
 json.dump(jsonlist, jsonfile, sort_keys=True, indent=4)
 jsonfile.close()
 
-toc = {"ships":[]}
+toc = {"ships":[], "carriers":[]}
 
 for entry in jsonlist["cargoquery"]:
     ship = entry["title"]
@@ -26,7 +26,11 @@ for entry in jsonlist["cargoquery"]:
     jsonfile = open(shipdir + "/ship.json", "w", encoding="UTF-8")
     json.dump(ship, jsonfile, sort_keys=True, indent=4)
     jsonfile.close()
-    toc["ships"].append({"ShipID":shipID, "Name":shipName, "dataJSON":(shipdir + "/ship.json")})
+    toc_entry = {"ShipID":shipID, "Name":shipName, "DataDir":shipdir, "dataJSON":(shipdir + "/ship.json")}
+    if ship["Type"] == "Light Aircraft Carrier" or ship["Type"] == "Aircraft Carrier":
+        toc_entry["carrierJSON"] = shipdir + "/carrier.json"
+        toc["carriers"].append(toc_entry)
+    toc["ships"].append(toc_entry)
 
 jsonfile = open("ships/toc.json", "w", encoding="UTF-8")
 json.dump(toc, jsonfile, sort_keys=True, indent=4)
