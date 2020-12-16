@@ -30,6 +30,7 @@ for entry in jsonlist["cargoquery"]:
     if ship["Type"] == "Light Aircraft Carrier" or ship["Type"] == "Aircraft Carrier":
         toc_entry["carrierJSON"] = shipdir + "/carrier.json"
         toc["carriers"].append(toc_entry)
+        parse_carrier_json(ship_json=ship, carrier_json_file=toc_entry["carrierJSON"])
     toc["ships"].append(toc_entry)
 
 jsonfile = open("ships/toc.json", "w", encoding="UTF-8")
