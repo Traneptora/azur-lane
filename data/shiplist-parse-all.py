@@ -2,6 +2,7 @@
 
 import json
 import os
+parse_carrier_json = __import__("shiplist-parse-carrier").parse_carrier_json
 
 jsonfile = open("shiplist.json", "r", encoding="UTF-8")
 jsonlist = json.load(jsonfile)
@@ -27,10 +28,13 @@ for entry in jsonlist["cargoquery"]:
     json.dump(ship, jsonfile, sort_keys=True, indent=4)
     jsonfile.close()
     toc_entry = {"ShipID":shipID, "Name":shipName, "DataDir":shipdir, "dataJSON":(shipdir + "/ship.json")}
-    if ship["Type"] == "Light Aircraft Carrier" or ship["Type"] == "Aircraft Carrier":
+    if ship["Type"] in ["Aircraft Carrier", "Light Aircraft Carrier"]:
         toc_entry["carrierJSON"] = shipdir + "/carrier.json"
         toc["carriers"].append(toc_entry)
-        parse_carrier_json(ship_json=ship, carrier_json_file=toc_entry["carrierJSON"])
+        carrier_json = parse_carrier_json(ship_json=ship)
+        jsonfile = open(toc_entry["carrierJSON"], "w", encoding="UTF-8")
+        json.dump(carrier_json, jsonfile, sort_keys=True, indent=4)
+        jsonfile.close()
     toc["ships"].append(toc_entry)
 
 jsonfile = open("ships/toc.json", "w", encoding="UTF-8")
