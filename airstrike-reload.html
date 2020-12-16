@@ -47,39 +47,6 @@
 		</header>
 	<hr>
 	<main>
-		<select id="planeselect" style="display: none;">
-			<option value="F" disabled class="disabled-option">Fighters</option>
-			<option name='hellcat' value="10.90">F6F Hellcat</option>
-			<option value="10.61">Sea Hornet</option>
-			<option value="10.20">VF-17 ("Pirate Squad")</option>
-			<option value="10.70">N1K3-A Shiden Kai</option>
-			<option value="10.60">Seafang</option>
-			<option value="10.61">Sea Fury</option>
-			<option value="10.44">A7M Reppuu</option>
-			<option value="8.98">XF5F Skyrocket</option>
-			<option value="9.24">Messerschmitt Me-155A</option>
-			<option value="9.44">F2A Buffalo (Thatch Squadron)</option>
-			<option value="DB" disabled class="disabled-option">Dive Bombers</option>
-			<option name='helldiver' value="11.88">SB2C Helldiver</option>
-			<option value="10.44">Comet / D4Y Suisei</option>
-			<option value="11.11">Fairey Firefly</option>
-			<option value="10.38">Fairey Barracuda (831 Squadron)</option>
-			<option value="9.18">Fairey Fulmar</option>
-			<option value="11.71">SBD Dauntless (McClusky)</option>
-			<option value="11.57">Junkers Ju-87c</option>
-			<option value="TB" disabled class="disabled-option">Torpedo Bombers</option>
-			<option value="10.31">Barracuda</option>
-			<option value="9.98">Fairey Albacore</option>
-			<option name='ryusei' value="11.37">Aichi B7A Ryusei</option>
-			<option value="10.97">Swordfish (818 Squadron)</option>
-			<option value="12.04">TBM Avenger (VT-18 Squadron)</option>
-			<option value="12.04">Torpedo VT-8 Squadron</option>
-			<option value="Other" disabled class="disabled-option">Other</option>
-			<option value="14.30">Aichi M6A Seiran</option>
-			<option value="13.97">Aichi E16A Zuiun</option>
-			<option value="Don't Use Slot">Don't Use Slot</option>
-			<option value="">Other</option>
-		</select>
 		<p>Instructions: Enter the absolute cooldown for each plane slot (in seconds), as well as the planecount for that slot. If a carrier only has two plane slots, or has two identical planes in different slots, feel free to leave the third plane type out of the calculation simply by setting the planecount to zero. Also enter the raw reload stat for the carrier in question, and the percentage reload buff, if any.</p>
 		<form action="javascript:calculate_reload();">
 		<div style="text-align: center; width: 80%; margin: 0 auto;">
@@ -95,7 +62,11 @@
 			<div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">Cooldown Reduction Percent:</div>
 				<div style="display: table-cell; text-align: right;"><input type="text" id="cooldownreductiontextfield" style="margin-top: 5px; margin-bottom: 5px; width: 120px; text-align: right;" value="0.0"></div>
-			</div></p>
+			</div>
+            <div style="display: table-row;">
+                <div style="display: table-cell; text-align: left; padding-right: 15px;">Use Loadout From Carrier:</div>
+                <div style="display: table-cell; text-align: right;"><select id="shipselect" onchange="acquire_loadout();" style="margin-top: 5px; margin-bottom: 5px; width: 225px; text-align: left;"></select></div>
+            </div></p>
 			<p><div style="display: table-row;">
 				<div style="display: table-cell; text-align: left; padding-right: 15px;">First Plane Cooldown:</div>
 				<div style="display: table-cell; text-align: right;">
