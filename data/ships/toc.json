@@ -197,6 +197,34 @@
             "dataJSON": "ships/by-id/148/ship.json"
         },
         {
+            "DataDir": "ships/by-id/208",
+            "Name": "Fusou",
+            "ShipID": "208",
+            "carrierJSON": "ships/by-id/208/carrier.json",
+            "dataJSON": "ships/by-id/208/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/209",
+            "Name": "Yamashiro",
+            "ShipID": "209",
+            "carrierJSON": "ships/by-id/209/carrier.json",
+            "dataJSON": "ships/by-id/209/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/210",
+            "Name": "Ise",
+            "ShipID": "210",
+            "carrierJSON": "ships/by-id/210/carrier.json",
+            "dataJSON": "ships/by-id/210/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/211",
+            "Name": "Hyuuga",
+            "ShipID": "211",
+            "carrierJSON": "ships/by-id/211/carrier.json",
+            "dataJSON": "ships/by-id/211/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/218",
             "Name": "Hiyou",
             "ShipID": "218",
@@ -1771,24 +1799,28 @@
             "DataDir": "ships/by-id/208",
             "Name": "Fusou",
             "ShipID": "208",
+            "carrierJSON": "ships/by-id/208/carrier.json",
             "dataJSON": "ships/by-id/208/ship.json"
         },
         {
             "DataDir": "ships/by-id/209",
             "Name": "Yamashiro",
             "ShipID": "209",
+            "carrierJSON": "ships/by-id/209/carrier.json",
             "dataJSON": "ships/by-id/209/ship.json"
         },
         {
             "DataDir": "ships/by-id/210",
             "Name": "Ise",
             "ShipID": "210",
+            "carrierJSON": "ships/by-id/210/carrier.json",
             "dataJSON": "ships/by-id/210/ship.json"
         },
         {
             "DataDir": "ships/by-id/211",
             "Name": "Hyuuga",
             "ShipID": "211",
+            "carrierJSON": "ships/by-id/211/carrier.json",
             "dataJSON": "ships/by-id/211/ship.json"
         },
         {
