@@ -1,5 +1,5 @@
 // planecounts and times must already be numbers
-function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count, plane3time, plane3count, reloadstat, reloadbuff, beacon, cooldown_reduction){
+function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count, plane3time, plane3count, reloadstat, reloadbuff, beacon, cooldown_reduction, init_cooldown_reduction){
 	let plane_count = plane1count + plane2count + plane3count;
 	if (plane_count <= 0){
 		return -1.0;
@@ -10,15 +10,27 @@ function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count
 	let weighted_cooldown_average = (plane1time * plane1count + plane2time * plane2count + plane3time * plane3count ) / plane_count;
 	let adjusted_reload = (1 + reloadstat / 100.0 * (1 + reloadbuff / 100.0));
 	let cooldown = Math.pow(adjusted_reload, -0.5) * 3.111269837 * weighted_cooldown_average;
+    let init_cooldown = cooldown;
+    let cd_reduction = +cooldown_reduction;
+    let init_cd_reduction = +init_cooldown_reduction;
 	if (beacon){
-		cooldown_reduction = +cooldown_reduction + 4.00;
+		cd_reduction = +cd_reduction + 4.00;
 	}
-	cooldown = 0.1 + cooldown * (1 - cooldown_reduction / 100.00);
-	if (cooldown > 0.0 && cooldown < 300.00){
-		return Math.round(cooldown * 100) / 100.00;
-	} else {
-		return -1.0;
-	}
+    init_cd_reduction += cd_reduction;
+    init_cooldown = init_cooldown * (1.0 - init_cd_reduction / 100.0);
+    cooldown = cooldown * (1.0 - cd_reduction / 100.0);
+    init_cooldown += 1.5;
+    if (cooldown > 0.0 && cooldown < 300.0 && init_cooldown > 0.0 && init_cooldown < 300.00){
+        let timer = init_cooldown;
+        let ret = [Math.round(cooldown * 100.00) / 100.00];
+        while (timer < 300.00){
+            ret.push(Math.round(timer * 100.00) / 100.00);
+            timer += cooldown;
+        }
+        return ret;
+    } else {
+        return [-1.0];
+    }
 }
 
 function calculate_reload(){
@@ -30,14 +42,19 @@ function calculate_reload(){
 	let plane2count = $("#plane2counttextfield").prop("value");
 	let plane3time = $("#plane3cdtextfield").prop("value");
 	let plane3count = $("#plane3counttextfield").prop("value");
-	let cooldown_reduction = $("#cooldownreductiontextfield").prop("value");
+	let cooldown_reduction = $("#cdreduction1textfield").prop("value");
+    let initial_cooldown_reduction = $("#cdreduction2textfield").prop("value");
 	let beacon = $("#beaconbox").is(":checked");
-	let cooldown = get_airstrike_cooldown(plane1time, +plane1count, plane2time, +plane2count, plane3time, +plane3count, +reloadstat, +reloadbuff, beacon, +cooldown_reduction);
-	if (cooldown > 0.0){
-		$("#finalcooldown").prop("innerHTML", cooldown + "s");
-	} else {
-		$("#finalcooldown").prop("innerHTML", "Some Error Occurred :(");
-	}
+	let cooldown = get_airstrike_cooldown(plane1time, +plane1count, plane2time, +plane2count, plane3time, +plane3count, +reloadstat, +reloadbuff, beacon, +cooldown_reduction, +initial_cooldown_reduction);
+    if (cooldown[0] > 0.0){
+        $("#finalcooldown").prop("innerHTML", cooldown.shift() + "s");
+        $("#initcooldown").prop("innerHTML", cooldown[0] + "s");
+        $("#finalstriketimers").prop("innerHTML", cooldown.join(", ") + "");
+    } else {
+        $("#finalcooldown").prop("innerHTML", "Some Error Occurred :(");
+        $("#initcooldown").prop("innerHTML", "");
+        $("#finalstriketimers").prop("innerHTML", "");
+    }
 }
 
 function update_textfields(idnumber){
