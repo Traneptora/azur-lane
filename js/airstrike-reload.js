@@ -19,7 +19,8 @@ function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count
     init_cd_reduction += cd_reduction;
     init_cooldown = init_cooldown * (1.0 - init_cd_reduction / 100.0);
     cooldown = cooldown * (1.0 - cd_reduction / 100.0);
-    init_cooldown += 1.5;
+    init_cooldown += 1.6;
+    cooldown += 0.1;
     if (cooldown > 0.0 && cooldown < 300.0 && init_cooldown > 0.0 && init_cooldown < 300.00){
         let timer = init_cooldown;
         let ret = [Math.round(cooldown * 100.00) / 100.00];
