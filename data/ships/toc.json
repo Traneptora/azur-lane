@@ -71,6 +71,13 @@
             "dataJSON": "ships/by-id/Collab057/ship.json"
         },
         {
+            "DataDir": "ships/by-id/30001",
+            "Name": "Hiryuu META",
+            "ShipID": "30001",
+            "carrierJSON": "ships/by-id/30001/carrier.json",
+            "dataJSON": "ships/by-id/30001/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/070",
             "Name": "Long Island",
             "ShipID": "070",
@@ -684,6 +691,13 @@
             "ShipID": "Collab057",
             "carrierJSON": "ships/by-id/Collab057/carrier.json",
             "dataJSON": "ships/by-id/Collab057/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/30001",
+            "Name": "Hiryuu META",
+            "ShipID": "30001",
+            "carrierJSON": "ships/by-id/30001/carrier.json",
+            "dataJSON": "ships/by-id/30001/ship.json"
         },
         {
             "DataDir": "ships/by-id/Plan001",
