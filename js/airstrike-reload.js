@@ -109,6 +109,8 @@ var fighters='' +
     '<option name="hellcat" value="10.90">F6F Hellcat</option>' +
     '<option value="10.61">Sea Hornet</option>' +
     '<option value="10.20">VF-17 ("Pirate Squad")</option>' + 
+    '<option value="10.77">F7F Tigercat</option>' +
+    '<option value="9.64">F8F Bearcat</option>' +
     '<option value="10.70">N1K3-A Shiden Kai</option>' +
     '<option value="10.60">Seafang</option>' +
     '<option value="10.61">Sea Fury</option>' +
@@ -123,6 +125,7 @@ var divebombers='' +
     '<option name="helldiver" value="11.88">SB2C Helldiver</option>' +
     '<option value="10.44">Comet / D4Y Suisei</option>' +
     '<option value="11.11">Fairey Firefly</option>' +
+    '<option value="11.91">Experimental XSB3C-1</option>' +
     '<option value="10.38">Fairey Barracuda (831 Squadron)</option>' +
     '<option value="9.18">Fairey Fulmar</option>' +
     '<option value="11.71">SBD Dauntless (McClusky)</option>' +
@@ -137,6 +140,8 @@ var torpedobombers='' +
     '<option value="10.97">Swordfish (818 Squadron)</option>' +
     '<option value="12.04">TBM Avenger (VT-18 Squadron)</option>' +
     '<option value="12.04">Torpedo VT-8 Squadron</option>' +
+    '<option value="10.51">Firecrest</option>' +
+    '<option value="11.64">Wyvern</option>' +
     '';
 
 var seaplanes='' +
