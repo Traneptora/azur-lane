@@ -142,6 +142,8 @@ var torpedobombers='' +
     '<option value="12.04">Torpedo VT-8 Squadron</option>' +
     '<option value="10.51">Firecrest</option>' +
     '<option value="11.64">Wyvern</option>' +
+    '<option value="11.17">Junkers Ju-87 D-4</option>' +
+    '<option value="12.17">XBT2D-1 Sky Pirate</option>' +
     '';
 
 var seaplanes='' +
