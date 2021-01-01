@@ -124,6 +124,7 @@ var divebombers='' +
     '<option value="DB" disabled class="disabled-option">Dive Bombers</option>' +
     '<option name="helldiver" value="11.88">SB2C Helldiver</option>' +
     '<option value="10.44">Comet / D4Y Suisei</option>' +
+    '<option value="9.98">Suisei Model 12A</option>' +
     '<option value="11.11">Fairey Firefly</option>' +
     '<option value="11.91">Experimental XSB3C-1</option>' +
     '<option value="10.38">Fairey Barracuda (831 Squadron)</option>' +
