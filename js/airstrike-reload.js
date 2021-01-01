@@ -151,6 +151,7 @@ var seaplanes='' +
     '<option value="Seaplane" disabled class="disabled-option">Seaplane</option>' +
     '<option value="14.30">Aichi M6A Seiran</option>' +
     '<option value="13.97">Aichi E16A Zuiun</option>' +
+    '<option value="12.97">Suisei Model 21</option>' +
     '';
 
 var otherplane='' +
