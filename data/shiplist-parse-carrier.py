@@ -2,7 +2,6 @@
 
 import json
 import re
-from itertools import product
 
 re_whitespace = re.compile(r'\s+')
 re_condition = re.compile(r'(\w+)(\(((\w+)on)?(\w+)\))?$')
@@ -10,11 +9,6 @@ re_f = re.compile(r'(fighter)[^\+]*(\+([0-9]))?$')
 re_d = re.compile(r'(divebomber)[^\+]*(\+([0-9]))?$')
 re_t = re.compile(r'(torpedobomber)[^\+]*(\+([0-9]))?$')
 re_s = re.compile(r'(seaplane)[^\+]*(\+([0-9]))?$')
-re_slot1 = re.compile(r'(slot1)[^\+]*(\+([0-9]))?$')
-re_slot2 = re.compile(r'(slot2)[^\+]*(\+([0-9]))?$')
-re_slot3 = re.compile(r'(slot3)[^\+]*(\+([0-9]))?$')
-re_all = re.compile(r'(allplanes)[^\+]*(\+([0-9]))?$')
-re_dict = {'F': re_f, 'D': re_d, 'T': re_t, 'S': re_s, '0': re_slot1, '1': re_slot2, '2': re_slot3, 'P': re_all}
 re_condition_parse = re.compile(r'(m)lb|lb([0-9])|(retrofit)')
 
 def parse_conditionless_type(equip_string):
@@ -64,36 +58,19 @@ def parse_equip_slot(equip_string):
                 lb_json_entry.update(base_state)
     return lb_json
 
-def parse_lb_upgrade(lb_upgrade_string):
-    option_list = re_whitespace.sub('', lb_upgrade_string.lower()).split('/')
-    sdict = {}
-    for option in option_list:
-        for k in re_dict:
-            m = re_dict[k].search(option)
-            if m and m.groups()[-1]:
-                sdict[k] = int(m.groups()[-1])
-    return sdict
-
 def parse_carrier_json(ship_json):
     slot_list = [parse_equip_slot(ship_json['Eq1Type']), parse_equip_slot(ship_json['Eq2Type']),  parse_equip_slot(ship_json['Eq3Type'])]
-    lb_upgrades = [{}, parse_lb_upgrade(ship_json['LB1']), parse_lb_upgrade(ship_json['LB2']), parse_lb_upgrade(ship_json['LB3']), {}]
-    for i,  j in product(range(3), range(5)):
-        slot = slot_list[i]
-        lb_upgrade = lb_upgrades[j]
-        for k in range(j, 5):
-            lb_state = slot[k]
-            for plane_type in lb_state.keys():
-                if plane_type in lb_upgrade:
-                    lb_state[plane_type] += lb_upgrade[plane_type]
-            if 'P' in lb_upgrade or str(i) in lb_upgrade:
-                for plane_type in 'F', 'D', 'T', 'S':
-                    if plane_type in lb_state:
-                        lb_state[plane_type] += lb_upgrade['P'] if 'P' in lb_upgrade else lb_upgrade[str(i)]
+    mlb_count = [ship_json['Eq1BaseMax'], ship_json['Eq2BaseMax'], ship_json['Eq3BaseMax']]
+    kai_count = [ship_json['Eq1BaseKai'], ship_json['Eq2BaseKai'], ship_json['Eq3BaseKai']]
     carrier_json = {'Slot1':{}, 'Slot2':{}, 'Slot3':{}}
     for i in range(3):
         slot_key = 'Slot' + str(i + 1)
-        lb_json = {'LB0':{}, 'LB1':{}, 'LB2':{}, 'MLB':{}, 'Retrofit':{}}
+        lb_json = {'MLB':{}, 'Retrofit':{}}
         carrier_json[slot_key] = lb_json
-        for j in range(5):
-            carrier_json[slot_key][list(lb_json.keys())[j]].update(slot_list[i][j])
+        carrier_json[slot_key]['MLB'].update(slot_list[i][3])
+        for key in carrier_json[slot_key]['MLB'].keys():
+            carrier_json[slot_key]['MLB'][key] = int(mlb_count[i])
+        carrier_json[slot_key]['Retrofit'].update(slot_list[i][4])
+        for key in carrier_json[slot_key]['Retrofit'].keys():
+            carrier_json[slot_key]['Retrofit'][key] = int(kai_count[i]) if int(kai_count[i]) != 0 else int(mlb_count[i])
     return carrier_json
