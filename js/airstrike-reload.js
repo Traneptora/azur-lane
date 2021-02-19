@@ -109,9 +109,9 @@ var fighters='' +
     '<option name="hellcat" value="10.90">F6F Hellcat</option>' +
     '<option value="10.61">Sea Hornet</option>' +
     '<option value="10.20">VF-17 ("Pirate Squad")</option>' + 
-    '<option value="10.77">F7F Tigercat</option>' +
+    '<option value="10.81">F7F Tigercat</option>' +
     '<option value="9.64">F8F Bearcat</option>' +
-    '<option value="10.70">N1K3-A Shiden Kai</option>' +
+    '<option value="10.71">N1K3-A Shiden Kai</option>' +
     '<option value="10.60">Seafang</option>' +
     '<option value="10.61">Sea Fury</option>' +
     '<option value="10.44">A7M Reppuu</option>' + 
