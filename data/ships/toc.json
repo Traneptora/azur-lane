@@ -78,6 +78,13 @@
             "dataJSON": "ships/by-id/30001/ship.json"
         },
         {
+            "DataDir": "ships/by-id/30002",
+            "Name": "Ark Royal META",
+            "ShipID": "30002",
+            "carrierJSON": "ships/by-id/30002/carrier.json",
+            "dataJSON": "ships/by-id/30002/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/070",
             "Name": "Long Island",
             "ShipID": "070",
@@ -712,6 +719,13 @@
             "ShipID": "30001",
             "carrierJSON": "ships/by-id/30001/carrier.json",
             "dataJSON": "ships/by-id/30001/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/30002",
+            "Name": "Ark Royal META",
+            "ShipID": "30002",
+            "carrierJSON": "ships/by-id/30002/carrier.json",
+            "dataJSON": "ships/by-id/30002/ship.json"
         },
         {
             "DataDir": "ships/by-id/Plan001",
@@ -3005,6 +3019,12 @@
             "dataJSON": "ships/by-id/434/ship.json"
         },
         {
+            "DataDir": "ships/by-id/435",
+            "Name": "Kirov",
+            "ShipID": "435",
+            "dataJSON": "ships/by-id/435/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/436",
             "Name": "Chapayev",
             "ShipID": "436",
@@ -3015,6 +3035,12 @@
             "Name": "Gangut",
             "ShipID": "437",
             "dataJSON": "ships/by-id/437/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/440",
+            "Name": "Sovetskaya Belorussiya",
+            "ShipID": "440",
+            "dataJSON": "ships/by-id/440/ship.json"
         },
         {
             "DataDir": "ships/by-id/441",
@@ -3335,6 +3361,54 @@
             "dataJSON": "ships/by-id/491/ship.json"
         },
         {
+            "DataDir": "ships/by-id/492",
+            "Name": "U-410",
+            "ShipID": "492",
+            "dataJSON": "ships/by-id/492/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/493",
+            "Name": "Ying Swei",
+            "ShipID": "493",
+            "dataJSON": "ships/by-id/493/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/494",
+            "Name": "Chao Ho",
+            "ShipID": "494",
+            "dataJSON": "ships/by-id/494/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/495",
+            "Name": "Penelope",
+            "ShipID": "495",
+            "dataJSON": "ships/by-id/495/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/496",
+            "Name": "Tallinn",
+            "ShipID": "496",
+            "dataJSON": "ships/by-id/496/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/497",
+            "Name": "Gremyashchy",
+            "ShipID": "497",
+            "dataJSON": "ships/by-id/497/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/498",
+            "Name": "Murmansk",
+            "ShipID": "498",
+            "dataJSON": "ships/by-id/498/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/499",
+            "Name": "Gromky",
+            "ShipID": "499",
+            "dataJSON": "ships/by-id/499/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/9001",
             "Name": "Tone",
             "ShipID": "9001",
@@ -3351,12 +3425,6 @@
             "Name": "Vittorio Veneto",
             "ShipID": "9007",
             "dataJSON": "ships/by-id/9007/ship.json"
-        },
-        {
-            "DataDir": "ships/by-id/9008",
-            "Name": "Kirov",
-            "ShipID": "9008",
-            "dataJSON": "ships/by-id/9008/ship.json"
         },
         {
             "DataDir": "ships/by-id/9009",
