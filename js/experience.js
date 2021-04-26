@@ -38,6 +38,8 @@ function get_experience_to_next_level(level){
         return 235000 + 18000 * (level - 115);
     } else if (level < 120){
         return 235000 + 21000 * (level - 115);
+    } else {
+        return -1;
     }
 }
 
@@ -80,6 +82,6 @@ function calculate_experience(){
     if (exp_diff < 0){
         $('#expneeded').prop("innerHTML", "Some Error Occurred :(");
     } else {
-        $('#expneeded').prop("innerHTML", exp_diff);
+        $('#expneeded').prop("innerHTML", exp_diff.toLocaleString());
     }
 }
