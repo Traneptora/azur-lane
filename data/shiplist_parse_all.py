@@ -2,7 +2,7 @@
 
 import json
 import os
-parse_carrier_json = __import__("shiplist-parse-carrier").parse_carrier_json
+from shiplist_parse_carrier import parse_carrier_json
 
 jsonfile = open("shiplist.json", "r", encoding="UTF-8")
 jsonlist = json.load(jsonfile)
