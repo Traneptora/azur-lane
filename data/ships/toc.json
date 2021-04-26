@@ -496,6 +496,13 @@
             "ShipID": "485",
             "carrierJSON": "ships/by-id/485/carrier.json",
             "dataJSON": "ships/by-id/485/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/502",
+            "Name": "Aquila",
+            "ShipID": "502",
+            "carrierJSON": "ships/by-id/502/carrier.json",
+            "dataJSON": "ships/by-id/502/ship.json"
         }
     ],
     "ships": [
@@ -3409,6 +3416,73 @@
             "dataJSON": "ships/by-id/499/ship.json"
         },
         {
+            "DataDir": "ships/by-id/500",
+            "Name": "Vittorio Veneto",
+            "ShipID": "500",
+            "dataJSON": "ships/by-id/500/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/501",
+            "Name": "Duca degli Abruzzi",
+            "ShipID": "501",
+            "dataJSON": "ships/by-id/501/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/502",
+            "Name": "Aquila",
+            "ShipID": "502",
+            "carrierJSON": "ships/by-id/502/carrier.json",
+            "dataJSON": "ships/by-id/502/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/503",
+            "Name": "Torricelli",
+            "ShipID": "503",
+            "dataJSON": "ships/by-id/503/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/504",
+            "Name": "Maestrale",
+            "ShipID": "504",
+            "dataJSON": "ships/by-id/504/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/505",
+            "Name": "Libeccio",
+            "ShipID": "505",
+            "dataJSON": "ships/by-id/505/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/506",
+            "Name": "Nicoloso da Recco",
+            "ShipID": "506",
+            "dataJSON": "ships/by-id/506/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/507",
+            "Name": "Oite",
+            "ShipID": "507",
+            "dataJSON": "ships/by-id/507/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/508",
+            "Name": "Allen M. Sumner",
+            "ShipID": "508",
+            "dataJSON": "ships/by-id/508/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/509",
+            "Name": "Stephen Potter",
+            "ShipID": "509",
+            "dataJSON": "ships/by-id/509/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/510",
+            "Name": "Amagi-chan",
+            "ShipID": "510",
+            "dataJSON": "ships/by-id/510/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/9001",
             "Name": "Tone",
             "ShipID": "9001",
@@ -3419,12 +3493,6 @@
             "Name": "Chikuma",
             "ShipID": "9002",
             "dataJSON": "ships/by-id/9002/ship.json"
-        },
-        {
-            "DataDir": "ships/by-id/9007",
-            "Name": "Vittorio Veneto",
-            "ShipID": "9007",
-            "dataJSON": "ships/by-id/9007/ship.json"
         },
         {
             "DataDir": "ships/by-id/9009",
