@@ -71,6 +71,12 @@ def parse_carrier_json(ship_json):
         for key in carrier_json[slot_key]['MLB'].keys():
             carrier_json[slot_key]['MLB'][key] = int(mlb_count[i])
         carrier_json[slot_key]['Retrofit'].update(slot_list[i][4])
-        for key in carrier_json[slot_key]['Retrofit'].keys():
-            carrier_json[slot_key]['Retrofit'][key] = int(kai_count[i]) if int(kai_count[i]) != 0 else int(mlb_count[i])
+        for key in carrier_json[slot_key]['Retrofit']:
+            try:
+                count = int(kai_count[i])
+            except ValueError:
+                count = 0
+            if count == 0:
+                count = int(mlb_count[i])
+            carrier_json[slot_key]['Retrofit'][key] = count
     return carrier_json
