@@ -4,23 +4,23 @@
             "F": 3
         },
         "Retrofit": {
-            "F": 4
+            "F": 3
         }
     },
     "Slot2": {
         "MLB": {
-            "T": 3
+            "D": 3
         },
         "Retrofit": {
-            "T": 4
+            "D": 3
         }
     },
     "Slot3": {
         "MLB": {
-            "N": 1
+            "T": 2
         },
         "Retrofit": {
-            "N": 1
+            "T": 2
         }
     }
 }
