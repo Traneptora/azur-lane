@@ -50,6 +50,12 @@ function update_guntextfields() {
         $('#cdredshowhide2').css('display', 'none');
     }
     $('#maingun1cdtextfield').prop('value', $('#maingun1cddropdown').prop('value'));
+    let $option = $('#maingun1cddropdown option:selected');
+    let name = $option.prop('name');
+    let imgname = $option.data('imgname');
+    let $img = $('#maingun1image');
+    $img.prop('src', 'images/equips/gun/bb/' + imgname);
+    $img.prop('alt', name);
 }
 
 function calculate_bbcooldown() {
