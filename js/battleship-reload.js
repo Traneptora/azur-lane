@@ -84,4 +84,10 @@ function calculate_bbcooldown() {
 $(function(){
     update_guntextfields();
     calculate_bbcooldown();
+    $('#maingun1cddropdown option').each((index, element) => {
+        let src = $(element).data('imgname');
+        if (src){
+            $(element).css('background', 'url("images/equips/gun/bb/' + src + '") no-repeat -200% -200%');
+        }
+    });
 });
