@@ -819,6 +819,12 @@
             "dataJSON": "ships/by-id/30002/ship.json"
         },
         {
+            "DataDir": "ships/by-id/30003",
+            "Name": "Helena META",
+            "ShipID": "30003",
+            "dataJSON": "ships/by-id/30003/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/Plan001",
             "Name": "HMS Neptune",
             "ShipID": "Plan001",
@@ -1687,6 +1693,12 @@
             "Name": "Fubuki",
             "ShipID": "151",
             "dataJSON": "ships/by-id/151/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/152",
+            "Name": "Shirayuki",
+            "ShipID": "152",
+            "dataJSON": "ships/by-id/152/ship.json"
         },
         {
             "DataDir": "ships/by-id/155",
@@ -3539,6 +3551,12 @@
             "Name": "Morrison",
             "ShipID": "515",
             "dataJSON": "ships/by-id/515/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/517",
+            "Name": "Kazagumo",
+            "ShipID": "517",
+            "dataJSON": "ships/by-id/517/ship.json"
         }
     ]
 }
