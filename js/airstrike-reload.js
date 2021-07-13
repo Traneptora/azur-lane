@@ -118,11 +118,13 @@ var fighters='' +
     '<option value="8.98">XF5F Skyrocket</option>' + 
     '<option value="9.24">Messerschmitt Me-155A</option>' +
     '<option value="9.44">F2A Buffalo (Thatch Squadron)</option>' +
+    '<option value="10.58">BF-109G Rocket Fighter</option>' +
     '';
 
 var divebombers='' +
     '<option value="DB" disabled class="disabled-option">Dive Bombers</option>' +
     '<option name="helldiver" value="11.88">SB2C Helldiver</option>' +
+    '<option value="12.00">J5N Tenrai</option>' +
     '<option value="10.44">Comet / D4Y Suisei</option>' +
     '<option value="9.98">Suisei Model 12A</option>' +
     '<option value="11.11">Fairey Firefly</option>' +
@@ -145,6 +147,7 @@ var torpedobombers='' +
     '<option value="11.64">Wyvern</option>' +
     '<option value="11.17">Junkers Ju-87 D-4</option>' +
     '<option value="12.17">XBT2D-1 Sky Pirate</option>' +
+    '<option value="10.60">Saiun (PR4)</option>' +
     '';
 
 var seaplanes='' +
