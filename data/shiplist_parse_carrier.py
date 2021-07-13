@@ -4,12 +4,12 @@ import json
 import re
 
 re_whitespace = re.compile(r'\s+')
-re_condition = re.compile(r'(\w+)(\(((\w+)on)?(\w+)\))?$')
+re_condition = re.compile(r'(\w+)(\(((\w+)on)?([a-zA-Z0-9_\.]+)\))?$')
 re_f = re.compile(r'(fighter)[^\+]*(\+([0-9]))?$')
 re_d = re.compile(r'(divebomber)[^\+]*(\+([0-9]))?$')
 re_t = re.compile(r'(torpedobomber)[^\+]*(\+([0-9]))?$')
 re_s = re.compile(r'(seaplane)[^\+]*(\+([0-9]))?$')
-re_condition_parse = re.compile(r'(m)lb|lb([0-9])|(retrofit)')
+re_condition_parse = re.compile(r'(m)lb|lb([0-9])|(retrofit)|dev[^0-9]?([0-9]+)')
 
 def parse_conditionless_type(equip_string):
     if equip_string == None:
@@ -25,12 +25,16 @@ def parse_conditionless_type(equip_string):
     return 'N'
 
 def parse_lb_condition(condition_string):
-    lb_num = next(status for status in re_condition_parse.search(condition_string).group(1, 2, 3) if status)
+    lb_num = next(status for status in re_condition_parse.search(condition_string).group(1, 2, 3, 4) if status)
     if lb_num == 'm':
         return 3
     if lb_num == 'retrofit':
         return 4
-    return int(lb_num)
+    lb_num = int(lb_num)
+    if lb_num > 4:
+        return int(lb_num / 10)
+    else:
+        return lb_num
 
 def parse_equip_slot(equip_string):
     option_list = re_whitespace.sub('', equip_string.lower()).split('/')
@@ -40,7 +44,7 @@ def parse_equip_slot(equip_string):
         if condition:
             condition_group = condition.group(1, 4, 5)
         else:
-            raise ValueError('invalid condition')
+            raise ValueError(f'invalid condition: {option}')
         base_state = {parse_conditionless_type(condition_group[0]): 1}
         if condition_group[2]:
             lb_num = parse_lb_condition(condition_group[2])
