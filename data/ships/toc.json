@@ -113,6 +113,20 @@
             "dataJSON": "ships/by-id/30002/ship.json"
         },
         {
+            "DataDir": "ships/by-id/Plan019",
+            "Name": "Hakuryuu",
+            "ShipID": "Plan019",
+            "carrierJSON": "ships/by-id/Plan019/carrier.json",
+            "dataJSON": "ships/by-id/Plan019/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/Plan021",
+            "Name": "August von Parseval",
+            "ShipID": "Plan021",
+            "carrierJSON": "ships/by-id/Plan021/carrier.json",
+            "dataJSON": "ships/by-id/Plan021/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/070",
             "Name": "Long Island",
             "ShipID": "070",
@@ -925,6 +939,38 @@
             "Name": "Champagne",
             "ShipID": "Plan017",
             "dataJSON": "ships/by-id/Plan017/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/Plan018",
+            "Name": "Anchorage",
+            "ShipID": "Plan018",
+            "dataJSON": "ships/by-id/Plan018/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/Plan019",
+            "Name": "Hakuryuu",
+            "ShipID": "Plan019",
+            "carrierJSON": "ships/by-id/Plan019/carrier.json",
+            "dataJSON": "ships/by-id/Plan019/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/Plan020",
+            "Name": "\u00c4gir",
+            "ShipID": "Plan020",
+            "dataJSON": "ships/by-id/Plan020/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/Plan021",
+            "Name": "August von Parseval",
+            "ShipID": "Plan021",
+            "carrierJSON": "ships/by-id/Plan021/carrier.json",
+            "dataJSON": "ships/by-id/Plan021/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/Plan022",
+            "Name": "Marco Polo",
+            "ShipID": "Plan022",
+            "dataJSON": "ships/by-id/Plan022/ship.json"
         },
         {
             "DataDir": "ships/by-id/001",
