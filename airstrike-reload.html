@@ -2,7 +2,10 @@
 <html><head>
 	<title>Airstrike Cooldown Calculator</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<link rel="preload" href="/styles.css" as="style">
+	<link rel="preload" href="js/airstrike-reload.js" as="script">
+	<link rel="preload" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css" as="style">
+	<link rel="preload" href="/fonts/noto/noto-mono/noto-mono.css" as="style">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -28,17 +31,11 @@
 	<meta property="og:title" content="Airstrike Cooldown Calculator">
 	<meta property="og:description" content="Calculate the cooldown for an airstrike in Azur Lane.">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/noto/noto-mono/noto-mono.css">
 	<script src="js/airstrike-reload.js"></script>
-	<script>
-		WebFont.load({
-			custom: {
-				families: ['Noto Sans Display', 'Noto Mono'],
-				urls: ['/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css', '/fonts/noto/noto-mono/noto-mono.css']
-			}
-		});
-	</script>
+	
 </head>
 <body>
 	<div id="wrapper">

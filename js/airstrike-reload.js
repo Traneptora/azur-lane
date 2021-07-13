@@ -35,48 +35,47 @@ function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count
 }
 
 function calculate_reload(){
-    let reloadstat = $("#reloadstattextfield").prop("value");
-    let reloadbuff = $("#reloadbufftextfield").prop("value");
-    let plane1time = $("#plane1cdtextfield").prop("value");
-    let plane1count = $("#plane1counttextfield").prop("value");
-    let plane2time = $("#plane2cdtextfield").prop("value");
-    let plane2count = $("#plane2counttextfield").prop("value");
-    let plane3time = $("#plane3cdtextfield").prop("value");
-    let plane3count = $("#plane3counttextfield").prop("value");
-    let cooldown_reduction = $("#cdreduction1textfield").prop("value");
-    let initial_cooldown_reduction = $("#cdreduction2textfield").prop("value");
-    let beacon = $("#beaconbox").is(":checked");
+    let reloadstat = document.getElementById("reloadstattextfield").value;
+    let reloadbuff = document.getElementById("reloadbufftextfield").value;
+    let plane1time = document.getElementById("plane1cdtextfield").value;
+    let plane1count = document.getElementById("plane1counttextfield").value;
+    let plane2time = document.getElementById("plane2cdtextfield").value;
+    let plane2count = document.getElementById("plane2counttextfield").value;
+    let plane3time = document.getElementById("plane3cdtextfield").value;
+    let plane3count = document.getElementById("plane3counttextfield").value;
+    let cooldown_reduction = document.getElementById("cdreduction1textfield").value;
+    let initial_cooldown_reduction = document.getElementById("cdreduction2textfield").value;
+    let beacon = document.getElementById("beaconbox").checked;
     let cooldown = get_airstrike_cooldown(plane1time, +plane1count, plane2time, +plane2count, plane3time, +plane3count, +reloadstat, +reloadbuff, beacon, +cooldown_reduction, +initial_cooldown_reduction);
     if (cooldown[0] > 0.0){
-        $("#finalcooldown").prop("innerHTML", cooldown.shift() + "s");
-        $("#initcooldown").prop("innerHTML", cooldown[0] + "s");
-        $("#finalstriketimers").prop("innerHTML", cooldown.join(", ") + "");
+        document.getElementById("finalcooldown").innerHTML = cooldown.shift() + "s";
+        document.getElementById("initcooldown").innerHTML = cooldown[0] + "s";
+        document.getElementById("finalstriketimers").innerHTML = cooldown.join(", ") + "";
     } else {
-        $("#finalcooldown").prop("innerHTML", "Some Error Occurred :(");
-        $("#initcooldown").prop("innerHTML", "");
-        $("#finalstriketimers").prop("innerHTML", "");
+        document.getElementById("finalcooldown").innerHTML = "Some Error Occurred :(";
+        document.getElementById("initcooldown").innerHTML = "";
+        document.getElementById("finalstriketimers").innerHTML = "";
     }
 }
 
 function update_textfields(idnumber){
-    let $cdtextfield = $('#plane' + idnumber + 'cdtextfield');
-    let $cddropdown = $('#plane' + idnumber + 'cddropdown');
-    let dropdownvalue = $cddropdown.prop('value');
-    $cdtextfield.prop('value', dropdownvalue);
-    let $counttextfield = $('#plane' + idnumber + 'counttextfield');
-    let $countstorage = $('#plane' + idnumber + 'countstorage');
-    let currcountvalue = +$counttextfield.prop('value');
-    let storedcountvalue = +$countstorage.prop('value');
+    let cdtextfield = document.getElementById('plane' + idnumber + 'cdtextfield');
+    let cddropdown = document.getElementById('plane' + idnumber + 'cddropdown');
+    let dropdownvalue = cddropdown.value;
+    cdtextfield.value = dropdownvalue;
+    let counttextfield = document.getElementById('plane' + idnumber + 'counttextfield');
+    let countstorage = document.getElementById('plane' + idnumber + 'countstorage');
+    let currcountvalue = +counttextfield.value;
+    let storedcountvalue = +countstorage.value;
     if (dropdownvalue === "Don't Use Slot"){
-        $cdtextfield.attr('disabled', true);
-        $counttextfield.attr('disabled', true);
-        $countstorage.prop('value', currcountvalue);
-        $counttextfield.prop('value', 0);
+        cdtextfield.disabled = true;
+        counttextfield.disabled = true;
+        countstorage.value =  currcountvalue;
+        counttextfield.value =  0;
     } else {
-        $cdtextfield.attr('disabled', false);
-        $counttextfield.attr('disabled', false);
-        //$counttextfield.prop('value', storedcountvalue);
-        $countstorage.prop('value', 0);
+        cdtextfield.disabled = false;
+        counttextfield.disabled = false;
+        countstorage.value =  0;
     }
 }
 
@@ -96,11 +95,19 @@ function handle_toc(data){
     carrier_list.sort();
     for (i in carrier_list){
         carrier_name = carrier_list[i];
-        $('#shipselect').append('<option name="' + carrier_name + '" value="'+ carrier_name +'">' + carrier_name + '</option>');
+        let option = document.createElement('option');
+        option.name = carrier_name;
+        option.value = carrier_name;
+        option.appendChild(document.createTextNode(carrier_name));
+        document.getElementById('shipselect').appendChild(option);
     }
     carrier_list.push("Other");
-    $('#shipselect').append('<option name="Other" value="Other">Other</option>');
-    $('#shipselect > option[name=Enterprise').prop("selected", true);
+    let other = document.createElement('option');
+    other.name = "Other";
+    other.value = "Other";
+    other.appendChild(document.createTextNode("Other"));
+    document.getElementById('shipselect').appendChild(other);
+    document.querySelector('#shipselect > option[value=Enterprise]').selected = true;
     acquire_loadout();
 }
 
@@ -214,18 +221,18 @@ function handle_loadout_data(data){
     ret_obj = buildoptions(slot3);
     slot3options = ret_obj.options;
     slot3count = ret_obj.count
-    let plane1name = $('#plane1cddropdown > option:selected').text();
-    let plane2name = $('#plane2cddropdown > option:selected').text();
-    let plane3name = $('#plane3cddropdown > option:selected').text();
-    $('#plane1cddropdown').html(slot1options);
-    $('#plane1counttextfield').prop('value', slot1count);
-    $('#plane2cddropdown').html(slot2options);
-    $('#plane2counttextfield').prop('value', slot2count);
-    $('#plane3cddropdown').html(slot3options);
-    $('#plane3counttextfield').prop('value', slot3count);
-    $("#plane1cddropdown > option").filter(function(){return $(this).text() === plane1name}).prop('selected', true);
-    $("#plane2cddropdown > option").filter(function(){return $(this).text() === plane2name}).prop('selected', true);
-    $("#plane3cddropdown > option").filter(function(){return $(this).text() === plane3name}).prop('selected', true);
+    let plane1name = document.querySelector('#plane1cddropdown > option:checked').text;
+    let plane2name = document.querySelector('#plane2cddropdown > option:checked').text;
+    let plane3name = document.querySelector('#plane3cddropdown > option:checked').text;
+    document.getElementById('plane1cddropdown').innerHTML = slot1options;
+    document.getElementById('plane1counttextfield').value = slot1count;
+    document.getElementById('plane2cddropdown').innerHTML = slot2options;
+    document.getElementById('plane2counttextfield').value = slot2count;
+    document.getElementById('plane3cddropdown').innerHTML = slot3options;
+    document.getElementById('plane3counttextfield').value = slot3count;
+    Array.prototype.filter.call(document.querySelectorAll('#plane1cddropdown > option'), (option) => option.text === plane1name).forEach((o) => o.selected = true);
+    Array.prototype.filter.call(document.querySelectorAll('#plane2cddropdown > option'), (option) => option.text === plane2name).forEach((o) => o.selected = true);
+    Array.prototype.filter.call(document.querySelectorAll('#plane3cddropdown > option'), (option) => option.text === plane3name).forEach((o) => o.selected = true);
     update_textfields(1);
     update_textfields(2);
     update_textfields(3);
@@ -233,28 +240,42 @@ function handle_loadout_data(data){
 }
 
 function acquire_loadout(){
-    let carrier_name = $('#shipselect').prop('value');
+    let carrier_name = document.getElementById('shipselect').value;
     if (carrier_name === "Other"){
         let general_loadout = {"F": "1", "D": "1", "T": "1", "S": "1", "N": "1"};
         let other_obj = {"Slot1":{"Retrofit":general_loadout}, "Slot2":{"Retrofit":general_loadout}, "Slot3":{"Retrofit":general_loadout}};
         handle_loadout_data(other_obj);
     } else {
         let full_url = "https://thebombzen.com/azur-lane/data/" + carriers[carrier_name].carrierJSON;
-        $.getJSON(full_url, handle_loadout_data);
+        fetch(full_url).then((response) => {
+            return response.json();
+        }).then((json) => {
+            handle_loadout_data(json);
+        });
     }
 }
 
 // Load This After JQuery
-$(function(){
-    $('#plane1cddropdown').html($('#planeselectfighter').html());
-    $('#plane1cddropdown > option[name=hellcat]').prop("selected", true);
-    $('#plane2cddropdown').html($('#planeselectdivebomber').html());
-    $('#plane2cddropdown > option[name=helldiver]').prop("selected", true);
-    $('#plane3cddropdown').html($('#planeselecttorpedobomber').html());
-    $('#plane3cddropdown > option[name=ryusei]').prop("selected", true);
+function ready() {
+    document.getElementById('plane1cddropdown').innerHTML = fighters;
+    document.querySelector('#plane1cddropdown > option[name=hellcat]').selected = true;
+    document.getElementById('plane2cddropdown').innerHTML = divebombers;
+    document.querySelector('#plane2cddropdown > option[name=helldiver]').selected = true;
+    document.getElementById('plane3cddropdown').innerHTML = torpedobombers;
+    document.querySelector('#plane3cddropdown > option[name=ryusei]').selected = true;
     update_textfields(1);
     update_textfields(2);
     update_textfields(3);
     calculate_reload();
-    $.getJSON('https://thebombzen.com/azur-lane/data/ships/toc.json', handle_toc)
-});
+    fetch('https://thebombzen.com/azur-lane/data/ships/toc.json').then((r) => {
+        return r.json();
+    }).then((j) => {
+        handle_toc(j);
+    });
+}
+
+if (document.readyState === 'loading'){
+    document.addEventListener("DOMContentLoaded", ready);
+} else {
+    ready();
+}
