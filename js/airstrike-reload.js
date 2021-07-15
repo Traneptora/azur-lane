@@ -150,9 +150,9 @@ var torpedobombers='' +
     '<option name="ryusei" value="11.37">B7A Ryusei</option>' +
     '<option value="11.17">Junkers Ju-87 D-4</option>' +
     '<option value="10.97">Swordfish (818 Squadron)</option>' +
+    '<option value="10.60">B6N Saiun</option>' +
     '<option value="10.31">Fairey Barracuda</option>' +
     '<option value="9.98">Fairey Albacore</option>' +
-    '<option value="10.60">B6N Saiun</option>' +
     '';
 
 var seaplanes='' +
