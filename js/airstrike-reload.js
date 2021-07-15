@@ -114,53 +114,51 @@ function handle_toc(data){
 var fighters='' +
     '<option value="F" disabled class="disabled-option">Fighters</option>' +
     '<option name="hellcat" value="10.90">F6F Hellcat</option>' +
-    '<option value="10.61">Sea Hornet</option>' +
-    '<option value="10.20">VF-17 ("Pirate Squad")</option>' + 
     '<option value="10.81">F7F Tigercat</option>' +
-    '<option value="9.64">F8F Bearcat</option>' +
     '<option value="10.71">N1K3-A Shiden Kai</option>' +
-    '<option value="10.60">Seafang</option>' +
+    '<option value="10.61">Sea Hornet</option>' +
     '<option value="10.61">Sea Fury</option>' +
-    '<option value="10.44">A7M Reppuu</option>' + 
-    '<option value="8.98">XF5F Skyrocket</option>' + 
-    '<option value="9.24">Messerschmitt Me-155A</option>' +
-    '<option value="9.44">F2A Buffalo (Thatch Squadron)</option>' +
+    '<option value="10.60">Seafang</option>' +
     '<option value="10.58">BF-109G Rocket Fighter</option>' +
+    '<option value="10.44">A7M Reppuu</option>' + 
+    '<option value="10.20">VF-17 (“Pirate Squad”)</option>' + 
+    '<option value="9.64">F8F Bearcat</option>' +
+    '<option value="9.44">F2A Buffalo (Thatch)</option>' +
+    '<option value="9.24">Messerschmitt Me-155A</option>' +
+    '<option value="8.98">XF5F Skyrocket</option>' + 
     '';
 
 var divebombers='' +
     '<option value="DB" disabled class="disabled-option">Dive Bombers</option>' +
-    '<option name="helldiver" value="11.88">SB2C Helldiver</option>' +
     '<option value="12.00">J5N Tenrai</option>' +
-    '<option value="10.44">Comet / D4Y Suisei</option>' +
-    '<option value="9.98">Suisei Model 12A</option>' +
-    '<option value="11.11">Fairey Firefly</option>' +
-    '<option value="11.91">Experimental XSB3C-1</option>' +
-    '<option value="10.38">Fairey Barracuda (831 Squadron)</option>' +
-    '<option value="9.18">Fairey Fulmar</option>' +
+    '<option value="11.91">XSB3C-1 (Goldiver)</option>' +
+    '<option name="helldiver" value="11.88">SB2C Helldiver</option>' +
     '<option value="11.71">SBD Dauntless (McClusky)</option>' +
     '<option value="11.57">Junkers Ju-87c</option>' +
+    '<option value="11.11">Fairey Firefly</option>' +
+    '<option value="10.44">D4Y Suisei</option>' +
+    '<option value="10.38">Fairey Barracuda (831 Squadron)</option>' +
+    '<option value="9.98">Suisei Model 12A</option>' +
+    '<option value="9.18">Fairey Fulmar</option>' +
     '';
 
 var torpedobombers='' +
     '<option value="TB" disabled class="disabled-option">Torpedo Bombers</option>' +
-    '<option value="10.31">Barracuda</option>' +
-    '<option value="9.98">Fairey Albacore</option>' +
-    '<option name="ryusei" value="11.37">Aichi B7A Ryusei</option>' +
-    '<option value="10.97">Swordfish (818 Squadron)</option>' +
-    '<option value="12.04">TBM Avenger (VT-18 Squadron)</option>' +
-    '<option value="12.04">Torpedo VT-8 Squadron</option>' +
-    '<option value="10.51">Firecrest</option>' +
-    '<option value="11.64">Wyvern</option>' +
+    '<option value="12.17">XTB2D-1 Sky Pirate</option>' +
+    '<option value="12.04">TBM Avenger (VT-18)</option>' +
+    '<option value="11.64">Westland Wyvern</option>' +
+    '<option name="ryusei" value="11.37">B7A Ryusei</option>' +
     '<option value="11.17">Junkers Ju-87 D-4</option>' +
-    '<option value="12.17">XBT2D-1 Sky Pirate</option>' +
-    '<option value="10.60">Saiun (PR4)</option>' +
+    '<option value="10.97">Swordfish (818 Squadron)</option>' +
+    '<option value="10.31">Fairey Barracuda</option>' +
+    '<option value="9.98">Fairey Albacore</option>' +
+    '<option value="10.60">B6N Saiun</option>' +
     '';
 
 var seaplanes='' +
     '<option value="Seaplane" disabled class="disabled-option">Seaplane</option>' +
-    '<option value="14.30">Aichi M6A Seiran</option>' +
-    '<option value="13.97">Aichi E16A Zuiun</option>' +
+    '<option value="14.30">M6A Seiran</option>' +
+    '<option value="13.97">E16A Zuiun</option>' +
     '<option value="12.97">Suisei Model 21</option>' +
     '';
 
