@@ -28,7 +28,7 @@ for entry in jsonlist["cargoquery"]:
     json.dump(ship, jsonfile, sort_keys=True, indent=4)
     jsonfile.close()
     toc_entry = {"ShipID":shipID, "Name":shipName, "DataDir":shipdir, "dataJSON":(shipdir + "/ship.json")}
-    if ship["Type"] in ["Aircraft Carrier", "Light Aircraft Carrier"] or ship["SubtypeRetro"] in ["Aviation Battleship"]:
+    if ship["Type"] in ["Aircraft Carrier", "Light Aircraft Carrier"] or "SubtypeRetro" in ship and ship["SubtypeRetro"] in ["Aviation Battleship"]:
         toc_entry["carrierJSON"] = shipdir + "/carrier.json"
         toc["carriers"].append(toc_entry)
         carrier_json = parse_carrier_json(ship_json=ship)

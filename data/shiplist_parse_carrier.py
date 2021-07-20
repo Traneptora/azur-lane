@@ -64,9 +64,10 @@ def parse_equip_slot(equip_string):
 
 def parse_carrier_json(ship_json):
     slot_list = [parse_equip_slot(ship_json['Eq1Type']), parse_equip_slot(ship_json['Eq2Type']),  parse_equip_slot(ship_json['Eq3Type'])]
-    mlb_count = [ship_json['Eq1BaseMax'], ship_json['Eq2BaseMax'], ship_json['Eq3BaseMax']]
-    kai_count = [ship_json['Eq1BaseKai'], ship_json['Eq2BaseKai'], ship_json['Eq3BaseKai']]
+    mlb_count = [ship_json['Eq1BaseMax'], ship_json['Eq2BaseMax'], ship_json.get('Eq3BaseMax', 0)]
+    kai_count = [ship_json['Eq1BaseKai'], ship_json['Eq2BaseKai'], ship_json.get('Eq3BaseKai', 0)] if 'Eq1BaseKai' in ship_json else [0, 0, 0]
     carrier_json = {'Slot1':{}, 'Slot2':{}, 'Slot3':{}}
+    carrier_json['Reload'] = ship_json.get('Reload120Kai', ship_json['Reload120'])
     for i in range(3):
         slot_key = 'Slot' + str(i + 1)
         lb_json = {'MLB':{}, 'Retrofit':{}}
