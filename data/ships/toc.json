@@ -649,7 +649,7 @@
         },
         {
             "DataDir": "ships/by-id/Collab001",
-            "Name": "HDN Neptune",
+            "Name": "Neptune (HDN)",
             "ShipID": "Collab001",
             "dataJSON": "ships/by-id/Collab001/ship.json"
         },
@@ -840,7 +840,7 @@
         },
         {
             "DataDir": "ships/by-id/Plan001",
-            "Name": "HMS Neptune",
+            "Name": "Neptune",
             "ShipID": "Plan001",
             "dataJSON": "ships/by-id/Plan001/ship.json"
         },
