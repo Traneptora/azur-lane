@@ -63,10 +63,30 @@ function get_exp_diff(table, current_level, target_level){
 function calculate_experience(){
     let current_level = document.getElementById('currentleveltextfield').value;
     let target_level = document.getElementById('targetleveltextfield').value;
-    let exp_diff = get_exp_diff(experience_table_enjp, current_level, target_level);
+    let rainbow = document.getElementById('cb-rainbow').checked;
+    let china = document.getElementById('cb-china').checked;
+    let table;
+    if (rainbow){
+        table = experience_table_dr;
+    } else if (china) {
+        table = experience_table_cn;
+    } else {
+        table = experience_table_enjp;
+    }
+    let exp_diff = get_exp_diff(table, current_level, target_level);
     if (exp_diff < 0){
         document.getElementById('expneeded').innerHTML = "Some Error Occurred :(";
     } else {
         document.getElementById('expneeded').innerHTML = exp_diff.toLocaleString();
     }
+}
+
+function ready(){
+    calculate_experience();
+}
+
+if (document.readyState === 'loading'){
+    document.addEventListener("DOMContentLoaded", ready);
+} else {
+    ready();
 }
