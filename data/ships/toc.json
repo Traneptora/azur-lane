@@ -36,6 +36,13 @@
             "dataJSON": "ships/by-id/10066/ship.json"
         },
         {
+            "DataDir": "ships/by-id/10072",
+            "Name": "Chihaya Kisaragi",
+            "ShipID": "10072",
+            "carrierJSON": "ships/by-id/10072/carrier.json",
+            "dataJSON": "ships/by-id/10072/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/Collab004",
             "Name": "Vert",
             "ShipID": "Collab004",
@@ -618,7 +625,7 @@
         },
         {
             "DataDir": "ships/by-id/10063",
-            "Name": "Kasumi (DOA)",
+            "Name": "Kasumi (Venus Vacation)",
             "ShipID": "10063",
             "dataJSON": "ships/by-id/10063/ship.json"
         },
@@ -648,8 +655,51 @@
             "dataJSON": "ships/by-id/10067/ship.json"
         },
         {
+            "DataDir": "ships/by-id/10071",
+            "Name": "Haruka Amami",
+            "ShipID": "10071",
+            "dataJSON": "ships/by-id/10071/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/10072",
+            "Name": "Chihaya Kisaragi",
+            "ShipID": "10072",
+            "carrierJSON": "ships/by-id/10072/carrier.json",
+            "dataJSON": "ships/by-id/10072/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/10073",
+            "Name": "Iori Minase",
+            "ShipID": "10073",
+            "dataJSON": "ships/by-id/10073/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/10074",
+            "Name": "Azusa Miura",
+            "ShipID": "10074",
+            "dataJSON": "ships/by-id/10074/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/10075",
+            "Name": "Ritsuko Akizuki",
+            "ShipID": "10075",
+            "dataJSON": "ships/by-id/10075/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/10076",
+            "Name": "Ami Futami",
+            "ShipID": "10076",
+            "dataJSON": "ships/by-id/10076/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/10077",
+            "Name": "Mami Futami",
+            "ShipID": "10077",
+            "dataJSON": "ships/by-id/10077/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/Collab001",
-            "Name": "Neptune (HDN)",
+            "Name": "Neptune (Neptunia)",
             "ShipID": "Collab001",
             "dataJSON": "ships/by-id/Collab001/ship.json"
         },
