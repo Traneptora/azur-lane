@@ -4,16 +4,20 @@ import json
 import os
 from shiplist_parse_carrier import parse_carrier_json
 
-jsonfile = open("shiplist.json", "r", encoding="UTF-8")
-jsonlist = json.load(jsonfile)
-jsonfile.close()
-jsonfile = open("shiplist.json", "w", encoding="UTF-8")
-json.dump(jsonlist, jsonfile, sort_keys=True, indent=4)
-jsonfile.close()
+cargolist = []
+
+for shiplist_json in ["shiplist_0.json", "shiplist_1.json"]:
+    jsonfile = open(shiplist_json, "r", encoding="UTF-8")
+    jsonlist = json.load(jsonfile)
+    jsonfile.close()
+    jsonfile = open(shiplist_json, "w", encoding="UTF-8")
+    json.dump(jsonlist, jsonfile, sort_keys=True, indent=4)
+    jsonfile.close()
+    cargolist += jsonlist["cargoquery"]
 
 toc = {"ships":[], "carriers":[]}
 
-for entry in jsonlist["cargoquery"]:
+for entry in cargolist:
     ship = entry["title"]
     shipID = ship["ShipID"]
     shipName = ship["Name"]

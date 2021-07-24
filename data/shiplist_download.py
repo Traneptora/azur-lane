@@ -3,7 +3,26 @@
 # Query the Azur Lane Wiki Cargo Query table for a JSON database of ships
 # Please only run this when necessary
 
-import urllib.request
+import sys
+import requests
 
-wikiurl = 'https://azurlane.koumakan.jp/w/api.php?action=cargoquery&tables=ships&format=json&limit=500&fields=ships.ShipGroup,ships.ShipID,ships.Name,ships.CNName,ships.JPName,ships.KRName,ships.Rarity,ships.Nationality,ships.ConstructTime,ships.Type,ships.SubtypeRetro,ships.Class,ships.Artist,ships.ArtistLink,ships.ArtistPixiv,ships.ArtistTwitter,ships.VA,ships.Remodel,ships.RemodelId,ships.HealthInitial,ships.Armor,ships.FireInitial,ships.AAInitial,ships.TorpInitial,ships.AirInitial,ships.ReloadInitial,ships.EvadeInitial,ships.ConsumptionInitial,ships.Speed,ships.Luck,ships.AccInitial,ships.ASWInitial,ships.OxygenInitial,ships.AmmoInitial,ships.HealthMax,ships.FireMax,ships.AAMax,ships.TorpMax,ships.AirMax,ships.ReloadMax,ships.EvadeMax,ships.ConsumptionMax,ships.AccMax,ships.ASWMax,ships.OxygenMax,ships.AmmoMax,ships.HealthKai,ships.ArmorKai,ships.FireKai,ships.AAKai,ships.TorpKai,ships.AirKai,ships.ReloadKai,ships.EvadeKai,ships.ConsumptionKai,ships.SpeedKai,ships.ASWKai,ships.AccKai,ships.OxygenKai,ships.AmmoKai,ships.Health120,ships.Fire120,ships.AA120,ships.Torp120,ships.Air120,ships.Reload120,ships.Evade120,ships.Consumption120,ships.Acc120,ships.ASW120,ships.Oxygen120,ships.Ammo120,ships.HealthKai120,ships.FireKai120,ships.AAKai120,ships.TorpKai120,ships.AirKai120,ships.ReloadKai120,ships.EvadeKai120,ships.ConsumptionKai120,ships.AccKai120,ships.ASWKai120,ships.OxygenKai120,ships.AmmoKai120,ships.Eq1Type,ships.Eq1EffInit,ships.Eq1EffInitMax,ships.Eq1EffInitKai,ships.Eq2Type,ships.Eq2EffInit,ships.Eq2EffInitMax,ships.Eq2EffInitKai,ships.Eq3Type,ships.Eq3EffInit,ships.Eq3EffInitMax,ships.Eq3EffInitKai,ships.Eq1BaseMax,ships.Eq1BaseKai,ships.Eq2BaseMax,ships.Eq2BaseKai,ships.Eq3BaseMax,ships.Eq3BaseKai'
-urllib.request.urlretrieve(wikiurl, 'shiplist.json')
+def _eprint(*args, **kwargs):
+    kwargs['file'] = sys.stderr
+    print(*args, **kwargs)
+
+ship_urls = [
+    'https://azurlane.koumakan.jp/w/api.php?action=cargoquery&tables=ships&format=json&limit=500&offset=0&fields=ShipGroup,ShipID,Name,CNName,JPName,KRName,Rarity,Nationality,ConstructTime,Type,SubtypeRetro,Class,Artist,ArtistLink,ArtistPixiv,ArtistTwitter,VA,Remodel,RemodelId,HealthInitial,Armor,FireInitial,AAInitial,TorpInitial,AirInitial,ReloadInitial,EvadeInitial,ConsumptionInitial,Speed,Luck,AccInitial,ASWInitial,OxygenInitial,AmmoInitial,HealthMax,FireMax,AAMax,TorpMax,AirMax,ReloadMax,EvadeMax,ConsumptionMax,AccMax,ASWMax,OxygenMax,AmmoMax,HealthKai,ArmorKai,FireKai,AAKai,TorpKai,AirKai,ReloadKai,EvadeKai,ConsumptionKai,SpeedKai,ASWKai,AccKai,OxygenKai,AmmoKai,Health120,Fire120,AA120,Torp120,Air120,Reload120,Evade120,Consumption120,Acc120,ASW120,Oxygen120,Ammo120,HealthKai120,FireKai120,AAKai120,TorpKai120,AirKai120,ReloadKai120,EvadeKai120,ConsumptionKai120,AccKai120,ASWKai120,OxygenKai120,AmmoKai120,Eq1Type,Eq1BaseMax,Eq1BaseKai,Eq1EffInit,Eq1EffInitMax,Eq1EffInitKai,Eq2Type,Eq2BaseMax,Eq2BaseKai,Eq2EffInit,Eq2EffInitMax,Eq2EffInitKai,Eq3Type,Eq3BaseMax,Eq3BaseKai,Eq3EffInit,Eq3EffInitMax,Eq3EffInitKai',
+    'https://azurlane.koumakan.jp/w/api.php?action=cargoquery&tables=ships&format=json&limit=500&offset=500&fields=ShipGroup,ShipID,Name,CNName,JPName,KRName,Rarity,Nationality,ConstructTime,Type,SubtypeRetro,Class,Artist,ArtistLink,ArtistPixiv,ArtistTwitter,VA,Remodel,RemodelId,HealthInitial,Armor,FireInitial,AAInitial,TorpInitial,AirInitial,ReloadInitial,EvadeInitial,ConsumptionInitial,Speed,Luck,AccInitial,ASWInitial,OxygenInitial,AmmoInitial,HealthMax,FireMax,AAMax,TorpMax,AirMax,ReloadMax,EvadeMax,ConsumptionMax,AccMax,ASWMax,OxygenMax,AmmoMax,HealthKai,ArmorKai,FireKai,AAKai,TorpKai,AirKai,ReloadKai,EvadeKai,ConsumptionKai,SpeedKai,ASWKai,AccKai,OxygenKai,AmmoKai,Health120,Fire120,AA120,Torp120,Air120,Reload120,Evade120,Consumption120,Acc120,ASW120,Oxygen120,Ammo120,HealthKai120,FireKai120,AAKai120,TorpKai120,AirKai120,ReloadKai120,EvadeKai120,ConsumptionKai120,AccKai120,ASWKai120,OxygenKai120,AmmoKai120,Eq1Type,Eq1BaseMax,Eq1BaseKai,Eq1EffInit,Eq1EffInitMax,Eq1EffInitKai,Eq2Type,Eq2BaseMax,Eq2BaseKai,Eq2EffInit,Eq2EffInitMax,Eq2EffInitKai,Eq3Type,Eq3BaseMax,Eq3BaseKai,Eq3EffInit,Eq3EffInitMax,Eq3EffInitKai'
+]
+
+for i, url in enumerate(ship_urls):
+    _eprint(f'Getting Ship URL: {i}')
+    r = requests.get(url)
+    if not r.ok:
+        _eprint(f'Error getting {entry["name"]} URL: {url}')
+        _eprint(f'Status code: {r.status_code}')
+        sys.exit(1)
+    save_location = f'shiplist_{i}.json'
+    _eprint(f'Saving to: {save_location}')
+    with open(save_location, "w", encoding='UTF-8') as file:
+        file.write(r.text)
