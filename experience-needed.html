@@ -2,7 +2,10 @@
 <html><head>
 	<title>Ship Leveling Calculator</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<link rel="preload" href="/styles.css" as="style">
+	<link rel="preload" href="js/experience.js" as="script">
+	<link rel="preload" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css" as="style">
+	<link rel="preload" href="/fonts/noto/noto-mono/noto-mono.css" as="style">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -28,17 +31,10 @@
 	<meta property="og:url" content="https://thebombzen.com/azur-lane/experience-needed.html">
 	<meta property="og:description" content="Calculate experience required from level A to level B in Azur Lane EN.">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w==" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/noto/noto-mono/noto-mono.css">
 	<script src="js/experience.js"></script>
-	<script>
-		WebFont.load({
-			custom: {
-				families: ['Noto Sans Display', 'Noto Mono'],
-				urls: ['/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css', '/fonts/noto/noto-mono/noto-mono.css']
-			}
-		});
-	</script>
 </head>
 <body>
 	<div id="wrapper">

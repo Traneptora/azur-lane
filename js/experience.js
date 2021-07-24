@@ -1,74 +1,59 @@
-function get_experience_to_next_level(level){
-    if (!(+level > 0)){
-        return -1;
-    }
-    if (level <= 40){
-        return 100 * level;
-    } else if (level <= 60){
-        return 4000 + 200 * (level - 40)
-    } else if (level <= 69){
-        return 8000 + 300 * (level - 60);
-    } else if (level <= 70){
-        return 10700 + 1400 * (level - 69);
-    } else if (level <= 79){
-        return 12100 + 440 * (level - 70);
-    } else if (level <= 89){
-        return 17250 + 575 * (level - 80);
-    } else if (level <= 90){
-        return 22425 + 1575 * (level - 89);
-    } else if (level <= 92){
-        return 24000 + 1200 * (level - 90);
-    } else if (level <= 94){
-        return 26400 + 2400 * (level - 92);
-    } else if (level <= 95){
-        return 31200 + 4800 * (level - 94);
-    } else if (level <= 97){
-        return 36000 + 6000 * (level - 95);
-    } else if (level <= 98){
-        return 48000 + 24000 * (level - 97);
-    } else if (level <= 99){
-        return 72000 + 86400 * (level - 98);
-    } else if (level <= 104){
-        return 70000 + 2000 * (level - 100);
-    } else if (level <= 105){
-        return 85000 + 7000 * (level - 105);
-    } else if (level <= 110){
-        return 145000 + 12000 * (level - 110);
-    } else if (level <= 115){
-        return 235000 + 18000 * (level - 115);
-    } else if (level < 120){
-        return 235000 + 21000 * (level - 115);
-    } else {
-        return -1;
-    }
-}
+var experience_table_enjp = [0, 100, 300, 600, 1000, 1500, 2100, 2800,
+3600, 4500, 5500, 6600, 7800, 9100, 10500, 12000, 13600, 15300, 17100,
+19000, 21000, 23100, 25300, 27600, 30000, 32500, 35100, 37800, 40600,
+43500, 46500, 49600, 52800, 56100, 59500, 63000, 66600, 70300, 74100,
+78000, 82000, 86200, 90600, 95200, 100000, 105000, 110200, 115600,
+121200, 127000, 133000, 139200, 145600, 152200, 159000, 166000, 173200,
+180600, 188200, 196000, 204000, 212300, 220900, 229800, 239000, 248500,
+258300, 268400, 278800, 289500, 301600, 314140, 327120, 340540, 354400,
+368700, 383440, 398620, 414240, 430300, 447550, 465375, 483775, 502750,
+522300, 542425, 563125, 584400, 606250, 628675, 652675, 677875, 704275,
+733075, 764275, 800275, 842275, 890275, 962275, 1120675, 1190675,
+1262675, 1336675, 1412675, 1490675, 1575675, 1672675, 1781675, 1902675,
+2035675, 2180675, 2343675, 2524675, 2723675, 2940675, 3175675, 3431675,
+3708675, 4006675, 4325675];
 
-var experience_table = null;
+var experience_table_cn = [0, 100, 300, 600, 1000, 1500, 2100, 2800,
+3600, 4500, 5500, 6600, 7800, 9100, 10500, 12000, 13600, 15300, 17100,
+19000, 21000, 23100, 25300, 27600, 30000, 32500, 35100, 37800, 40600,
+43500, 46500, 49600, 52800, 56100, 59500, 63000, 66600, 70300, 74100,
+78000, 82000, 86200, 90600, 95200, 100000, 105000, 110200, 115600,
+121200, 127000, 133000, 139200, 145600, 152200, 159000, 166000, 173200,
+180600, 188200, 196000, 204000, 212300, 220900, 229800, 239000, 248500,
+258300, 268400, 278800, 289500, 300500, 311900, 323700, 335900, 348500,
+361500, 374900, 388700, 402900, 417500, 432500, 448000, 464000, 480500,
+497500, 515000, 533000, 551500, 570500, 590000, 610000, 631000, 653000,
+677000, 703000, 733000, 768000, 808000, 868000, 1000000, 1070000,
+1142000, 1216000, 1292000, 1370000, 1455000, 1552000, 1661000, 1782000,
+1915000, 2060000, 2223000, 2404000, 2603000, 2820000, 3055000, 3311000,
+3588000, 3886000, 4205000];
 
-function populate_experience_table(){
-    if (experience_table){
-        return;
-    }
-    experience_table = new Array(120);
-    experience_table[0] = 0;
-    for (let i = 1; i < 120; i++){
-        experience_table[i] = experience_table[i - 1] + get_experience_to_next_level(i);
-    }
-}
+var experience_table_dr = [0, 120, 360, 720, 1200, 1800, 2520, 3360,
+4320, 5400, 6600, 7920, 9360, 10920, 12600, 14400, 16320, 18360, 20520,
+22800, 25200, 27720, 30360, 33120, 36000, 39000, 42120, 45360, 48720,
+52200, 55800, 59520, 63360, 67320, 71400, 75600, 79920, 84360, 88920,
+93600, 98400, 103440, 108720, 114240, 120000, 126000, 132240, 138720,
+145440, 152400, 159600, 167040, 174720, 182640, 190800, 199200, 207840,
+216720, 225840, 235200, 244800, 254760, 265080, 275760, 286800, 298200,
+309960, 322080, 344560, 347400, 360600, 374280, 388440, 403080, 418200,
+433800, 449800, 466440, 483480, 501000, 519000, 537600, 556800, 576600,
+597000, 618000, 639600, 661800, 684600, 708000, 734000, 761300, 789900,
+821100, 854900, 893900, 939400, 991400, 1069400, 1241000, 1325000,
+1411400, 1500200, 1591400, 1685000, 1787000, 1903400, 2034200, 2179400,
+2339000, 2513000, 2708600, 2925800, 3164600, 3425000, 3707000, 4014200,
+4346600, 4704200, 5087000];
 
-populate_experience_table();
-
-function get_total_exp(level){
+function get_total_exp(table, level){
     if (level > 0 && level <= 120){
-        return experience_table[level - 1];
+        return table[level - 1];
     } else {
         return -1;
     }
 }
 
-function get_exp_diff(current_level, target_level){
-    let current_exp = get_total_exp(current_level);
-    let target_exp = get_total_exp(target_level);
+function get_exp_diff(table, current_level, target_level){
+    let current_exp = get_total_exp(table, current_level);
+    let target_exp = get_total_exp(table, target_level);
     if (current_exp < 0 || target_exp < 0 || target_exp < current_exp){
         return -1;
     }
@@ -76,12 +61,12 @@ function get_exp_diff(current_level, target_level){
 }
 
 function calculate_experience(){
-    let current_level = $('#currentleveltextfield').prop("value");
-    let target_level = $('#targetleveltextfield').prop("value");
-    let exp_diff = get_exp_diff(current_level, target_level);
+    let current_level = document.getElementById('currentleveltextfield').value;
+    let target_level = document.getElementById('targetleveltextfield').value;
+    let exp_diff = get_exp_diff(experience_table_enjp, current_level, target_level);
     if (exp_diff < 0){
-        $('#expneeded').prop("innerHTML", "Some Error Occurred :(");
+        document.getElementById('expneeded').innerHTML = "Some Error Occurred :(";
     } else {
-        $('#expneeded').prop("innerHTML", exp_diff.toLocaleString());
+        document.getElementById('expneeded').innerHTML = exp_diff.toLocaleString();
     }
 }
