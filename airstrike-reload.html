@@ -1,140 +1,140 @@
 <!DOCTYPE html>
 <html><head>
-	<title>Airstrike Cooldown Calculator</title>
-	<meta charset="UTF-8">
-	<link rel="preload" href="/styles.css" as="style">
-	<link rel="preload" href="css/airstrike-reload.css" as="style">
-	<link rel="preload" href="js/airstrike-reload.js" as="script">
-	<link rel="preload" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css" as="style">
-	<link rel="preload" href="/fonts/noto/noto-mono/noto-mono.css" as="style">
+    <title>Airstrike Cooldown Calculator</title>
+    <meta charset="UTF-8">
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="css/airstrike-reload.css" as="style">
+    <link rel="preload" href="js/airstrike-reload.js" as="script">
+    <link rel="preload" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css" as="style">
+    <link rel="preload" href="/fonts/noto/noto-mono/noto-mono.css" as="style">
 
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-	<meta property="og:image" content="https://thebombzen.com/images/avatar-current/avatar-current_256.png">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://thebombzen.com/azur-lane/airstrike-reload.html">
-	<meta property="og:title" content="Airstrike Cooldown Calculator">
-	<meta property="og:description" content="Calculate the cooldown for an airstrike in Azur Lane.">
+    <meta property="og:image" content="https://thebombzen.com/images/avatar-current/avatar-current_256.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thebombzen.com/azur-lane/airstrike-reload.html">
+    <meta property="og:title" content="Airstrike Cooldown Calculator">
+    <meta property="og:description" content="Calculate the cooldown for an airstrike in Azur Lane.">
 
-	<link rel="stylesheet" type="text/css" href="/styles.css">
-	<link rel="stylesheet" type="text/css" href="css/airstrike-reload.css">
-	<link rel="stylesheet" type="text/css" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css">
-	<link rel="stylesheet" type="text/css" href="/fonts/noto/noto-mono/noto-mono.css">
-	<script src="js/airstrike-reload.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/airstrike-reload.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/noto/noto-mono/noto-mono.css">
+    <script src="js/airstrike-reload.js"></script>
 </head>
 <body>
-	<div id="wrapper">
-		<header id="maintitle">
-			Airstrike Cooldown Calculator
-		</header>
-	<hr>
-	<main>
-		<p>Instructions: Enter the absolute cooldown for each plane slot (in seconds), as well as the planecount for that slot. If a carrier only has two plane slots, or has two identical planes in different slots, feel free to leave the third plane type out of the calculation simply by setting the planecount to zero. Also enter the raw reload stat for the carrier in question, and the percentage reload buff, if any.</p>
-		<form action="javascript:calculate_reload();">
-		<div class="calculator">
-		<div class="calculator-table">
-			<div class="calculator-row">
-				<div class="calculator-tag"><b>Reload Stat:</b></div>
-				<div class="calculator-input"><input type="text" id="reloadstattextfield" value="132"></div>
-			</div>
-			<div class="calculator-row">
-				<div class="calculator-tag"><b>Reload Percentage Buff:</b><br>(for example from Casablanca)</div>
-				<div class="calculator-input"><input type="text" id="reloadbufftextfield" value="0.0"></div>
-			</div>
-			<div class="calculator-row">
-				<div class="calculator-tag"><b>Cooldown Reduction Percent:</b><br>(for example on Ise)</div>
-				<div class="calculator-input"><input type="text" id="cdreduction1textfield" value="0.0"></div>
-			</div>
-			<div class="calculator-row">
-				<div class="calculator-tag"><b>Initial Cooldown Reduction Percent:</b><br>(for example on Kaga)</div>
-				<div class="calculator-input"><input type="text" id="cdreduction2textfield" value="0.0"></div>
-			</div>
-			<div class="calculator-row">
-				<div class="calculator-tag"><b>Use Loadout From Ship:</b></div>
-				<div class="calculator-input"><select id="shipselect" onchange="acquire_loadout();"></select></div>
-			</div>
-			<p></p>
-			<div class="calculator-row">
-				<div class="calculator-tag">First Plane Cooldown:</div>
-				<div class="calculator-input">
-					<select id="plane1cddropdown" onchange="update_textfields(1); calculate_reload();"></select>
-					<input type="text" id="plane1cdtextfield" value="10.90">
-				</div>
-			</div>
-			<div class="calculator-row">
-				<div class="calculator-tag">First Plane Count:</div>
-				<div class="calculator-input">
-					<input type="text" id="plane1counttextfield" value="3">
-					<input type="hidden" id="plane1countstorage" value="0">
-				</div>
-			</div>
-			<p></p>
-			<div class="calculator-row">
-				<div class="calculator-tag">Second Plane Cooldown:</div>
-				<div class="calculator-input">
-					<select id="plane2cddropdown" onchange="update_textfields(2); calculate_reload();"></select>
-					<input type="text" id="plane2cdtextfield" value="11.88"></div>
-			</div>
-			<div class="calculator-row">
-				<div class="calculator-tag">Second Plane Count:</div>
-				<div class="calculator-input">
-					<input type="text" id="plane2counttextfield" value="3">
-					<input type="hidden" id="plane2countstorage" value="0">
-				</div>
-			</div>
-			<p></p>
-			<div class="calculator-row">
-				<div class="calculator-tag">Third Plane Cooldown:</div>
-				<div class="calculator-input">
-					<select id="plane3cddropdown" onchange="update_textfields(3); calculate_reload();"></select>
-					<input type="text" id="plane3cdtextfield" value="11.37">
-				</div>
-			</div>
-			<div class="calculator-row">
-				<div class="calculator-tag">Third Plane Count:</div>
-				<div class="calculator-input">
-					<input type="text" id="plane3counttextfield" value="2">
-					<input type="hidden" id="plane3countstorage" value="0">
-				</div>
-			</div>
-			<p></p>
-			<div class="calculator-row">
-				<div class="calculator-tag">
-					<div class="calculator-check"><input type="checkbox" id="beaconbox" onclick="javascript:calculate_reload();"></div>
-					Homing Beacon Equipped
-				</div>
-				<div class="calculator-input">
-					<input type="submit" value="Calculate Airstrike Cooldown">
-				</div>
-			</div>
-		</div>
-		<div style="text-align: left;">
-			<p><b>Airstrike Cooldown:</b> <span id="finalcooldown"></span></p>
-			<p><b>Airstrike First Cooldown:</b> <span id="initcooldown"></span></p>
-			<p><b>Airstrike Launch Timers:</b> <span id="finalstriketimers"></span></p></div></form>
-		</div>
-	</main>
-	<hr>
-	<footer id="footer">
-		<a href="battleship-reload.html">Similar Calculator, but for Battleships</a>
-		<a href="index.html">Azur Lane Utilities</a>
-	</footer>
-	</div>
+    <div id="wrapper">
+        <header id="maintitle">
+            Airstrike Cooldown Calculator
+        </header>
+    <hr>
+    <main>
+        <p>Instructions: Enter the absolute cooldown for each plane slot (in seconds), as well as the planecount for that slot. If a carrier only has two plane slots, or has two identical planes in different slots, feel free to leave the third plane type out of the calculation simply by setting the planecount to zero. Also enter the raw reload stat for the carrier in question, and the percentage reload buff, if any.</p>
+        <form action="javascript:calculate_reload();">
+        <div class="calculator">
+        <div class="calculator-table">
+            <div class="calculator-row">
+                <div class="calculator-tag"><b>Reload Stat:</b></div>
+                <div class="calculator-input"><input type="text" id="reloadstattextfield" value="132"></div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-tag"><b>Reload Percentage Buff:</b><br>(for example from Casablanca)</div>
+                <div class="calculator-input"><input type="text" id="reloadbufftextfield" value="0.0"></div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-tag"><b>Cooldown Reduction Percent:</b><br>(for example on Ise)</div>
+                <div class="calculator-input"><input type="text" id="cdreduction1textfield" value="0.0"></div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-tag"><b>Initial Cooldown Reduction Percent:</b><br>(for example on Kaga)</div>
+                <div class="calculator-input"><input type="text" id="cdreduction2textfield" value="0.0"></div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-tag"><b>Use Loadout From Ship:</b></div>
+                <div class="calculator-input"><select id="shipselect" onchange="acquire_loadout();"></select></div>
+            </div>
+            <p></p>
+            <div class="calculator-row">
+                <div class="calculator-tag">First Plane Cooldown:</div>
+                <div class="calculator-input">
+                    <select id="plane1cddropdown" onchange="update_textfields(1); calculate_reload();"></select>
+                    <input type="text" id="plane1cdtextfield" value="10.90">
+                </div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-tag">First Plane Count:</div>
+                <div class="calculator-input">
+                    <input type="text" id="plane1counttextfield" value="3">
+                    <input type="hidden" id="plane1countstorage" value="0">
+                </div>
+            </div>
+            <p></p>
+            <div class="calculator-row">
+                <div class="calculator-tag">Second Plane Cooldown:</div>
+                <div class="calculator-input">
+                    <select id="plane2cddropdown" onchange="update_textfields(2); calculate_reload();"></select>
+                    <input type="text" id="plane2cdtextfield" value="11.88"></div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-tag">Second Plane Count:</div>
+                <div class="calculator-input">
+                    <input type="text" id="plane2counttextfield" value="3">
+                    <input type="hidden" id="plane2countstorage" value="0">
+                </div>
+            </div>
+            <p></p>
+            <div class="calculator-row">
+                <div class="calculator-tag">Third Plane Cooldown:</div>
+                <div class="calculator-input">
+                    <select id="plane3cddropdown" onchange="update_textfields(3); calculate_reload();"></select>
+                    <input type="text" id="plane3cdtextfield" value="11.37">
+                </div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-tag">Third Plane Count:</div>
+                <div class="calculator-input">
+                    <input type="text" id="plane3counttextfield" value="2">
+                    <input type="hidden" id="plane3countstorage" value="0">
+                </div>
+            </div>
+            <p></p>
+            <div class="calculator-row">
+                <div class="calculator-tag">
+                    <div class="calculator-check"><input type="checkbox" id="beaconbox" onclick="javascript:calculate_reload();"></div>
+                    Homing Beacon Equipped
+                </div>
+                <div class="calculator-input">
+                    <input type="submit" value="Calculate Airstrike Cooldown">
+                </div>
+            </div>
+        </div>
+        <div style="text-align: left;">
+            <p><b>Airstrike Cooldown:</b> <span id="finalcooldown"></span></p>
+            <p><b>Airstrike First Cooldown:</b> <span id="initcooldown"></span></p>
+            <p><b>Airstrike Launch Timers:</b> <span id="finalstriketimers"></span></p></div></form>
+        </div>
+    </main>
+    <hr>
+    <footer id="footer">
+        <a href="battleship-reload.html">Similar Calculator, but for Battleships</a>
+        <a href="index.html">Azur Lane Utilities</a>
+    </footer>
+    </div>
 </body>
 </html>
