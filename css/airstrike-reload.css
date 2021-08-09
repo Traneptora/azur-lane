@@ -5,23 +5,33 @@
 }
 
 .calculator-table {
-    display: table;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     width: 100%;
 }
 
+.calculator-rowgroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
 .calculator-row {
-    display: table-row;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .calculator-tag {
-    display: table-cell;
+    display: block;
     text-align: left;
     padding-right: 15px;
 }
 
 .calculator-input {
-    display: table-cell;
+    display: block;
     text-align: right;
 }
 
@@ -45,11 +55,18 @@ input[type=hidden] {
 }
 
 .calculator-check {
-    float: left;
-    margin-left: 1px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    margin-right: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+}
+
+.calculator-check input[type=checkbox] {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
 
 footer a {

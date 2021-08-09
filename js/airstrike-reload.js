@@ -1,14 +1,14 @@
 // planecounts and times must already be numbers
-function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count, plane3time, plane3count, reloadstat, reloadbuff, beacon, cooldown_reduction, init_cooldown_reduction){
+function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count, plane3time, plane3count, reloadstat, reloadbonus, reloadbuff, beacon, cooldown_reduction, init_cooldown_reduction){
     let plane_count = plane1count + plane2count + plane3count;
     if (plane_count <= 0){
-        return -1.0;
+        return [-1.0];
     }
     plane1time = plane1count != 0 ? +plane1time : 0.0;
     plane2time = plane2count != 0 ? +plane2time : 0.0;
     plane3time = plane3count != 0 ? +plane3time : 0.0;
     let weighted_cooldown_average = (plane1time * plane1count + plane2time * plane2count + plane3time * plane3count ) / plane_count;
-    let adjusted_reload = (1 + reloadstat / 100.0 * (1 + reloadbuff / 100.0));
+    let adjusted_reload = (1 + (reloadstat + reloadbonus) / 100.0 * (1 + reloadbuff / 100.0));
     let cooldown = Math.pow(adjusted_reload, -0.5) * 3.111269837 * weighted_cooldown_average;
     let init_cooldown = cooldown;
     let cd_reduction = +cooldown_reduction;
@@ -35,7 +35,8 @@ function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count
 }
 
 function calculate_reload(){
-    let reloadstat = document.getElementById("reloadstattextfield").value;
+    let reloadstat = document.getElementById("reloadstattxt").value;
+    let reloadbonus = document.getElementById("reloadbonustxt").value;
     let reloadbuff = document.getElementById("reloadbufftextfield").value;
     let plane1time = document.getElementById("plane1cdtextfield").value;
     let plane1count = document.getElementById("plane1counttextfield").value;
@@ -46,7 +47,7 @@ function calculate_reload(){
     let cooldown_reduction = document.getElementById("cdreduction1textfield").value;
     let initial_cooldown_reduction = document.getElementById("cdreduction2textfield").value;
     let beacon = document.getElementById("beaconbox").checked;
-    let cooldown = get_airstrike_cooldown(plane1time, +plane1count, plane2time, +plane2count, plane3time, +plane3count, +reloadstat, +reloadbuff, beacon, +cooldown_reduction, +initial_cooldown_reduction);
+    let cooldown = get_airstrike_cooldown(plane1time, +plane1count, plane2time, +plane2count, plane3time, +plane3count, +reloadstat, +reloadbonus, +reloadbuff, beacon, +cooldown_reduction, +initial_cooldown_reduction);
     if (cooldown[0] > 0.0){
         document.getElementById("finalcooldown").innerHTML = cooldown.shift() + "s";
         document.getElementById("initcooldown").innerHTML = cooldown[0] + "s";
@@ -70,12 +71,13 @@ function update_textfields(idnumber){
     if (dropdownvalue === "Don't Use Slot"){
         cdtextfield.disabled = true;
         counttextfield.disabled = true;
-        countstorage.value =  currcountvalue;
-        counttextfield.value =  0;
+        countstorage.value = currcountvalue;
+        counttextfield.value = 0;
     } else {
         cdtextfield.disabled = false;
         counttextfield.disabled = false;
-        countstorage.value =  0;
+        counttextfield.value = storedcountvalue;
+        countstorage.value = currcountvalue;
     }
 }
 
@@ -93,6 +95,7 @@ function handle_toc(data){
         carriers[carrier_name] = data.carriers[i];
     }
     carrier_list.sort();
+    carrier_list.push("Other");
     for (i in carrier_list){
         carrier_name = carrier_list[i];
         let option = document.createElement('option');
@@ -101,19 +104,13 @@ function handle_toc(data){
         option.appendChild(document.createTextNode(carrier_name));
         document.getElementById('shipselect').appendChild(option);
     }
-    carrier_list.push("Other");
-    let other = document.createElement('option');
-    other.name = "Other";
-    other.value = "Other";
-    other.appendChild(document.createTextNode("Other"));
-    document.getElementById('shipselect').appendChild(other);
     document.querySelector('#shipselect > option[value=Enterprise]').selected = true;
     acquire_loadout();
 }
 
 var fighters='' +
     '<option value="F" disabled class="disabled-option">Fighters</option>' +
-    '<option name="hellcat" value="10.90">F6F Hellcat</option>' +
+    '<option name="hellcat" selected value="10.90">F6F Hellcat</option>' +
     '<option value="10.81">F7F Tigercat</option>' +
     '<option value="10.71">N1K3-A Shiden Kai</option>' +
     '<option value="10.61">Sea Hornet</option>' +
@@ -132,7 +129,7 @@ var divebombers='' +
     '<option value="DB" disabled class="disabled-option">Dive Bombers</option>' +
     '<option value="12.00">J5N Tenrai</option>' +
     '<option value="11.91">XSB3C-1 (Goldiver)</option>' +
-    '<option name="helldiver" value="11.88">SB2C Helldiver</option>' +
+    '<option name="helldiver" selected value="11.88">SB2C Helldiver</option>' +
     '<option value="11.71">SBD Dauntless (McClusky)</option>' +
     '<option value="11.57">Junkers Ju-87c</option>' +
     '<option value="11.11">Fairey Firefly</option>' +
@@ -147,7 +144,7 @@ var torpedobombers='' +
     '<option value="12.17">XTB2D-1 Sky Pirate</option>' +
     '<option value="12.04">TBM Avenger (VT-18)</option>' +
     '<option value="11.64">Westland Wyvern</option>' +
-    '<option name="ryusei" value="11.37">B7A Ryusei</option>' +
+    '<option name="ryusei" selected value="11.37">B7A Ryusei</option>' +
     '<option value="11.17">Junkers Ju-87 D-4</option>' +
     '<option value="10.97">Swordfish (818 Squadron)</option>' +
     '<option value="10.60">B6N Saiun</option>' +
@@ -203,6 +200,7 @@ function handle_loadout_data(data){
     let slot1 = data.Slot1.Retrofit;
     let slot2 = data.Slot2.Retrofit;
     let slot3 = data.Slot3.Retrofit;
+    let reload_stat = +data.Reload;
     let slot1options;
     let slot2options;
     let slot3options;
@@ -219,15 +217,19 @@ function handle_loadout_data(data){
     ret_obj = buildoptions(slot3);
     slot3options = ret_obj.options;
     slot3count = ret_obj.count
+    document.getElementById("reloadstattxt").value = reload_stat;
     let plane1name = document.querySelector('#plane1cddropdown > option:checked').text;
     let plane2name = document.querySelector('#plane2cddropdown > option:checked').text;
     let plane3name = document.querySelector('#plane3cddropdown > option:checked').text;
     document.getElementById('plane1cddropdown').innerHTML = slot1options;
     document.getElementById('plane1counttextfield').value = slot1count;
+    document.getElementById('plane1countstorage').value = slot1count;
     document.getElementById('plane2cddropdown').innerHTML = slot2options;
     document.getElementById('plane2counttextfield').value = slot2count;
+    document.getElementById('plane2countstorage').value = slot2count;
     document.getElementById('plane3cddropdown').innerHTML = slot3options;
     document.getElementById('plane3counttextfield').value = slot3count;
+    document.getElementById('plane3countstorage').value = slot3count;
     Array.prototype.filter.call(document.querySelectorAll('#plane1cddropdown > option'), (option) => option.text === plane1name).forEach((o) => o.selected = true);
     Array.prototype.filter.call(document.querySelectorAll('#plane2cddropdown > option'), (option) => option.text === plane2name).forEach((o) => o.selected = true);
     Array.prototype.filter.call(document.querySelectorAll('#plane3cddropdown > option'), (option) => option.text === plane3name).forEach((o) => o.selected = true);
@@ -241,7 +243,7 @@ function acquire_loadout(){
     let carrier_name = document.getElementById('shipselect').value;
     if (carrier_name === "Other"){
         let general_loadout = {"F": "1", "D": "1", "T": "1", "S": "1", "N": "1"};
-        let other_obj = {"Slot1":{"Retrofit":general_loadout}, "Slot2":{"Retrofit":general_loadout}, "Slot3":{"Retrofit":general_loadout}};
+        let other_obj = {"Reload":100,"Slot1":{"Retrofit":general_loadout}, "Slot2":{"Retrofit":general_loadout}, "Slot3":{"Retrofit":general_loadout}};
         handle_loadout_data(other_obj);
     } else {
         let full_url = "https://thebombzen.com/azur-lane/data/" + carriers[carrier_name].carrierJSON;
@@ -253,7 +255,6 @@ function acquire_loadout(){
     }
 }
 
-// Load This After JQuery
 function ready() {
     document.getElementById('plane1cddropdown').innerHTML = fighters;
     document.querySelector('#plane1cddropdown > option[name=hellcat]').selected = true;

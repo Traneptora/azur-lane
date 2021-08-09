@@ -49,27 +49,35 @@
         <form action="javascript:calculate_reload();">
         <div class="calculator">
         <div class="calculator-table">
+            <div class="calculator-rowgroup">
             <div class="calculator-row">
-                <div class="calculator-tag"><b>Reload Stat:</b></div>
-                <div class="calculator-input"><input type="text" id="reloadstattextfield" value="132"></div>
+                <div class="calculator-tag"><b>Choose Ship:</b></div>
+                <div class="calculator-input"><select id="shipselect" onchange="acquire_loadout();"></select></div>
+            </div>
+            </div>
+            <div class="calculator-rowgroup">
+            <div class="calculator-row">
+                <div class="calculator-tag"><b>Base Reload Stat:</b><br>(without skills, Fleet Tech, or cats)</div>
+                <div class="calculator-input"><input type="text" id="reloadstattxt" value="132"></div>
             </div>
             <div class="calculator-row">
-                <div class="calculator-tag"><b>Reload Percentage Buff:</b><br>(for example from Casablanca)</div>
+                <div class="calculator-tag"><b>Bonus RLD Stat:</b><br>(from Fleet Tech and cats)</div>
+                <div class="calculator-input"><input type="text" id="reloadbonustxt" value="0"></div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-tag"><b>Reload Percentage Buff:</b><br>(from skills, for example from <a href="https://azurlane.koumakan.jp/Queen_Elizabeth">Queen Elizabeth</a>)</div>
                 <div class="calculator-input"><input type="text" id="reloadbufftextfield" value="0.0"></div>
             </div>
             <div class="calculator-row">
-                <div class="calculator-tag"><b>Cooldown Reduction Percent:</b><br>(for example on Ise)</div>
+                <div class="calculator-tag"><b>Cooldown Reduction Percent:</b><br>(for all airstrikes, for example on <a href="https://azurlane.koumakan.jp/Aquila">Aquila</a>)</div>
                 <div class="calculator-input"><input type="text" id="cdreduction1textfield" value="0.0"></div>
             </div>
             <div class="calculator-row">
-                <div class="calculator-tag"><b>Initial Cooldown Reduction Percent:</b><br>(for example on Kaga)</div>
+                <div class="calculator-tag"><b>Initial Cooldown Reduction Percent:</b><br>(for one airstrike, for example on <a href="https://azurlane.koumakan.jp/Kaga">Kaga</a>)</div>
                 <div class="calculator-input"><input type="text" id="cdreduction2textfield" value="0.0"></div>
             </div>
-            <div class="calculator-row">
-                <div class="calculator-tag"><b>Use Loadout From Ship:</b></div>
-                <div class="calculator-input"><select id="shipselect" onchange="acquire_loadout();"></select></div>
             </div>
-            <p></p>
+            <div class="calculator-rowgroup">
             <div class="calculator-row">
                 <div class="calculator-tag">First Plane Cooldown:</div>
                 <div class="calculator-input">
@@ -84,7 +92,8 @@
                     <input type="hidden" id="plane1countstorage" value="0">
                 </div>
             </div>
-            <p></p>
+            </div>
+            <div class="calculator-rowgroup">
             <div class="calculator-row">
                 <div class="calculator-tag">Second Plane Cooldown:</div>
                 <div class="calculator-input">
@@ -98,7 +107,8 @@
                     <input type="hidden" id="plane2countstorage" value="0">
                 </div>
             </div>
-            <p></p>
+            </div>
+            <div class="calculator-rowgroup">
             <div class="calculator-row">
                 <div class="calculator-tag">Third Plane Cooldown:</div>
                 <div class="calculator-input">
@@ -113,11 +123,11 @@
                     <input type="hidden" id="plane3countstorage" value="0">
                 </div>
             </div>
-            <p></p>
+            </div>
             <div class="calculator-row">
-                <div class="calculator-tag">
-                    <div class="calculator-check"><input type="checkbox" id="beaconbox" onclick="javascript:calculate_reload();"></div>
-                    Homing Beacon Equipped
+                <div class="calculator-check">
+                    <input type="checkbox" id="beaconbox" onclick="javascript:calculate_reload();">
+                    <div>Homing Beacon Equipped</div>
                 </div>
                 <div class="calculator-input">
                     <input type="submit" value="Calculate Airstrike Cooldown">
@@ -127,7 +137,9 @@
         <div style="text-align: left;">
             <p><b>Airstrike Cooldown:</b> <span id="finalcooldown"></span></p>
             <p><b>Airstrike First Cooldown:</b> <span id="initcooldown"></span></p>
-            <p><b>Airstrike Launch Timers:</b> <span id="finalstriketimers"></span></p></div></form>
+            <p><b>Airstrike Launch Timers:</b> <span id="finalstriketimers"></span></p>
+        </div>
+        </form>
         </div>
     </main>
     <hr>
