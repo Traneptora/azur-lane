@@ -65,19 +65,18 @@ function update_textfields(idnumber){
     let dropdownvalue = cddropdown.value;
     cdtextfield.value = dropdownvalue;
     let counttextfield = document.getElementById('plane' + idnumber + 'counttextfield');
-    let countstorage = document.getElementById('plane' + idnumber + 'countstorage');
     let currcountvalue = +counttextfield.value;
-    let storedcountvalue = +countstorage.value;
+    let storedcountvalue = +counttextfield.dataset.storedValue;
+    counttextfield.dataset.storedValue = currcountvalue;
     if (dropdownvalue === "Don't Use Slot"){
         cdtextfield.disabled = true;
         counttextfield.disabled = true;
-        countstorage.value = currcountvalue;
         counttextfield.value = 0;
-    } else {
+    } else if (counttextfield.disabled) {
+        // restoring from "Don't use slot"
         cdtextfield.disabled = false;
         counttextfield.disabled = false;
         counttextfield.value = storedcountvalue;
-        countstorage.value = currcountvalue;
     }
 }
 
@@ -221,15 +220,19 @@ function handle_loadout_data(data){
     let plane1name = document.querySelector('#plane1cddropdown > option:checked').text;
     let plane2name = document.querySelector('#plane2cddropdown > option:checked').text;
     let plane3name = document.querySelector('#plane3cddropdown > option:checked').text;
+    let textfield;
     document.getElementById('plane1cddropdown').innerHTML = slot1options;
-    document.getElementById('plane1counttextfield').value = slot1count;
-    document.getElementById('plane1countstorage').value = slot1count;
+    textfield = document.getElementById('plane1counttextfield');
+    textfield.value = slot1count;
+    textfield.dataset.storedValue = slot1count;
     document.getElementById('plane2cddropdown').innerHTML = slot2options;
-    document.getElementById('plane2counttextfield').value = slot2count;
-    document.getElementById('plane2countstorage').value = slot2count;
+    textfield = document.getElementById('plane2counttextfield');
+    textfield.value = slot2count;
+    textfield.dataset.storedValue = slot2count;
     document.getElementById('plane3cddropdown').innerHTML = slot3options;
-    document.getElementById('plane3counttextfield').value = slot3count;
-    document.getElementById('plane3countstorage').value = slot3count;
+    textfield = document.getElementById('plane3counttextfield');
+    textfield.value = slot3count;
+    textfield.dataset.storedValue = slot3count;
     Array.prototype.filter.call(document.querySelectorAll('#plane1cddropdown > option'), (option) => option.text === plane1name).forEach((o) => o.selected = true);
     Array.prototype.filter.call(document.querySelectorAll('#plane2cddropdown > option'), (option) => option.text === plane2name).forEach((o) => o.selected = true);
     Array.prototype.filter.call(document.querySelectorAll('#plane3cddropdown > option'), (option) => option.text === plane3name).forEach((o) => o.selected = true);
