@@ -1,29 +1,3 @@
-.calculator {
-    margin: 0 auto;
-    text-align: center;
-    width: 80%;
-}
-
-.calculator-table {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 100%;
-}
-
-.calculator-rowgroup {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.calculator-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-
 .calculator-tag {
     display: block;
     text-align: left;
@@ -50,10 +24,6 @@
     text-align: left;
 }
 
-input[type=hidden] {
-    display: none;
-}
-
 .calculator-check {
     display: flex;
     flex-direction: row;
@@ -67,10 +37,4 @@ input[type=hidden] {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 10px;
-}
-
-footer a {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
