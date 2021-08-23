@@ -84,19 +84,17 @@ var carrier_list = [];
 var carriers = {};
 
 function handle_toc(data){
-    if (carriers.length > 0){
+    if (carrier_list.length > 0){
         return;
     }
-    data.carriers.sort((a, b) => a < b ? -1 : 1);
-    for (let i in data.carriers){
-        let carrier_name = data.carriers[i].Name;
+    for (let ship of data.ships){
+        let carrier_name = ship.Name;
         carrier_list.push(carrier_name);
-        carriers[carrier_name] = data.carriers[i];
+        carriers[carrier_name] = ship;
     }
     carrier_list.sort();
     carrier_list.push("Other");
-    for (i in carrier_list){
-        carrier_name = carrier_list[i];
+    for (let carrier_name of carrier_list){
         let option = document.createElement('option');
         option.name = carrier_name;
         option.value = carrier_name;
@@ -246,10 +244,10 @@ function acquire_loadout(){
     let carrier_name = document.getElementById('shipselect').value;
     if (carrier_name === "Other"){
         let general_loadout = {"F": "1", "D": "1", "T": "1", "S": "1", "N": "1"};
-        let other_obj = {"Reload":100,"Slot1":{"Retrofit":general_loadout}, "Slot2":{"Retrofit":general_loadout}, "Slot3":{"Retrofit":general_loadout}};
+        let other_obj = {"Name":"Other","Reload":100,"Slot1":{"Retrofit":general_loadout}, "Slot2":{"Retrofit":general_loadout}, "Slot3":{"Retrofit":general_loadout}};
         handle_loadout_data(other_obj);
     } else {
-        let full_url = "https://thebombzen.com/azur-lane/data/" + carriers[carrier_name].carrierJSON;
+        let full_url = "/azur-lane/data/" + carriers[carrier_name].carrierJSON;
         fetch(full_url).then((response) => {
             return response.json();
         }).then((json) => {
