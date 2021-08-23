@@ -42,52 +42,60 @@ function get_bbcooldown(weapon_cooldown, reload_stat, reload_percent_buff, has_t
 }
 
 function update_guntextfields() {
-    const tempRLD = document.getElementById('cdred2enablecb').checked;
-    const cdredshowhideCL = document.getElementById('cdredshowhide').classList;
+    const tempRLD = document.getElementById("cdred2enablecb").checked;
+    const cdredshowhideCL = document.getElementById("cdredshowhide").classList;
     if (tempRLD){
-        cdredshowhideCL.remove('hidden');
+        cdredshowhideCL.remove("hidden");
     } else {
-        cdredshowhideCL.add('hidden');
+        cdredshowhideCL.add("hidden");
     }
-    $('#maingun1cdtextfield').prop('value', $('#maingun1cddropdown').prop('value'));
-    let $option = $('#maingun1cddropdown option:selected');
-    let name = $option.prop('name');
-    let imgname = $option.data('imgname');
-    let $img = $('#maingun1image');
-    $img.prop('src', 'images/equips/gun/bb/' + imgname);
-    $img.prop('alt', name);
+    const currValue = document.getElementById("maingun1cddropdown").value;
+    document.getElementById("maingun1cdtextfield").value = currValue;
+    // standard CSS/JS uses checked here
+    // event tho it's a selectbox
+    const option = document.querySelector("#maingun1cddropdown option:checked")
+    const name = option.name;
+    const imgname = option.dataset.imgname;
+    const img = document.getElementById("maingun1image");
+    img.src = "images/equips/gun/bb/" + imgname;
+    img.alt = name;
 }
 
 function calculate_bbcooldown() {
-    let reloadstat = $("#bbreloadstattextfield").prop('value');
-    let reloadbuff = $("#bbreloadbufftextfield").prop('value');
-    let weaponcd = $("#maingun1cdtextfield").prop('value');
-    let cooldown_reduction = $("#cdreduction1textfield").prop("value");
-    let initial_cd_reduction = $("#cdreduction2textfield").prop("value");
-    let has_timed_reload_buff = $('#cdred2enablecb').is(':checked');
-    let has_boomer_fcr = $("#boomerfcrbox").is(":checked");
-    let timed_reload_percent_buff = $('#cdred2percenttxtfield').prop('value');
-    let timed_reload_buff_duration = $('#cdred2timetxtfield').prop('value');
-    let cooldown = get_bbcooldown(+weaponcd, +reloadstat, +reloadbuff, has_timed_reload_buff, +timed_reload_percent_buff, +timed_reload_buff_duration, +cooldown_reduction, +initial_cd_reduction, has_boomer_fcr);
+    const reloadstat = document.getElementById("bbreloadstattextfield").value;
+    const reloadbuff = document.getElementById("bbreloadbufftextfield").value;
+    const weaponcd = document.getElementById("maingun1cdtextfield").value;
+    const cooldown_reduction = document.getElementById("cdreduction1textfield").value;
+    const initial_cd_reduction = document.getElementById("cdreduction2textfield").value;
+    const has_timed_reload_buff = document.getElementById("cdred2enablecb").checked;
+    const has_boomer_fcr = document.getElementById("boomerfcrbox").checked;
+    const timed_reload_percent_buff = document.getElementById("cdred2percenttxtfield").value;
+    const timed_reload_buff_duration = document.getElementById("cdred2timetxtfield").value;
+    const cooldown = get_bbcooldown(+weaponcd, +reloadstat, +reloadbuff, has_timed_reload_buff, +timed_reload_percent_buff, +timed_reload_buff_duration, +cooldown_reduction, +initial_cd_reduction, has_boomer_fcr);
     if (cooldown[0] > 0.0){
-        $("#finalbbcooldown").prop("innerHTML", cooldown.shift() + "s");
-        $("#initbbcooldown").prop("innerHTML", cooldown[0] + "s");
-        $("#finalbbshottimers").prop("innerHTML", cooldown.join(", ") + "");
+        document.getElementById("finalbbcooldown").innerHTML = cooldown.shift() + "s";
+        document.getElementById("initbbcooldown").innerHTML = cooldown[0] + "s";
+        document.getElementById("finalbbshottimers").innerHTML = cooldown.join(", ") + "";
     } else {
-        $("#finalbbcooldown").prop("innerHTML", "Some Error Occurred :(");
-        $("#initbbcooldown").prop("innerHTML", "");
-        $("#finalbbshottimers").prop("innerHTML", "");
+        document.getElementById("finalbbcooldown").innerHTML = "Some Error Occurred :(";
+        document.getElementById("initbbcooldown").innerHTML = "";
+        document.getElementById("finalbbshottimers").innerHTML = "";
     }
 }
 
-// Load This After JQuery
-$(function(){
+function ready() {
     update_guntextfields();
     calculate_bbcooldown();
-    $('#maingun1cddropdown option').each((index, element) => {
-        let src = $(element).data('imgname');
+    document.querySelectorAll("#maingun1cddropdown option").forEach((elem) => {
+        const src = elem.dataset.imgname;
         if (src){
-            $(element).css('background', 'url("images/equips/gun/bb/' + src + '") no-repeat -200% -200%');
+            elem.style.background = 'url("images/equips/gun/bb/' + src + '") no-repeat -200% -200%';
         }
     });
-});
+}
+
+if (document.readyState === 'loading'){
+    document.addEventListener("DOMContentLoaded", ready);
+} else {
+    ready();
+}
