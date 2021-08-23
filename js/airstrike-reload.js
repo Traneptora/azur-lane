@@ -269,7 +269,7 @@ function ready() {
     update_textfields(2);
     update_textfields(3);
     calculate_reload();
-    fetch('https://thebombzen.com/azur-lane/data/ships/toc.json').then((r) => {
+    fetch('/azur-lane/data/ships/carriers.json').then((r) => {
         return r.json();
     }).then((j) => {
         handle_toc(j);
