@@ -43,7 +43,12 @@ function get_bbcooldown(weapon_cooldown, reload_stat, reload_percent_buff, has_t
 
 function update_guntextfields() {
     const tempRLD = document.getElementById('cdred2enablecb').checked;
-    document.getElementById('cdredshowhide').style.display = tempRLD ? 'flex' : 'none';
+    const cdredshowhideCL = document.getElementById('cdredshowhide').classList;
+    if (tempRLD){
+        cdredshowhideCL.remove('hidden');
+    } else {
+        cdredshowhideCL.add('hidden');
+    }
     $('#maingun1cdtextfield').prop('value', $('#maingun1cddropdown').prop('value'));
     let $option = $('#maingun1cddropdown option:selected');
     let name = $option.prop('name');
