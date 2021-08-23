@@ -70,15 +70,18 @@
 			</div>
 			<div class="centered-flow-rowgroup">
 				<div class="centered-flow-row">
-					<div class="calculator-tag">
-						<input type="checkbox" onchange="update_guntextfields(); calculate_bbcooldown();" id="cdred2enablecb" style="margin-top: 5px; margin-bottom: 5px;">
-						<span style="margin-left; 5px;"><b>Temporary Reload Buff?</b><br>(for example from Howe)</span>
+					<div class="calculator-check">
+						<input type="checkbox" onchange="update_guntextfields(); calculate_bbcooldown();" id="cdred2enablecb">
+						<div><b>Temporary Reload Buff?</b><br>(for example from Howe)</div>
 					</div>
 				</div>
-				<div id="cdredshowhide1" style="display: none; width: 100%;">
+			</div>
+			<div class="centered-flow-rowgroup" id="cdredshowhide">
+				<div class="centered-flow-row">
 					<div class="calculator-tag">Temp RLD Buff Duration:</div>
 					<div class="calculator-input"><input type="text" id="cdred2timetxtfield" value="8.0"></div>
-				</div><div id="cdredshowhide2" style="display: none; width: 100%;">
+				</div>
+				<div class="centered-flow-row">
 					<div class="calculator-tag">Temp RLD Buff Percent:</div>
 					<div class="calculator-input"><input type="text" id="cdred2percenttxtfield" value="20.00"></div>
 				</div>
