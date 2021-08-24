@@ -1,6 +1,7 @@
 {
     "Name": "Aquila",
     "Reload": 127,
+    "ReloadUnkai": 127,
     "Slot1": {
         "MLB": {
             "F": 2

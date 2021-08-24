@@ -1,6 +1,7 @@
 {
     "Name": "Saratoga",
     "Reload": 130,
+    "ReloadUnkai": 110,
     "Slot1": {
         "MLB": {
             "F": 2

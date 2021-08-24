@@ -1,6 +1,7 @@
 {
     "Name": "Anniversary Kizuna AI",
     "Reload": 120,
+    "ReloadUnkai": 120,
     "Slot1": {
         "MLB": {
             "F": 2

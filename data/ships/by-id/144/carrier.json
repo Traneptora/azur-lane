@@ -1,6 +1,7 @@
 {
     "Name": "Ark Royal",
     "Reload": 132,
+    "ReloadUnkai": 117,
     "Slot1": {
         "MLB": {
             "T": 3

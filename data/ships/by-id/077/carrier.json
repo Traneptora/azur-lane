@@ -1,6 +1,7 @@
 {
     "Name": "Enterprise",
     "Reload": 132,
+    "ReloadUnkai": 132,
     "Slot1": {
         "MLB": {
             "F": 3

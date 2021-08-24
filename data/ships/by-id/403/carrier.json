@@ -1,6 +1,7 @@
 {
     "Name": "Bataan",
     "Reload": 199,
+    "ReloadUnkai": 199,
     "Slot1": {
         "MLB": {
             "F": 3

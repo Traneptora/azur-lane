@@ -1,6 +1,7 @@
 {
     "Name": "Langley",
     "Reload": 128,
+    "ReloadUnkai": 123,
     "Slot1": {
         "MLB": {
             "F": 3

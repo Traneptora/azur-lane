@@ -1,6 +1,7 @@
 {
     "Name": "Eagle",
     "Reload": 112,
+    "ReloadUnkai": 112,
     "Slot1": {
         "MLB": {
             "F": 3

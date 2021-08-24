@@ -1,6 +1,7 @@
 {
     "Name": "Yorktown",
     "Reload": 121,
+    "ReloadUnkai": 121,
     "Slot1": {
         "MLB": {
             "F": 3

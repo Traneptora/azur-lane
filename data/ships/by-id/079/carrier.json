@@ -1,6 +1,7 @@
 {
     "Name": "Wasp",
     "Reload": 117,
+    "ReloadUnkai": 117,
     "Slot1": {
         "MLB": {
             "F": 3

@@ -1,6 +1,7 @@
 {
     "Name": "Green Heart",
     "Reload": 115,
+    "ReloadUnkai": 115,
     "Slot1": {
         "MLB": {
             "F": 2

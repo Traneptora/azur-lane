@@ -1,6 +1,7 @@
 {
     "Name": "Chaser",
     "Reload": 185,
+    "ReloadUnkai": 185,
     "Slot1": {
         "MLB": {
             "F": 3
