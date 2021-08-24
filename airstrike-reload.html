@@ -58,7 +58,13 @@
             <div class="centered-flow-rowgroup">
                 <div class="centered-flow-row">
                     <div class="calculator-tag"><b>Base RLD Stat:</b><br>(without skills, Fleet Tech, or cats)</div>
-                    <div class="calculator-input"><input type="text" id="reloadstattxt" value="132"></div>
+                    <div class="calculator-input"><input type="text" id="reloadstattxt" data-pre-affinity-reload="132" value="132"></div>
+                </div>
+                <div class="centered-flow-row">
+                    <div class="calculator-check">
+                        <input type="checkbox" id="cv-box-affinity" onclick="acquire_loadout();">
+                        <div><b>Ship is Oathed</b><br>(and with 200 affinity)</div>
+                    </div>
                 </div>
                 <div class="centered-flow-row">
                     <div class="calculator-tag"><b>Bonus RLD Stat:</b><br>(from Fleet Tech and cats)</div>

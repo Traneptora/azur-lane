@@ -23,9 +23,9 @@ function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count
     cooldown += 0.1;
     if (cooldown > 0.0 && cooldown < 300.0 && init_cooldown > 0.0 && init_cooldown < 300.00){
         let timer = init_cooldown;
-        let ret = [Math.round(cooldown * 100.00) / 100.00];
+        let ret = [roundBase10(cooldown, 2)];
         while (timer < 300.00){
-            ret.push(Math.round(timer * 100.00) / 100.00);
+            ret.push(roundBase10(timer, 2));
             timer += cooldown;
         }
         return ret;
@@ -193,11 +193,23 @@ function buildoptions(slot_obj){
 
 }
 
+function roundBase10(value, digits = 2){
+    const power_ten = Math.pow(10.0, digits);
+    const rounded = Math.round(value * power_ten) / power_ten;
+    return rounded.toLocaleString("en-US", {"minimumFractionDigits": digits, "maximumFractionDigits": digits})
+}
+
+function get_oath_reload(reload, reloadunkai){
+    const kai_diff = reload - reloadunkai;
+    const reload_oath = reloadunkai * 1.056603774 + kai_diff;
+    return roundBase10(reload_oath, 2);
+}
+
 function handle_loadout_data(data){
-    let slot1 = data.Slot1.Retrofit;
-    let slot2 = data.Slot2.Retrofit;
-    let slot3 = data.Slot3.Retrofit;
-    let reload_stat = +data.Reload;
+    const slot1 = data.Slot1.Retrofit;
+    const slot2 = data.Slot2.Retrofit;
+    const slot3 = data.Slot3.Retrofit;
+    let reload_stat = document.getElementById("cv-box-affinity").checked ? get_oath_reload(+data.Reload, +data.ReloadUnkai) : +data.Reload;
     let slot1options;
     let slot2options;
     let slot3options;
@@ -214,10 +226,12 @@ function handle_loadout_data(data){
     ret_obj = buildoptions(slot3);
     slot3options = ret_obj.options;
     slot3count = ret_obj.count
-    document.getElementById("reloadstattxt").value = reload_stat;
-    let plane1name = document.querySelector('#plane1cddropdown > option:checked').text;
-    let plane2name = document.querySelector('#plane2cddropdown > option:checked').text;
-    let plane3name = document.querySelector('#plane3cddropdown > option:checked').text;
+    const reload_stat_txt = document.getElementById("reloadstattxt");
+    reload_stat_txt.value = reload_stat;
+    reload_stat_txt.dataset.preAffinityReload = +data.Reload;
+    const plane1name = document.querySelector('#plane1cddropdown > option:checked').text;
+    const plane2name = document.querySelector('#plane2cddropdown > option:checked').text;
+    const plane3name = document.querySelector('#plane3cddropdown > option:checked').text;
     let textfield;
     document.getElementById('plane1cddropdown').innerHTML = slot1options;
     textfield = document.getElementById('plane1counttextfield');
@@ -243,8 +257,16 @@ function handle_loadout_data(data){
 function acquire_loadout(){
     let carrier_name = document.getElementById('shipselect').value;
     if (carrier_name === "Other"){
-        let general_loadout = {"F": "1", "D": "1", "T": "1", "S": "1", "N": "1"};
-        let other_obj = {"Name":"Other","Reload":100,"Slot1":{"Retrofit":general_loadout}, "Slot2":{"Retrofit":general_loadout}, "Slot3":{"Retrofit":general_loadout}};
+        const general_loadout = {"F": "1", "D": "1", "T": "1", "S": "1", "N": "1"};
+        const rld = document.getElementById("reloadstattxt").dataset.preAffinityReload;
+        const other_obj = {
+            "Name" : "Other",
+            "Reload": rld,
+            "ReloadUnkai": rld,
+            "Slot1": {"Retrofit":general_loadout},
+            "Slot2":{"Retrofit":general_loadout},
+            "Slot3":{"Retrofit":general_loadout}
+        };
         handle_loadout_data(other_obj);
     } else {
         let full_url = "/azur-lane/data/" + carriers[carrier_name].carrierJSON;
