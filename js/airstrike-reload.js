@@ -94,6 +94,7 @@ function handle_toc(data){
     }
     carrier_list.sort();
     carrier_list.push("Other");
+    carriers["Other"] = {};
     for (let carrier_name of carrier_list){
         let option = document.createElement('option');
         option.name = carrier_name;
@@ -194,22 +195,56 @@ function buildoptions(slot_obj){
 }
 
 function roundBase10(value, digits = 2){
-    const power_ten = Math.pow(10.0, digits);
+    const power_ten = Math.pow(10.0, digits > 0 ? digits : -digits);
     const rounded = Math.round(value * power_ten) / power_ten;
-    return rounded.toLocaleString("en-US", {"minimumFractionDigits": digits, "maximumFractionDigits": digits})
+    const str = rounded.toString();
+    if (digits > 0){
+        const index = str.indexOf(".");
+        if (index < 0){
+            return str + "." + "0".repeat(digits);
+        } else {
+            return str.slice(0, index + 1) + (str.slice(index + 1) + "0".repeat(digits)).slice(0, digits);
+        }
+    } else {
+        return str;
+    }
 }
 
-function get_oath_reload(reload, reloadunkai){
-    const kai_diff = reload - reloadunkai;
-    const reload_oath = reloadunkai * 1.056603774 + kai_diff;
-    return roundBase10(reload_oath, 2);
+function get_oath_reload(reload, reload_kai_diff){
+    return (reload - reload_kai_diff) * 1.056603774 + reload_kai_diff;
+}
+
+function get_unoath_reload(reload_oath, reload_kai_diff){
+    return (reload_oath - reload_kai_diff) * 0.946428571 + reload_kai_diff;
+}
+
+function update_reload_stat(reload){
+    const oath = document.getElementById("cv-box-affinity").checked;
+    const reload_stat_txt = document.getElementById("reloadstattxt");
+    const reload_kai_diff = +reload_stat_txt.dataset.reloadKaiDiff;
+    const reload_stat = oath ? get_oath_reload(reload, reload_kai_diff) : reload;
+    reload_stat_txt.value = roundBase10(reload_stat, -2);
+    reload_stat_txt.dataset.reload = reload_stat;
+}
+
+function toggle_affinity(){
+    const oath = document.getElementById("cv-box-affinity").checked;
+    const reload_stat_txt = document.getElementById("reloadstattxt");
+    const reload_kai_diff = +reload_stat_txt.dataset.reloadKaiDiff;
+    const saved_reload = +reload_stat_txt.dataset.reload;
+    const value = +reload_stat_txt.value;
+    // if user did not change it, use saved value for full precision
+    const reload = roundBase10(saved_reload, -1) === value ? saved_reload : value;
+    const unoath_reload = oath ? reload : get_unoath_reload(reload, reload_kai_diff);
+    update_reload_stat(unoath_reload);
 }
 
 function handle_loadout_data(data){
     const slot1 = data.Slot1.Retrofit;
     const slot2 = data.Slot2.Retrofit;
     const slot3 = data.Slot3.Retrofit;
-    let reload_stat = document.getElementById("cv-box-affinity").checked ? get_oath_reload(+data.Reload, +data.ReloadUnkai) : +data.Reload;
+    const reloadDiff = (+data.Reload) - (+data.ReloadUnkai);
+    document.getElementById("reloadstattxt").dataset.reloadKaiDiff = reloadDiff;
     let slot1options;
     let slot2options;
     let slot3options;
@@ -226,9 +261,6 @@ function handle_loadout_data(data){
     ret_obj = buildoptions(slot3);
     slot3options = ret_obj.options;
     slot3count = ret_obj.count
-    const reload_stat_txt = document.getElementById("reloadstattxt");
-    reload_stat_txt.value = reload_stat;
-    reload_stat_txt.dataset.preAffinityReload = +data.Reload;
     const plane1name = document.querySelector('#plane1cddropdown > option:checked').text;
     const plane2name = document.querySelector('#plane2cddropdown > option:checked').text;
     const plane3name = document.querySelector('#plane3cddropdown > option:checked').text;
@@ -251,30 +283,45 @@ function handle_loadout_data(data){
     update_textfields(1);
     update_textfields(2);
     update_textfields(3);
-    calculate_reload();
 }
 
 function acquire_loadout(){
-    let carrier_name = document.getElementById('shipselect').value;
-    if (carrier_name === "Other"){
+    const carrier_name = document.getElementById("shipselect").value;
+    const previous_carrier = document.getElementById("shipselect").dataset.previousCarrier;
+    if (carrier_name === "Other" && previous_carrier !== "Other"){
         const general_loadout = {"F": "1", "D": "1", "T": "1", "S": "1", "N": "1"};
-        const rld = document.getElementById("reloadstattxt").dataset.preAffinityReload;
         const other_obj = {
             "Name" : "Other",
-            "Reload": rld,
-            "ReloadUnkai": rld,
+            "Reload": 100,
+            "ReloadUnkai": 100,
             "Slot1": {"Retrofit":general_loadout},
             "Slot2":{"Retrofit":general_loadout},
             "Slot3":{"Retrofit":general_loadout}
         };
+        carriers["Other"].ship_info = other_obj;
         handle_loadout_data(other_obj);
-    } else {
-        let full_url = "/azur-lane/data/" + carriers[carrier_name].carrierJSON;
-        fetch(full_url).then((response) => {
-            return response.json();
-        }).then((json) => {
-            handle_loadout_data(json);
-        });
+        update_reload_stat(rld);
+        calculate_reload();
+    } else if (carrier_name !== previous_carrier) {
+        const handle = (data) => {
+            if (previous_carrier !== carrier_name){
+                handle_loadout_data(data);
+            }
+            update_reload_stat(+data.Reload);
+            calculate_reload();
+            document.getElementById("shipselect").dataset.previousCarrier = carrier_name;
+        };
+        if (carriers[carrier_name].ship_info){
+            handle(carriers[carrier_name].ship_info);
+        } else {
+            const fetch_url = "/azur-lane/data/" + carriers[carrier_name].carrierJSON;
+            fetch(fetch_url).then((response) => {
+                return response.json();
+            }).then((data) => {
+                carriers[data.Name].ship_info = data;
+                handle(data);
+            });
+        }
     }
 }
 
@@ -288,7 +335,6 @@ function ready() {
     update_textfields(1);
     update_textfields(2);
     update_textfields(3);
-    calculate_reload();
     fetch('/azur-lane/data/ships/carriers.json').then((r) => {
         return r.json();
     }).then((j) => {
