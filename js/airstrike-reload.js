@@ -35,8 +35,8 @@ function get_airstrike_cooldown(plane1time, plane1count, plane2time, plane2count
 }
 
 function calculate_reload(){
-    let reloadstat = document.getElementById("reloadstattxt").value;
-    let reloadbonus = document.getElementById("reloadbonustxt").value;
+    let reloadstat = document.getElementById("txt-rld-stat-base").value;
+    let reloadbonus = document.getElementById("txt-rld-stat-bonus").value;
     let reloadbuff = document.getElementById("reloadbufftextfield").value;
     let plane1time = document.getElementById("plane1cdtextfield").value;
     let plane1count = document.getElementById("plane1counttextfield").value;
@@ -78,32 +78,6 @@ function update_textfields(idnumber){
         counttextfield.disabled = false;
         counttextfield.value = storedcountvalue;
     }
-}
-
-var carrier_list = [];
-var carriers = {};
-
-function handle_toc(data){
-    if (carrier_list.length > 0){
-        return;
-    }
-    for (let ship of data.ships){
-        let carrier_name = ship.Name;
-        carrier_list.push(carrier_name);
-        carriers[carrier_name] = ship;
-    }
-    carrier_list.sort();
-    carrier_list.push("Other");
-    carriers["Other"] = {};
-    for (let carrier_name of carrier_list){
-        let option = document.createElement('option');
-        option.name = carrier_name;
-        option.value = carrier_name;
-        option.appendChild(document.createTextNode(carrier_name));
-        document.getElementById('shipselect').appendChild(option);
-    }
-    document.querySelector('#shipselect > option[value=Enterprise]').selected = true;
-    acquire_loadout();
 }
 
 var fighters='' +
@@ -194,57 +168,10 @@ function buildoptions(slot_obj){
 
 }
 
-function roundBase10(value, digits = 2){
-    const power_ten = Math.pow(10.0, digits > 0 ? digits : -digits);
-    const rounded = Math.round(value * power_ten) / power_ten;
-    const str = rounded.toString();
-    if (digits > 0){
-        const index = str.indexOf(".");
-        if (index < 0){
-            return str + "." + "0".repeat(digits);
-        } else {
-            return str.slice(0, index + 1) + (str.slice(index + 1) + "0".repeat(digits)).slice(0, digits);
-        }
-    } else {
-        return str;
-    }
-}
-
-function get_oath_reload(reload, reload_kai_diff){
-    return (reload - reload_kai_diff) * 1.056603774 + reload_kai_diff;
-}
-
-function get_unoath_reload(reload_oath, reload_kai_diff){
-    return (reload_oath - reload_kai_diff) * 0.946428571 + reload_kai_diff;
-}
-
-function update_reload_stat(reload){
-    const oath = document.getElementById("cv-box-affinity").checked;
-    const reload_stat_txt = document.getElementById("reloadstattxt");
-    const reload_kai_diff = +reload_stat_txt.dataset.reloadKaiDiff;
-    const reload_stat = oath ? get_oath_reload(reload, reload_kai_diff) : reload;
-    reload_stat_txt.value = roundBase10(reload_stat, -2);
-    reload_stat_txt.dataset.reload = reload_stat;
-}
-
-function toggle_affinity(){
-    const oath = document.getElementById("cv-box-affinity").checked;
-    const reload_stat_txt = document.getElementById("reloadstattxt");
-    const reload_kai_diff = +reload_stat_txt.dataset.reloadKaiDiff;
-    const saved_reload = +reload_stat_txt.dataset.reload;
-    const value = +reload_stat_txt.value;
-    // if user did not change it, use saved value for full precision
-    const reload = roundBase10(saved_reload, -1) === value ? saved_reload : value;
-    const unoath_reload = oath ? reload : get_unoath_reload(reload, reload_kai_diff);
-    update_reload_stat(unoath_reload);
-}
-
-function handle_loadout_data(data){
+function handle_loadout_data_impl(data){
     const slot1 = data.Slot1.Retrofit;
     const slot2 = data.Slot2.Retrofit;
     const slot3 = data.Slot3.Retrofit;
-    const reloadDiff = (+data.Reload) - (+data.ReloadUnkai);
-    document.getElementById("reloadstattxt").dataset.reloadKaiDiff = reloadDiff;
     let slot1options;
     let slot2options;
     let slot3options;
@@ -285,44 +212,8 @@ function handle_loadout_data(data){
     update_textfields(3);
 }
 
-function acquire_loadout(){
-    const carrier_name = document.getElementById("shipselect").value;
-    const previous_carrier = document.getElementById("shipselect").dataset.previousCarrier;
-    if (carrier_name === "Other" && previous_carrier !== "Other"){
-        const general_loadout = {"F": "1", "D": "1", "T": "1", "S": "1", "N": "1"};
-        const other_obj = {
-            "Name" : "Other",
-            "Reload": 100,
-            "ReloadUnkai": 100,
-            "Slot1": {"Retrofit":general_loadout},
-            "Slot2":{"Retrofit":general_loadout},
-            "Slot3":{"Retrofit":general_loadout}
-        };
-        carriers["Other"].ship_info = other_obj;
-        handle_loadout_data(other_obj);
-        update_reload_stat(rld);
-        calculate_reload();
-    } else if (carrier_name !== previous_carrier) {
-        const handle = (data) => {
-            if (previous_carrier !== carrier_name){
-                handle_loadout_data(data);
-            }
-            update_reload_stat(+data.Reload);
-            calculate_reload();
-            document.getElementById("shipselect").dataset.previousCarrier = carrier_name;
-        };
-        if (carriers[carrier_name].ship_info){
-            handle(carriers[carrier_name].ship_info);
-        } else {
-            const fetch_url = "/azur-lane/data/" + carriers[carrier_name].carrierJSON;
-            fetch(fetch_url).then((response) => {
-                return response.json();
-            }).then((data) => {
-                carriers[data.Name].ship_info = data;
-                handle(data);
-            });
-        }
-    }
+function get_fetch_url_impl(data){
+    return "/azur-lane/data/" + data.carrierJSON;
 }
 
 function ready() {
@@ -338,12 +229,8 @@ function ready() {
     fetch('/azur-lane/data/ships/carriers.json').then((r) => {
         return r.json();
     }).then((j) => {
-        handle_toc(j);
+        handle_toc(j, "Enterprise");
     });
 }
 
-if (document.readyState === 'loading'){
-    document.addEventListener("DOMContentLoaded", ready);
-} else {
-    ready();
-}
+document.addEventListener("DOMContentLoaded", ready);
