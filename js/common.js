@@ -38,6 +38,7 @@ function update_reload_stat(reload){
     const reload_stat = oath ? get_oath_reload(reload, reload_kai_diff) : reload;
     reload_stat_txt.value = roundBase10(reload_stat, -2);
     reload_stat_txt.dataset.reload = reload_stat;
+    calculate_reload();
 }
 
 
@@ -53,7 +54,6 @@ function toggle_affinity(){
     const unoath_reload = oath ? reload : get_unoath_reload(reload, reload_kai_diff);
     update_reload_stat(unoath_reload);
 }
-
 
 function handle_toc(data, default_ship){
     if (ship_list.length > 0){
@@ -90,14 +90,12 @@ function handle_loadout_data(data){
     document.getElementById("txt-rld-stat-base").dataset.reloadKaiDiff = reloadDiff;
     update_reload_stat(+data.Reload);
     calculate_reload();
-    ship_select.dataset.previousShip = ship_name;
 }
 
 function acquire_loadout(){
     const ship_select = document.getElementById("select-ship");
     const ship_name = ship_select.value;
     const previous_ship = ship_select.dataset.previousShip;
-
     if (ship_name === "Other" && previous_ship !== "Other"){
         const general_loadout = {"F": "1", "D": "1", "T": "1", "S": "1", "N": "1"};
         const other_obj = {
@@ -128,4 +126,5 @@ function acquire_loadout(){
             });
         }
     }
+    ship_select.dataset.previousShip = ship_name;
 }
