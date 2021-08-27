@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html><head>
+    <link rel="preload" as="style" href="/css/main.css">
+    <link rel="preload" as="style" href="css/calculator.css">
+    <link rel="preload" as="style" href="/fonts/noto-sans-display/index.css">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/noto-sans-display/NotoSansDisplay-Regular.woff2">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/noto-sans-display/NotoSansDisplay-Bold.woff2">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/noto-sans-display/NotoSansDisplay-SemiBold.woff2">
+    <link rel="preload" as="script" href="js/common.js">
+    <link rel="preload" as="script" href="js/battleship-reload.js">
+
     <title>Battleship Cooldown Calculator</title>
     <meta charset="UTF-8">
-    <link rel="preload" href="/styles.css" as="style">
-    <link rel="preload" href="css/calculator.css" as="style">
-    <link rel="preload" href="js/airstrike-reload.js" as="script">
-    <link rel="preload" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css" as="style">
-    <link rel="preload" href="/fonts/noto/noto-mono/noto-mono.css" as="style">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="256x256" href="/images/avatar/avatar-256.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" sizes="16x16" href="/images/avatar/favicon.ico">
 
-    <meta property="og:image" content="https://thebombzen.com/images/avatar-current/avatar-current_256.png">
+    <meta property="og:image" content="https://thebombzen.com/images/avatar/avatar-256.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thebombzen.com/azur-lane/battleship-reload.html">
     <meta property="og:title" content="Battleship Cooldown Calculator">
     <meta property="og:description" content="Calculate the cooldown for a battleship main gun in Azur Lane.">
 
-    <link rel="stylesheet" type="text/css" href="/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/calculator.css">
-    <link rel="stylesheet" type="text/css" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css">
-    <link rel="stylesheet" type="text/css" href="/fonts/noto/noto-mono/noto-mono.css">
-    <script src="js/battleship-reload.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="/fonts/noto-sans-display/index.css">
+    <script defer src="js/common.js"></script>
+    <script defer src="js/battleship-reload.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -46,23 +35,29 @@
     <hr>
     <main>
         <p>Choose a ship from the dropdown. Modify her reload stat if necessary (in case she’s oathed, is under level 120, etc.) Enter any relevant bonus modifiers (these are not automatically generated), and choose her equipment. You can provide custom data for any of the dropdowns by choosing “Other” from the bottom of the menu.</p>
-        <form action="javascript:calculate_bbcooldown();">
+        <form action="javascript:calculate_reload();">
         <div class="centered-flow">
         <div class="centered-flow-content">
             <div class="centered-flow-rowgroup">
                 <div class="centered-flow-row">
                     <div class="calculator-tag"><b>Choose Ship:</b></div>
-                    <div class="calculator-input"><select id="shipselect" onchange="acquire_loadout();"></select></div>
+                    <div class="calculator-input"><select id="select-ship" data-previous-ship="empty" onchange="acquire_loadout();"></select></div>
                 </div>
             </div>
             <div class="centered-flow-rowgroup">
                 <div class="centered-flow-row">
                     <div class="calculator-tag"><b>Base RLD Stat:</b><br>(without skills, Fleet Tech, or cats)</div>
-                    <div class="calculator-input"><input type="text" id="bb-rld-stat-txt" value="163"></div>
+                    <div class="calculator-input"><input type="text" id="txt-rld-stat-base" value="163"></div>
+                </div>
+                <div class="centered-flow-row">
+                    <div class="calculator-check">
+                        <input type="checkbox" id="box-affinity" onclick="toggle_affinity();">
+                        <div><b>Ship is Oathed</b><br>(and with 200 affinity)</div>
+                    </div>
                 </div>
                 <div class="centered-flow-row">
                     <div class="calculator-tag"><b>Bonus RLD Stat:</b><br>(from Fleet Tech and cats)</div>
-                    <div class="calculator-input"><input type="text" id="bb-rld-bonus-txt" value="0"></div>
+                    <div class="calculator-input"><input type="text" id="txt-rld-stat-bonus" value="0"></div>
                 </div>
                 <div class="centered-flow-row">
                     <div class="calculator-tag"><b>Reload Percentage Buff:</b><br>(for example from <a href="https://azurlane.koumakan.jp/Queen_Elizabeth">Queen Elizabeth</a>)</div>
@@ -80,7 +75,7 @@
             <div class="centered-flow-rowgroup">
                 <div class="centered-flow-row">
                     <div class="calculator-check">
-                        <input type="checkbox" onchange="update_guntextfields(); calculate_bbcooldown();" id="bb-cd-red-3-enable">
+                        <input type="checkbox" onchange="update_guntextfields(); calculate_reload();" id="bb-cd-red-3-enable">
                         <div><b>Temporary Reload Buff?</b><br>(for example from Howe)</div>
                     </div>
                 </div>
@@ -99,7 +94,7 @@
                 <div class="centered-flow-row">
                     <div class="calculator-tag"><b>Main Gun Cooldown:</b></div>
                     <div class="calculator-input">
-                        <select id="bb-mg-1-dropdown" onchange="update_guntextfields(); calculate_bbcooldown();">
+                        <select id="bb-mg-1-dropdown" onchange="update_guntextfields(); calculate_reload();">
                             <option name="HE" value="HE" disabled class="disabled-option">High Explosive</option>
                             <option name="triple406mk6" data-imgname="triple-406-mk6.png" value="24.02">Triple 406mm MK6</option>
                             <option name="triple406mk7" data-imgname="triple-406-mk7.png" value="24.22">Triple 406mm Mk7</option>
@@ -135,7 +130,7 @@
             <div class="centered-flow-rowgroup">
                 <div class="centered-flow-row">
                     <div class="calculator-check">
-                        <input type="checkbox" id="bb-hpfcr-enable" onclick="javascript:calculate_bbcooldown();">
+                        <input type="checkbox" id="bb-hpfcr-enable" onclick="calculate_reload();">
                         <div><b>High Standard FCR Equipped?</b></div>
                     </div>
                     <div class="calculator-input">
