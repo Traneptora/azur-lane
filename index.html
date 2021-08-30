@@ -1,36 +1,20 @@
 <!DOCTYPE html>
 <html><head>
     <title>Azur Lane Utilities</title>
-    <meta charset="UTF-8">
-    <link rel="preload" href="/styles.css" as="style">
-    <link rel="preload" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css" as="style">
+    <link rel="preload" as="style" href="/css/main.css">
+    <link rel="preload" as="style" href="/fonts/noto-sans-display/index.css">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="256x256" href="/images/avatar/avatar-256.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" sizes="16x16" href="/images/avatar/favicon.ico">
 
-    <meta property="og:image" content="https://thebombzen.com/images/avatar-current/avatar-current_256.png">
+    <meta property="og:image" content="https://thebombzen.com/images/avatar/avatar-256.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thebombzen.com/azur-lane/">
     <meta property="og:title" content="Azur Lane Utilities">
     <meta property="og:description" content="Various utilities related to the mobile game, Azur Lane.">
 
-    <link rel="stylesheet" type="text/css" href="/styles.css">
-    <link rel="stylesheet" type="text/css" href="/fonts/noto/noto-sans/noto-sans-display/noto-sans-display.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/fonts/noto-sans-display/index.css">
 </head><body>
     <div id="wrapper">
         <header id="maintitle">
@@ -44,9 +28,9 @@
         <section>
             <div class="section-header">Calculators</div>
             <ul class="linklist">
-                <li><a href="airstrike-reload.html">Airstrike Cooldown Calculator</a> - Calculate the cooldown for an airstrike.</li>
-                <li><a href="battleship-reload.html">Battleship Cooldown Calculator</a> - Calculate the cooldown for a battleship main gun.</li>
-                <li><a href="experience-needed.html">Experience Calculator</a> - Calculate experience required to get a ship from level A to level B in the English edition of the game.</li>
+                <li><a href="/azur-lane/airstrike-reload/">Airstrike Cooldown Calculator</a> - Calculate the cooldown for an airstrike.</li>
+                <li><a href="/azur-lane/battleship-reload/">Battleship Cooldown Calculator</a> - Calculate the cooldown for a battleship main gun.</li>
+                <li><a href="/azur-lane/experience-needed.html">Experience Calculator</a> - Calculate experience required to get a ship from level A to level B in the English edition of the game.</li>
                 <li><a href="https://docs.google.com/spreadsheets/d/1bEb0k3c9f4y3-eUo18gIAbFqp7xOzOikPXrx68ky_wc/edit?usp=sharing">PR Completion Calculator</a> - This spreadsheet calculates your completion percent based on blueprint count for Priority Research ships. Clone the spreadsheet to edit it.</li>
                 <li><a href="https://docs.google.com/spreadsheets/d/1ixx2JOhgFJdote0DVnmrrxIS_1leLZljEC-Dz15-YgA/edit?usp=sharing">AA Gun Calculator</a> - This spreadsheet calculates your anti-air DPS given your AA gun configuration.</li>
             </ul>
@@ -59,9 +43,10 @@
             </ul>
         </section>
         <section>
-            <div class="section-header">Other Usefulness</div>
+            <div class="section-header">Other Utilities</div>
             <ul class="linklist">
-                <li><a href="data/ships/toc.json">JSON Ship Database</a> - A mirror of ship cargo data on <a href="https://azurlane.koumakan.jp/">The English AL Wiki</a> in JSON, which should make it easy to parse using client-side JS and other languages.</li>
+                <li><a href="/azur-lane/pr-data/">PR Data Submission</a> - We’re collecting data for PR research. Use this page to upload screenshots of your PR Research Results to help out the data gathering.</li>
+                <li><a href="/azur-lane/data/ships/toc.json">JSON Ship Database</a> - A mirror of ship cargo data on <a href="https://azurlane.koumakan.jp/">The English AL Wiki</a> in JSON, which should make it easy to parse using client-side JS and other languages.</li>
                 <li><a href="https://slaimuda.github.io/ectl/#/home">EN Community Tierlist</a> - I help with managing the ECTL website.</li>
             </ul>
         </section>

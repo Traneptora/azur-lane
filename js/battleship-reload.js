@@ -59,7 +59,7 @@ function update_guntextfields() {
     const name = option.name;
     const imgname = option.dataset.imgname;
     const img = document.getElementById("bb-mg-1-img");
-    img.src = "images/equips/gun/bb/" + imgname;
+    img.src = "/azur-lane/images/equips/gun/bb/" + imgname;
     img.alt = name;
 }
 
@@ -105,7 +105,7 @@ function ready() {
     document.querySelectorAll("#bb-mg-1-dropdown option").forEach((elem) => {
         const src = elem.dataset.imgname;
         if (src){
-            elem.style.background = 'url("images/equips/gun/bb/' + src + '") no-repeat -200% -200%';
+            elem.style.background = 'url("/azur-lane/images/equips/gun/bb/' + src + '") no-repeat -200% -200%';
         }
     });
 }

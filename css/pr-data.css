@@ -1,0 +1,11 @@
+/*
+ * for /azur-lane/pr-data/
+ */
+
+#project-name {
+    width: 50%;
+}
+
+#project-series-required, #project-name-required, #results-screenshot-required {
+    color: #D40000;
+}
