@@ -21,6 +21,10 @@ function update_option_hiding(){
         if (should_show){
             o.classList.remove("hidden");
         } else {
+            if (o.selected){
+                document.getElementById("project-name").value = "";
+                name_changed();
+            }
             o.classList.add("hidden");
         }
     });
