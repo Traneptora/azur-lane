@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html><head>
+    <link rel="preload" as="style" href="/css/main.css">
+    <link rel="preload" as="style" href="/azur-lane/css/pr-data.css">
+    <link rel="preload" as="style" href="/fonts/noto-sans-display/index.css">
+    <link rel="preload" as="style" href="/fonts/noto-mono/index.css">
+    <link rel="preload" as="script" href="/azur-lane/js/pr-data.js">
+
+    <title>PR Data Submission</title>
+
+    <link rel="icon" type="image/png" sizes="256x256" href="/images/avatar/avatar-256.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" sizes="16x16" href="/images/avatar/favicon.ico">
+
+    <meta property="og:image" content="https://thebombzen.com/images/avatar/avatar-256.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thebombzen.com/azur-lane/pr-data/">
+    <meta property="og:title" content="PR Data Submission">
+    <meta property="og:description" content="Upload screenshots of your PR research results to help gather data about rates.">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/azur-lane/css/pr-data.css">
+    <link rel="stylesheet" href="/fonts/noto-sans-display/index.css">
+    <link rel="stylesheet" href="/fonts/noto-mono/index.css">
+    <script defer src="/azur-lane/js/pr-data.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="maintitle">
+            PR Data Submission
+        </header>
+        <main>
+            <section>
+            <p>We’re collecting data for PR research. Use this page to upload screenshots of your PR Research Results to help out the data gathering. Keep in mind:</p>
+            <ul>
+                <li>If you do not remember the name of the project, <strong>do not guess.</strong> Pick “I don’t know.” We can try to figure it out anyway.</li>
+                <li>Try your best to post All of your research results, or at least whenever you remember, regardless of content. If you only upload “interesting” results then our data collection will be skewed.</li>
+                <li>You won’t be able to see the images you uploaded, but there is a check for exact duplicates. If you don’t remember whether or not you uploaded a screenshot, just upload it again.</li>
+                <li>Upload screenshots as-is. Cropping them makes it harder to auto-detect what is there.</li>
+            </ul>
+            </section>
+            <section>
+                <h3>This is a Work In Progress. Currently, this submission form does not do anything.</h3>
+            </section>
+            <section>
+            <form method="POST" action="javascript:alert('Work in Progress');">
+            <div class="centered-flow">
+            <div class="centered-flow-content">
+                <div class="centered-flow-rowgroup">
+                    <div class="centered-flow-row">
+                        <label for="project-series">Select the research project series (also cAlled season):</label>
+                    </div>
+                    <div class="centered-flow-row hidden" id="project-series-required">
+                        Project series is required.
+                    </div>
+                    <div class="centered-flow-row">
+                        <select name="project-series" id="project-series" required>
+                            <option value="">Select Series</option>
+                            <optgroup label="Series">
+                                <option value="PR4">PR4 (Series IV)</option>
+                                <option value="PR3">PR3 (Series III)</option>
+                                <option value="PR2">PR2 (Series II)</option>
+                                <option value="PR1">PR1 (Series I)</option>
+                            </optgroup>
+                            <optgroup label="Other">
+                                <option value="unknown">I don’t know</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="centered-flow-rowgroup">
+                    <div class="centered-flow-row">
+                        <label for="project-type">Select the project type:</label>
+                    </div>
+                    <div class="centered-flow-row">
+                        <select name="project-type" id="project-type">
+                            <option value="">Select Type</option>
+                            <optgroup label="Type">
+                                <option value="B">B (Data Collection)</option>
+                                <option value="C">C (Basic Research)</option>
+                                <option value="D">D (Cognition)</option>
+                                <option value="E">E (Collection)</option>
+                                <option value="G">G (Grant Donation)</option>
+                                <option value="H">H (Cube Analysis/Soul Forming)</option>
+                                <option value="Q">Q (Rigging Analysis)</option>
+                                <option value="T">T (Commission)</option>
+                            </optgroup>
+                            <optgroup label="Other">
+                                <option value="All">Show All Projects</option>
+                                <option value="unknown">I don’t know</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="centered-flow-rowgroup">
+                    <div class="centered-flow-row">
+                        <label for="project-name">Select the project name:</label>
+                    </div>
+                    <div class="centered-flow-row hidden" id="project-name-required">
+                        Project name is required.
+                    </div>
+                    <div class="centered-flow-row">
+                        <select name="project-name" id="project-name" required>
+                            <option value="" data-project-series="All" data-project-type="All">Select Project</option>
+                            <optgroup label="B (Data Collection)" data-project-series="All" data-project-type="B">
+                                <option value="B-622-MI" data-project-series="All" data-project-type="B" data-project-color="Blue" data-project-length="8" data-project-cost="Clear Chapter 3 or onward stages 6 times (on normal mode)">B-622-MI (Chapter 3)</option>
+                                <option value="B-636-MI" data-project-series="All" data-project-type="B" data-project-color="Blue" data-project-length="8" data-project-cost="Clear Chapter 4 or onward stages 6 times (on normal mode)">B-636-MI (Chapter 4)</option>
+                                <option value="B-654-MI" data-project-series="All" data-project-type="B" data-project-color="Blue" data-project-length="8" data-project-cost="Clear Chapter 5 or onward stages 6 times (on normal mode)">B-654-MI (Chapter 5)</option>
+                                <option value="B-682-MI" data-project-series="All" data-project-type="B" data-project-color="Blue" data-project-length="8" data-project-cost="Clear Chapter 6 or onward stages 6 times (on normal mode)">B-682-MI (Chapter 6)</option>
+                                <option value="B-235-MI" data-project-series="All" data-project-type="B" data-project-color="Purple" data-project-length="8" data-project-cost="Clear Chapter 7 or onward stages 5 times (on normal mode)">B-235-MI (Chapter 7)</option>
+                                <option value="B-268-MI" data-project-series="All" data-project-type="B" data-project-color="Purple" data-project-length="8" data-project-cost="Clear Chapter 8 or onward stages 5 times (on normal mode)">B-268-MI (Chapter 8)</option>
+                                <option value="B-128-MI" data-project-series="All" data-project-type="B" data-project-color="Purple" data-project-length="8" data-project-cost="Clear Chapter 9 or onward stages 4 times (on normal mode)">B-128-MI (Chapter 9)</option>
+                                <option value="B-164-MI" data-project-series="All" data-project-type="B" data-project-color="Purple" data-project-length="8" data-project-cost="Clear Chapter 10 or onward stages 4 times (on normal mode)">B-164-MI (Chapter 10)</option>
+                                <option value="B-351-RF" data-project-series="All" data-project-type="B" data-project-color="Gold" data-project-length="8" data-project-cost="Clear Chapter 11 or onward stages 3 times (on normal mode)">B-351-RF (Chapter 11)</option>
+                                <option value="B-397-RF-12" data-project-series="All" data-project-type="B" data-project-color="Gold" data-project-length="8" data-project-cost="Clear Chapter 12 or onward stages 3 times (on normal mode)">B-397-RF (Chapter 12)</option>
+                                <option value="B-397-RF-13" data-project-series="All" data-project-type="B" data-project-color="Gold" data-project-length="8" data-project-cost="Clear Chapter 13 or onward stages 2 times (on normal mode)">B-397-RF (Chapter 13)</option>
+                            </optgroup>
+                            <optgroup label="C (Basic Research)" data-project-series="All" data-project-type="C">
+                                <option value="C-153-MI" data-project-series="All" data-project-type="C" data-project-color="Blue" data-project-length="12" data-project-cost="Nothing">C-153-MI (Blue 06:00)</option>
+                                <option value="C-185-MI" data-project-series="All" data-project-type="C" data-project-color="Purple" data-project-length="16" data-project-cost="Nothing">C-185-MI (Purple 08:00)</option>
+                                <option value="C-038-RF" data-project-series="All" data-project-type="C" data-project-color="Gold" data-project-length="24" data-project-cost="Nothing">C-038-RF (Gold 12:00)</option>
+                            </optgroup>
+                            <optgroup label="D (Cognition)" data-project-series="All" data-project-type="D">
+                                <option value="D-708-MI" data-project-series="PR4" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-708-MI (small Anchorage)</option>
+                                <option value="D-782-MI" data-project-series="PR4" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-782-MI (small August von Parseval)</option>
+                                <option value="D-768-MI" data-project-series="PR4" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-768-MI (small Marco Polo)</option>
+                                <option value="D-775-MI" data-project-series="PR4" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-775-MI (small Ägir)</option>
+                                <option value="D-763-MI" data-project-series="PR4" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-763-MI (small Hakuryuu)</option>
+                                <option value="D-308-MI" data-project-series="PR4" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-308-MI (medium Anchorage)</option>
+                                <option value="D-382-MI" data-project-series="PR4" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-382-MI (medium August von Parseval)</option>
+                                <option value="D-368-MI" data-project-series="PR4" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-368-MI (medium Marco Polo)</option>
+                                <option value="D-375-MI" data-project-series="PR4" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-375-MI (medium Ägir)</option>
+                                <option value="D-363-MI" data-project-series="PR4" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-363-MI (medium Hakuryuu)</option>
+                                <option value="D-408-RF" data-project-series="PR4" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-408-RF (large Anchorage)</option>
+                                <option value="D-482-RF" data-project-series="PR4" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-482-RF (large August von Parseval)</option>
+                                <option value="D-468-RF" data-project-series="PR4" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-468-RF (large Marco Polo)</option>
+                                <option value="D-475-RF" data-project-series="PR4" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-475-RF (large Ägir)</option>
+                                <option value="D-463-RF" data-project-series="PR4" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-463-RF (large Hakuryuu)</option>
+                                <option value="D-008-UL" data-project-series="PR4" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-008-UL (very small Anchorage)</option>
+                                <option value="D-082-UL" data-project-series="PR4" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-082-UL (very small August von Parseval)</option>
+                                <option value="D-068-UL" data-project-series="PR4" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-068-UL (very small Marco Polo)</option>
+                                <option value="D-075-UL" data-project-series="PR4" data-project-type="D" data-project-color="Rainbow" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-075-UL (very small Ägir)</option>
+                                <option value="D-063-UL" data-project-series="PR4" data-project-type="D" data-project-color="Rainbow" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-063-UL (very small Hakuryuu)</option>
+                                <option value="D-795-MI" data-project-series="PR3" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-795-MI (small Champagne)</option>
+                                <option value="D-721-MI" data-project-series="PR3" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-721-MI (small Cheshire)</option>
+                                <option value="D-772-MI" data-project-series="PR3" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-772-MI (small Mainz)</option>
+                                <option value="D-777-MI" data-project-series="PR3" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-777-MI (small Odin)</option>
+                                <option value="D-722-MI" data-project-series="PR3" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-722-MI (small Drake)</option>
+                                <option value="D-395-MI" data-project-series="PR3" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-395-MI (medium Champagne)</option>
+                                <option value="D-321-MI" data-project-series="PR3" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-321-MI (medium Cheshire)</option>
+                                <option value="D-372-MI" data-project-series="PR3" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-372-MI (medium Mainz)</option>
+                                <option value="D-377-MI" data-project-series="PR3" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-377-MI (medium Odin)</option>
+                                <option value="D-322-MI" data-project-series="PR3" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-322-MI (medium Drake)</option>
+                                <option value="D-495-RF" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-495-RF (large Champagne)</option>
+                                <option value="D-421-RF" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-421-RF (large Cheshire)</option>
+                                <option value="D-472-RF" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-472-RF (large Mainz)</option>
+                                <option value="D-477-RF" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-477-RF (large Odin)</option>
+                                <option value="D-422-RF" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-422-RF (large Drake)</option>
+                                <option value="D-095-UL" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-095-UL (very small Champagne)</option>
+                                <option value="D-021-UL" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-021-UL (very small Cheshire)</option>
+                                <option value="D-072-UL" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-072-UL (very small Mainz)</option>
+                                <option value="D-077-UL" data-project-series="PR3" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-077-UL (very small Odin)</option>
+                                <option value="D-022-UL" data-project-series="PR3" data-project-type="D" data-project-color="Rainbow" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-022-UL (very small Drake)</option>
+                                <option value="D-794-MI" data-project-series="PR2" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-794-MI (small Gascogne)</option>
+                                <option value="D-712-MI" data-project-series="PR2" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-712-MI (small Georgia)</option>
+                                <option value="D-746-MI" data-project-series="PR2" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-746-MI (small Kitakaze)</option>
+                                <option value="D-705-MI" data-project-series="PR2" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-705-MI (small Seattle)</option>
+                                <option value="D-757-MI" data-project-series="PR2" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-757-MI (small Azuma)</option>
+                                <option value="D-779-MI" data-project-series="PR2" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-779-MI (small Friedrich der Große)</option>
+                                <option value="D-394-MI" data-project-series="PR2" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-394-MI (medium Gascogne)</option>
+                                <option value="D-312-MI" data-project-series="PR2" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-312-MI (medium Georgia)</option>
+                                <option value="D-346-MI" data-project-series="PR2" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-346-MI (medium Kitakaze)</option>
+                                <option value="D-305-MI" data-project-series="PR2" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-305-MI (medium Seattle)</option>
+                                <option value="D-357-MI" data-project-series="PR2" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-357-MI (medium Azuma)</option>
+                                <option value="D-379-MI" data-project-series="PR2" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-379-MI (medium Friedrich der Große)</option>
+                                <option value="D-494-RF" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-494-RF (large Gascogne)</option>
+                                <option value="D-412-RF" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-412-RF (large Georgia)</option>
+                                <option value="D-446-RF" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-446-RF (large Kitakaze)</option>
+                                <option value="D-405-RF" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-405-RF (large Seattle)</option>
+                                <option value="D-457-RF" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-457-RF (large Azuma)</option>
+                                <option value="D-479-RF" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-479-RF (large Friedrich der Große)</option>
+                                <option value="D-094-UL" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-094-UL (very small Gascogne)</option>
+                                <option value="D-012-UL" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-012-UL (very small Georgia)</option>
+                                <option value="D-046-UL" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-046-UL (very small Kitakaze)</option>
+                                <option value="D-005-UL" data-project-series="PR2" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-005-UL (very small Seattle)</option>
+                                <option value="D-057-UL" data-project-series="PR2" data-project-type="D" data-project-color="Rainbow" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-057-UL (very small Azuma)</option>
+                                <option value="D-079-UL" data-project-series="PR2" data-project-type="D" data-project-color="Rainbow" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-079-UL (very small Friedrich der Große)</option>
+                                <option value="D-794-MI" data-project-series="PR1" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-794-MI (small Ibuki)</option>
+                                <option value="D-712-MI" data-project-series="PR1" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-712-MI (small Izumo)</option>
+                                <option value="D-746-MI" data-project-series="PR1" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-746-MI (small Monarch)</option>
+                                <option value="D-705-MI" data-project-series="PR1" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-705-MI (small Neptune)</option>
+                                <option value="D-757-MI" data-project-series="PR1" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-757-MI (small Roon)</option>
+                                <option value="D-779-MI" data-project-series="PR1" data-project-type="D" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">D-779-MI (small Saint Louis)</option>
+                                <option value="D-394-MI" data-project-series="PR1" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-394-MI (medium Ibuki)</option>
+                                <option value="D-312-MI" data-project-series="PR1" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-312-MI (medium Izumo)</option>
+                                <option value="D-346-MI" data-project-series="PR1" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-346-MI (medium Monarch)</option>
+                                <option value="D-305-MI" data-project-series="PR1" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-305-MI (medium Neptune)</option>
+                                <option value="D-357-MI" data-project-series="PR1" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-357-MI (medium Roon)</option>
+                                <option value="D-379-MI" data-project-series="PR1" data-project-type="D" data-project-color="Purple" data-project-length="10" data-project-cost="5000 coins">D-379-MI (medium Saint Louis)</option>
+                                <option value="D-494-RF" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-494-RF (large Ibuki)</option>
+                                <option value="D-412-RF" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-412-RF (large Izumo)</option>
+                                <option value="D-446-RF" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-446-RF (large Monarch)</option>
+                                <option value="D-405-RF" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-405-RF (large Neptune)</option>
+                                <option value="D-457-RF" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-457-RF (large Roon)</option>
+                                <option value="D-479-RF" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="16" data-project-cost="8000 coins">D-479-RF (large Saint Louis)</option>
+                                <option value="D-094-UL" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-094-UL (very small Ibuki)</option>
+                                <option value="D-012-UL" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-012-UL (very small Izumo)</option>
+                                <option value="D-046-UL" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-046-UL (very small Monarch)</option>
+                                <option value="D-005-UL" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-005-UL (very small Neptune)</option>
+                                <option value="D-057-UL" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-057-UL (very small Roon)</option>
+                                <option value="D-079-UL" data-project-series="PR1" data-project-type="D" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 5 cubes">D-079-UL (very small Saint Louis)</option>
+                            </optgroup>
+                            <optgroup label="E (Collection)" data-project-series="All" data-project-type="E">
+                                <option value="E-031-MI" data-project-series="All" data-project-type="E" data-project-color="Blue" data-project-length="4" data-project-cost="Scrap 8 pieces of gear.">E-031-MI (small blue)</option>
+                                <option value="E-351-MI" data-project-series="All" data-project-type="E" data-project-color="Purple" data-project-length="4" data-project-cost="Scrap 8 pieces of gear.">E-351-MI (small purple)</option>
+                                <option value="E-121-MI" data-project-series="PR3" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-121-MI (Twin 234mm)</option>
+                                <option value="E-123-MI" data-project-series="PR3" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-123-MI (Twin 114mm)</option>
+                                <option value="E-124-MI" data-project-series="PR3" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-124-MI (Sextuple 40mm Bofors)</option>
+                                <option value="E-177-MI" data-project-series="PR3" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-177-MI (Triple 305mm BB)</option>
+                                <option value="E-195-MI" data-project-series="PR3" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-195-MI (Triple 406mm Mle 1938)</option>
+                                <option value="E-821-MI" data-project-series="PR3" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-821-MI (Twin 234mm)</option>
+                                <option value="E-823-MI" data-project-series="PR3" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-823-MI (Twin 114mm)</option>
+                                <option value="E-824-MI" data-project-series="PR3" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-824-MI (Sextuple 40mm Bofors)</option>
+                                <option value="E-877-MI" data-project-series="PR3" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-877-MI (Triple 305mm BB)</option>
+                                <option value="E-895-MI" data-project-series="PR3" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-895-MI (Triple 406mm Mle 1938)</option>
+                                <option value="E-105-MI" data-project-series="PR2" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-105-MI (Triple 152mm Mk17)</option>
+                                <option value="E-146-MI" data-project-series="PR2" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-146-MI (Twin 40mm Bofors Type 5)</option>
+                                <option value="E-157-MI" data-project-series="PR2" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-157-MI (Triple 310mm)</option>
+                                <option value="E-179-MI" data-project-series="PR2" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-179-MI (Twin 406mm SKC)</option>
+                                <option value="E-194-MI" data-project-series="PR2" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-194-MI (Twin 37mm ACAD)</option>
+                                <option value="E-805-MI" data-project-series="PR2" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-805-MI (Triple 152mm Mk17)</option>
+                                <option value="E-846-MI" data-project-series="PR2" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-846-MI (Twin 40mm Bofors Type 5)</option>
+                                <option value="E-857-MI" data-project-series="PR2" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-857-MI (Triple 310mm)</option>
+                                <option value="E-879-MI" data-project-series="PR2" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-879-MI (Twin 406mm SKC)</option>
+                                <option value="E-894-MI" data-project-series="PR2" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-894-MI (Twin 37mm ACAD)</option>
+                                <option value="E-118-MI" data-project-series="PR1" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-118-MI (Triple 152mm Mk XXV)</option>
+                                <option value="E-131-MI" data-project-series="PR1" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-131-MI (Triple 381mm)</option>
+                                <option value="E-144-MI" data-project-series="PR1" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-144-MI (Twin 100mm AA)</option>
+                                <option value="E-159-MI" data-project-series="PR1" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-159-MI (Triple 410mm)</option>
+                                <option value="E-174-MI" data-project-series="PR1" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-174-MI (Triple 203mm SKC)</option>
+                                <option value="E-192-MI" data-project-series="PR1" data-project-type="E" data-project-color="Purple" data-project-length="12" data-project-cost="15 purple boxes">E-192-MI (Triple 203mm Mle)</option>
+                                <option value="E-818-MI" data-project-series="PR1" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-818-MI (Triple 152mm Mk XXV)</option>
+                                <option value="E-831-MI" data-project-series="PR1" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-831-MI (Triple 381mm)</option>
+                                <option value="E-844-MI" data-project-series="PR1" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-844-MI (Twin 100mm AA)</option>
+                                <option value="E-859-MI" data-project-series="PR1" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-859-MI (Triple 410mm)</option>
+                                <option value="E-874-MI" data-project-series="PR1" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-874-MI (Triple 203mm SKC)</option>
+                                <option value="E-892-MI" data-project-series="PR1" data-project-type="E" data-project-color="Gold" data-project-length="4" data-project-cost="45 blueprints">E-892-MI (Triple 203mm Mle)</option>
+                            </optgroup>
+                            <optgroup label="G (Grant Donation)" data-project-series="All" data-project-type="G">
+                                <option value="G-412-MI" data-project-series="All" data-project-type="G" data-project-color="Blue" data-project-length="3" data-project-cost="1500 coins">G-412-MI (Blue 01:30)</option>
+                                <option value="G-236-MI" data-project-series="All" data-project-type="G" data-project-color="Blue" data-project-length="5" data-project-cost="3000 coins">G-236-MI (Blue 02:30)</option>
+                                <option value="G-531-MI" data-project-series="All" data-project-type="G" data-project-color="Purple" data-project-length="8" data-project-cost="6000 coins">G-531-MI (Purple 04:00)</option>
+                            </optgroup>
+                            <optgroup label="H (Cube Analysis/Soul Forming)" data-project-series="All" data-project-type="H">
+                                <option value="H-387-MI" data-project-series="All" data-project-type="H" data-project-color="Blue" data-project-length="2" data-project-cost="3 cubes">H-387-MI (Blue 01:00)</option>
+                                <option value="H-339-MI" data-project-series="All" data-project-type="H" data-project-color="Purple" data-project-length="4" data-project-cost="6 cubes">H-339-MI (Purple 02:00)</option>
+                                <option value="H-207-RF" data-project-series="All" data-project-type="H" data-project-color="Gold" data-project-length="8" data-project-cost="10 cubes">H-207-MI (Gold 04:00)</option>
+                                <option value="H-060-UL" data-project-series="All" data-project-type="H" data-project-color="Gold" data-project-length="1" data-project-cost="8000 coins, 3 cubes">H-060-UL (Gold 00:30)</option>
+                            </optgroup>
+                            <optgroup label="Q (Rigging Analysis)" data-project-series="All" data-project-type="Q">
+                                <option value="Q-302-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="2" data-project-cost="20 Gray General Plates">Q-302-MI (Blue 01:00, w/ General Plates)</option>
+                                <option value="Q-202-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="4" data-project-cost="20 Blue General Plates">Q-202-MI (Blue 02:00, w/ General Plates)</option>
+                                <option value="Q-002-MI" data-project-series="All" data-project-type="Q" data-project-color="Purple" data-project-length="8" data-project-cost="20 Purple General Plates">Q-002-MI (Purple 04:00, w/ General Plates)</option>
+                                <option value="Q-002-UL" data-project-series="All" data-project-type="Q" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 20 Purple General Plates">Q-002-UL (Gold 00:30, w/ General Plates)</option>
+                                <option value="Q-310-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="2" data-project-cost="20 Gray Main Gun Plates">Q-310-MI (Blue 01:00, w/ Main Gun Plates)</option>
+                                <option value="Q-210-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="4" data-project-cost="20 Blue Main Gun Plates">Q-210-MI (Blue 02:00, w/ Main Gun Plates)</option>
+                                <option value="Q-010-MI" data-project-series="All" data-project-type="Q" data-project-color="Purple" data-project-length="8" data-project-cost="20 Purple Main Gun Plates">Q-010-MI (Purple 04:00, w/ Main Gun Plates)</option>
+                                <option value="Q-010-UL" data-project-series="All" data-project-type="Q" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 20 Purple Main Gun Plates">Q-010-UL (Gold 00:30, w/ Main Gun Plates)</option>
+                                <option value="Q-351-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="2" data-project-cost="20 Gray Torpedo Plates">Q-351-MI (Blue 01:00, w/ Torpedo Plates)</option>
+                                <option value="Q-251-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="4" data-project-cost="20 Blue Torpedo Plates">Q-251-MI (Blue 02:00, w/ Torpedo Plates)</option>
+                                <option value="Q-051-MI" data-project-series="All" data-project-type="Q" data-project-color="Purple" data-project-length="8" data-project-cost="20 Purple Torpedo Plates">Q-051-MI (Purple 04:00, w/ Torpedo Plates)</option>
+                                <option value="Q-051-UL" data-project-series="All" data-project-type="Q" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 20 Purple Torpedo Plates">Q-051-UL (Gold 00:30, w/ Torpedo Plates)</option>
+                                <option value="Q-389-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="2" data-project-cost="20 Gray Airplane Plates">Q-389-MI (Blue 01:00, w/ Airplane Plates)</option>
+                                <option value="Q-289-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="4" data-project-cost="20 Blue Airplane Plates">Q-289-MI (Blue 02:00, w/ Airplane Plates)</option>
+                                <option value="Q-089-MI" data-project-series="All" data-project-type="Q" data-project-color="Purple" data-project-length="8" data-project-cost="20 Purple Airplane Plates">Q-089-MI (Purple 04:00, w/ Airplane Plates)</option>
+                                <option value="Q-089-UL" data-project-series="All" data-project-type="Q" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 20 Purple Airplane Plates">Q-089-UL (Gold 00:30, w/ Airplane Plates)</option>
+                                <option value="Q-368-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="2" data-project-cost="20 Gray AA Gun Plates">Q-368-MI (Blue 01:00, w/ AA Gun Plates)</option>
+                                <option value="Q-268-MI" data-project-series="All" data-project-type="Q" data-project-color="Blue" data-project-length="4" data-project-cost="20 Blue AA Gun Plates">Q-268-MI (Blue 02:00, w/ AA Gun Plates)</option>
+                                <option value="Q-068-MI" data-project-series="All" data-project-type="Q" data-project-color="Purple" data-project-length="8" data-project-cost="20 Purple AA Gun Plates">Q-068-MI (Purple 04:00, w/ AA Gun Plates)</option>
+                                <option value="Q-068-UL" data-project-series="All" data-project-type="Q" data-project-color="Gold" data-project-length="1" data-project-cost="5000 coins, 20 Purple AA Gun Plates">Q-068-UL (Gold 00:30, w/ AA Gun Plates)</option>
+                            </optgroup>
+                            <optgroup label="T (Commission)" data-project-series="All" data-project-type="T">
+                                <option value="T-018-MI" data-project-series="All" data-project-type="T" data-project-color="Blue" data-project-length="6" data-project-cost="Complete 2 commissions.">T-018-MI (Blue 03:00)</option>
+                                <option value="T-384-MI" data-project-series="All" data-project-type="T" data-project-color="Blue" data-project-length="8" data-project-cost="Complete 4 commissions.">T-384-MI (Blue 04:00)</option>
+                                <option value="T-249-MI" data-project-series="All" data-project-type="T" data-project-color="Purple" data-project-length="12" data-project-cost="Complete 6 commissions.">T-249-MI (Purple 06:00)</option>
+                            </optgroup>
+                            <optgroup label="Other" data-project-series="All" data-project-type="All">
+                                <option value="unknown" data-project-series="All" data-project-type="All">I don’t know</option>
+                                <option value="unlisted" data-project-series="All" data-project-type="All">I know the name but it is missing</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="centered-flow-rowgroup">
+                    <div class="centered-flow-row">
+                        <b>Selected project properties</b>
+                    </div>
+                    <div class="centered-flow-row">
+                        <span>Color:&nbsp;<span id="report-color"></span></span>
+                    </div>
+                    <div class="centered-flow-row">
+                        <span>Length:&nbsp;<span id="report-length"></span></span>
+                    </div>
+                    <div class="centered-flow-row">
+                        <span>Cost:&nbsp;<span id="report-cost"></span></span>
+                    </div>
+                </div>
+                <div class="centered-flow-rowgroup">
+                    <div class="centered-flow-row">
+                        <label for="results-screenshot">Select results screenshot:</label>
+                    </div>
+                    <div class="centered-flow-row hidden" id="results-screenshot-required">
+                        A screenshot is required.
+                    </div>
+                    <div class="centered-flow-row">
+                        <input type="file" required name="results-screenshot" id="results-screenshot" accept="image/jxl,image/png,image/jpeg,image/webp,.jxl,.png,.jpg,.webp">
+                    </div>
+                </div>
+                <div class="centered-flow-rowgroup">
+                    <div class="centered-flow-row hidden" id="error-report">
+                        <span><strong>Do not submit the result through this form.</strong> Join the <a href="https://discord.gg/dmrG9kXpxE">ECTL Discord</a>, submit the result in <code style="background-color: #B7CFFF;">#pr-data</code>, and bother <b>Sedna#4917</b> that there is a missing project.</span>
+                    </div>
+                    <div class="centered-flow-row">
+                        <input type="submit" id="submit" value="Submit Research Result">
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+            </form>
+        </main>
+        <hr>
+        <footer>
+            <a href="../">Azur Lane Utilities</a>
+        </footer>
+    </div>
+</body>
+</html>
