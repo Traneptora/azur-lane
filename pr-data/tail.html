@@ -1,48 +1,16 @@
-<!DOCTYPE html>
-<html><head>
-    <link rel="preload" as="style" href="/css/main.css">
-    <link rel="preload" as="style" href="/azur-lane/css/pr-data.css">
-    <link rel="preload" as="style" href="/fonts/noto-sans-display/index.css">
-    <link rel="preload" as="style" href="/fonts/noto-mono/index.css">
-    <link rel="preload" as="script" href="/azur-lane/js/pr-data.js">
-
-    <title>PR Data Submission</title>
-
-    <link rel="icon" type="image/png" sizes="256x256" href="/images/avatar/avatar-256.png">
-    <link rel="icon" type="image/vnd.microsoft.icon" sizes="16x16" href="/images/avatar/favicon.ico">
-
-    <meta property="og:image" content="https://thebombzen.com/images/avatar/avatar-256.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://thebombzen.com/azur-lane/pr-data/">
-    <meta property="og:title" content="PR Data Submission">
-    <meta property="og:description" content="Upload screenshots of your PR research results to help gather data about rates.">
-
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/azur-lane/css/pr-data.css">
-    <link rel="stylesheet" href="/fonts/noto-sans-display/index.css">
-    <link rel="stylesheet" href="/fonts/noto-mono/index.css">
-    <script defer src="/azur-lane/js/pr-data.js"></script>
-</head>
-<body>
-    <div id="wrapper">
-        <header id="maintitle">
-            PR Data Submission
-        </header>
         <main>
             <section>
-            <p>We’re collecting data for PR research. Use this page to upload screenshots of your PR Research Results to help out the data gathering. Keep in mind:</p>
+            <p>We’re collecting data for PR research. Use this page to upload screenshots of your PR Research Results to help out with the data gathering effort. Keep in mind:</p>
             <ul>
                 <li>If you do not remember the name of the project, <strong>do not guess.</strong> Pick “I don’t know.” We can try to figure it out anyway.</li>
                 <li>Try your best to post all of your research results, or at least whenever you remember, regardless of content. If you only upload “interesting” results then our data collection will be skewed.</li>
-                <li>You won’t be able to see the images you uploaded, but there is a check for exact duplicates. If you don’t remember whether or not you uploaded a screenshot, just upload it again.</li>
+                <li>If you don’t remember whether or not you uploaded a screenshot, upload it again. There is a built-in check for duplicates.</li>
+                <li>If you upload a screenshot with the wrong project series or project name, fix it and upload it again.</li>
                 <li>Upload screenshots as-is. Cropping them makes it harder to auto-detect what is there.</li>
             </ul>
             </section>
             <section>
-                <h3>This is a Work In Progress. Currently, this submission form does not do anything.</h3>
-            </section>
-            <section>
-            <form method="POST" action="javascript:alert('Work in Progress');">
+            <form method="POST" enctype="multipart/form-data" action="/azur-lane/pr-data/" target="_top">
             <div class="centered-flow" style="width: 100%;">
             <div class="centered-flow-content">
                 <div class="centered-flow-rowgroup">
@@ -325,7 +293,6 @@
                     <div class="centered-flow-row">
                         <input type="submit" id="submit" value="Submit Research Result">
                     </div>
-                    
                 </div>
             </div>
             </div>
