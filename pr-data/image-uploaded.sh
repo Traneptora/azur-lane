@@ -1,5 +1,13 @@
 #!/bin/sh
 
+sha384_base64(){
+    sha384sum "$1" | awk '{print $1}' | xxd -r -p | base64 --wrap=0 | tr '+/' '-_' | tr -d '='
+}
+
+image_checksum(){
+    convert "$1" RGBA:- | sha384_base64 -
+}
+
 check_and_push(){
     filename="$1"
     ext="$2"
@@ -8,16 +16,16 @@ check_and_push(){
     project_type="$5"
     project_name="$6"
     filesize="$(stat -c%s "$filename")"
-    checksum="$(image-checksum "$filename")"
+    checksum="$(image_checksum "$filename")"
     status="$?"
     # OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb is the checksum of an empty file
-    if ! [ "$status" = "0" ] || [ "$checksum" = "OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb" ] ; then
+    if ! [ "$status" = "0" ] || [ "$checksum" = "OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb" ] || [ -z "$checksum" ] ; then
         rm >&2 -f -v -- "$filename"
         printf >&2 'image-checksum failed: %s\n' "$original"
         printf 'color: %s\nstatus: %s\nextra: %s\n' 'error' 'Invalid upload.' 'Unsupported file.'
         return 1
     fi
-    dirname="${HOME}/.config/deep-blue-sky/ranger/storage/pr-data"
+    dirname="/home/ubuntu/.config/deep-blue-sky/ranger/pr-data"
     # json manifest
     json_file="${dirname}/${checksum}.meta.json"
     # post file. creating it requests ranger to read the image
