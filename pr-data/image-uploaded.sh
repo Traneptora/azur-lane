@@ -48,7 +48,7 @@ check_and_push(){
         printf >&2 'New image found: %s\n' "$checksum"
         mv >&2 -f -v -- "$filename" "$fullpath"
     fi
-
+    now_time="$(date -u +%s)"
     printf '{}' |\
     jq --arg key 'checksum' --arg value "$checksum" '. | .[$key]=$value' |\
     jq --arg key 'original' --arg value "$original" '. | .[$key]=$value' |\
@@ -58,9 +58,10 @@ check_and_push(){
     jq --arg key 'project-series' --arg value "$project_series" '. | .[$key]=$value' |\
     jq --arg key 'project-type' --arg value "$project_type" '. | .[$key]=$value' |\
     jq --arg key 'project-name' --arg value "$project_name" '. | .[$key]=$value' |\
-    jq --arg key 'time' --arg value "$(date -u +%s)" '. | .[$key]=$value' |\
+    jq --arg key 'mtime' --arg value "$now_time" '. | .[$key]=$value' |\
+    jq --arg key 'crtime' --arg value "$now_time" '. | .[$key]=$value' |\
     jq --arg key 'size' --arg value "$filesize" '. | .[$key]=$value' |\
-    jq '.' >"$json_file"
+    jq -c '.' >"$json_file"
     touch -- "$post_file"
 }
 
