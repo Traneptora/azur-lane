@@ -33,7 +33,7 @@ check_and_push(){
     # ranger's metadata file
     disc_file="${dirname}/${checksum}.meta.disc"
     fullpath="${dirname}/${checksum}${ext}"
-    if [ -f "$json_file" ] ; then
+    if [ -f "$disc_file" ] ; then
         printf >&2 'Duplicate found: %s\n' "$checksum"
         rm >&2 -f -v -- "$filename"
         if [ -f "$post_file" ] ; then
@@ -41,8 +41,8 @@ check_and_push(){
             printf 'color: %s\nstatus: %s\nextra: %s\n' 'warn' 'Please wait a moment.' "That image still hasn't been processed."
             return 0
         fi
-        cached_series="$(jq <"$json_file" '.["project-series"]' | tr -d '"')"
-        cached_name="$(jq <"$json_file" '.["project-name"]' | tr -d '"')"
+        cached_series="$(jq <"$disc_file" '.["project-series"]' | tr -d '"')"
+        cached_name="$(jq <"$disc_file" '.["project-name"]' | tr -d '"')"
         if [ "$cached_series" = "$project_series" ] && [ "$cached_name" = "$project_name" ] ; then
             printf >&2 'Duplicate is exact: %s\n' "$checksum"
             printf 'color: %s\nstatus: %s\nextra: %s\n' 'ok' 'Exact duplicate uploaded.' 'No action was performed.'
