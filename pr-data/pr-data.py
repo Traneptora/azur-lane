@@ -112,12 +112,11 @@ def main(env, start_response):
     success = success.replace('COLOR', colors[status_dict['color']], 1)
     success = success.replace('STATUS', status_dict['status'], 1)
     success = success.replace('EXTRA', status_dict['extra'], 1)
-    with open('header.html') as header, open('tail.html') as tail:
-        return ('200 OK', [
-            get_asset('header.html'),
-            success.encode(),
-            get_asset('tail.html'),
-        ]);
+    return ('200 OK', [
+        get_asset('header.html'),
+        success.encode(),
+        get_asset('tail.html'),
+    ]);
 
 def is_post_request(environ):
     if environ['REQUEST_METHOD'].upper() != 'POST':
