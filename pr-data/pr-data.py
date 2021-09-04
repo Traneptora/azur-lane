@@ -8,9 +8,6 @@ import sys
 import tempfile
 import traceback
 
-import watchdog.events
-import watchdog.observers
-
 colors = {
     'ok': '#0D800F',
     'warn': '#C8B00F',
@@ -18,6 +15,7 @@ colors = {
 }
 
 asset_cache = {}
+static_asset_dir = 'pr-data/static/'
 
 def eprint(*args, **kwargs):
     kwargs['file'] = sys.stderr
@@ -27,30 +25,34 @@ def eprint(*args, **kwargs):
 def logprint(*args, **kwargs):
     eprint(*args, **kwargs)
 
-def asset_on_modified(event):
-    asset = event.src_path
-    logprint(f'Asset changed on disk: {asset}', file=sys.stderr)
-    if asset in asset_cache:
-        # only reload an asset if it has been requested
-        load_asset(asset)
+def canonicalize_asset(asset):
+    return asset if asset.startswith(static_asset_dir) else static_asset_dir + asset
 
-assets_changed_handler = watchdog.events.PatternMatchingEventHandler(['*'], ignore_directories=True, case_sensitive=True)
-assets_changed_handler.on_modified = asset_on_modified
+def canonicalassets(f):
+    def inner(asset):
+        return f(canonicalize_asset(asset))
+    return inner
 
+@canonicalassets
 def load_asset(asset):
     logprint(f'Loading asset: {asset}')
+    mtime = os.path.getmtime(asset)
     with open(asset, 'rb') as fd:
-        asset_cache[asset] = fd.read()
-    return asset_cache[asset]
+        asset_cache[asset] = {
+            'mtime': mtime,
+            'data' : fd.read(),
+        }
+    return asset_cache[asset]['data']
 
+@canonicalassets
 def get_asset(asset):
-    if asset in asset_cache:
-        return asset_cache[asset]
-    return load_asset(asset)
-
-observer = watchdog.observers.Observer()
-observer.schedule(assets_changed_handler, 'pr-data/', recursive=False)
-observer.start()
+    if asset not in asset_cache:
+        return load_asset(asset)
+    mtime = os.path.getmtime(asset)
+    if asset_cache[asset]['mtime'] != mtime:
+        logprint(f'Asset changed on disk: {asset}')
+        return load_asset(asset)
+    return asset_cache[asset]['data']
 
 def application(env, start_response):
     try:
@@ -61,7 +63,7 @@ def application(env, start_response):
         traceback.print_exc()
         status = '500 Internal Server Error'
         start_response(status, [('Content-Type','text/html')])
-        return [f'<!DOCTYPE html><html><head><title>{status}</title></head><body style="text-align: center;"><h1>{status}</h1><h2>Oops! Something went wrong :(</h2></body></html>'.encode()]
+        return [get_asset('500.html')]
 
 def response_checker(env, start_response):
     status, lines = main(env, start_response)
@@ -72,23 +74,22 @@ def response_checker(env, start_response):
         headers += [('location', lines)]
         return (status, headers, [])
     headers += [('Content-Type','text/html')]
-    lines = [f'<!DOCTYPE html><html><head><title>{status}</title></head><body style="text-align: center;"><h1>{status}</h1>']
+    lines = []
     if status == '400 Bad Request':
-        lines += [f'<h2>Bro</h2><img src="/images/thonk.svg" alt="thonk">']
+        lines += [get_asset('400.html')]
     elif status == '404 Not Found':
-        lines += [f'<h2>I can’t find them. There’s only soup.</h2><img src="/images/soup.jpg" alt="soup">']
+        lines += [get_asset('404.html')]
     elif status == '405 Method Not Allowed':
-        lines += [f'<h2><a href="/azur-lane/pr-data/">Go Back</a></h2><img src="/images/thonk.svg" alt="thonk">']
+        lines += [get_asset('405.html')]
     else:
-        lines += [f'<h2>Thonk</h2><img src="/images/thonk.svg" alt="thonk">']
-    lines += [f'</body></html>']
-    return (status, [('Content-Type','text/html')], ['\n'.join(lines).encode()])
+        lines += [re.sub(r'\{STATUS\}', status, get_asset('error.html').decode()).encode()]
+    return (status, [('Content-Type','text/html')], lines)
 
 def main(env, start_response):
     if env['REQUEST_URI'] != '/azur-lane/pr-data/':
         return ('404 Not Found', None)
     if not is_post_request(env):
-        return ('200 OK', [get_asset('pr-data/header.html'), get_asset('pr-data/tail.html')])
+        return ('200 OK', [get_asset('header.html'), get_asset('tail.html')])
     form = get_post_form(env)
     project_series = form.getvalue('project-series', '')
     project_type = form.getvalue('project-type', '')
@@ -100,7 +101,7 @@ def main(env, start_response):
     tmp = os.fdopen(fd, mode='w+b')
     tmp.write(results_screenshot.file.read())
     status = subprocess.run(['pr-data/image-uploaded.sh', tmp_name, results_screenshot.filename, project_series, project_type, project_name], capture_output=True).stdout.decode()
-    success = get_asset('pr-data/success.html').decode()
+    success = get_asset('success.html').decode()
     status_dict = {}
     for line in status.splitlines():
         match = re.match(r'(\w+):\s(.*)', line)
@@ -111,11 +112,11 @@ def main(env, start_response):
     success = success.replace('COLOR', colors[status_dict['color']], 1)
     success = success.replace('STATUS', status_dict['status'], 1)
     success = success.replace('EXTRA', status_dict['extra'], 1)
-    with open('pr-data/header.html') as header, open('pr-data/tail.html') as tail:
+    with open('header.html') as header, open('tail.html') as tail:
         return ('200 OK', [
-            get_asset('pr-data/header.html'),
+            get_asset('header.html'),
             success.encode(),
-            get_asset('pr-data/tail.html'),
+            get_asset('tail.html'),
         ]);
 
 def is_post_request(environ):
