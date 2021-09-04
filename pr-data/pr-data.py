@@ -8,11 +8,49 @@ import sys
 import tempfile
 import traceback
 
+import watchdog.events
+import watchdog.observers
+
 colors = {
     'ok': '#0D800F',
     'warn': '#C8B00F',
     'error': '#B00D0F',
 }
+
+asset_cache = {}
+
+def eprint(*args, **kwargs):
+    kwargs['file'] = sys.stderr
+    print(*args, **kwargs)
+
+# will later wrap python.logging
+def logprint(*args, **kwargs):
+    eprint(*args, **kwargs)
+
+def asset_on_modified(event):
+    asset = event.src_path
+    logprint(f'Asset changed on disk: {asset}', file=sys.stderr)
+    if asset in asset_cache:
+        # only reload an asset if it has been requested
+        load_asset(asset)
+
+assets_changed_handler = watchdog.events.PatternMatchingEventHandler(['*'], ignore_directories=True, case_sensitive=True)
+assets_changed_handler.on_modified = asset_on_modified
+
+def load_asset(asset):
+    logprint(f'Loading asset: {asset}')
+    with open(asset, 'rb') as fd:
+        asset_cache[asset] = fd.read()
+    return asset_cache[asset]
+
+def get_asset(asset):
+    if asset in asset_cache:
+        return asset_cache[asset]
+    return load_asset(asset)
+
+observer = watchdog.observers.Observer()
+observer.schedule(assets_changed_handler, 'pr-data/', recursive=False)
+observer.start()
 
 def application(env, start_response):
     try:
@@ -28,7 +66,7 @@ def application(env, start_response):
 def response_checker(env, start_response):
     status, lines = main(env, start_response)
     if status == '200 OK':
-        return (status, [('Content-Type','text/html')], ['\n'.join(lines).encode()])
+        return (status, [('Content-Type','text/html')], lines)
     headers = []
     if status == '302 Found' or status == '301 Moved Permanently':
         headers += [('location', lines)]
@@ -50,8 +88,7 @@ def main(env, start_response):
     if env['REQUEST_URI'] != '/azur-lane/pr-data/':
         return ('404 Not Found', None)
     if not is_post_request(env):
-        with open('pr-data/header.html') as header, open('pr-data/tail.html') as tail:
-            return ('200 OK', [header.read(), tail.read()])
+        return ('200 OK', [get_asset('pr-data/header.html'), get_asset('pr-data/tail.html')])
     form = get_post_form(env)
     project_series = form.getvalue('project-series', '')
     project_type = form.getvalue('project-type', '')
@@ -63,8 +100,7 @@ def main(env, start_response):
     tmp = os.fdopen(fd, mode='w+b')
     tmp.write(results_screenshot.file.read())
     status = subprocess.run(['pr-data/image-uploaded.sh', tmp_name, results_screenshot.filename, project_series, project_type, project_name], capture_output=True).stdout.decode()
-    with open('pr-data/success.html') as success_file:
-        success = success_file.read()
+    success = get_asset('pr-data/success.html').decode()
     status_dict = {}
     for line in status.splitlines():
         match = re.match(r'(\w+):\s(.*)', line)
@@ -77,9 +113,9 @@ def main(env, start_response):
     success = success.replace('EXTRA', status_dict['extra'], 1)
     with open('pr-data/header.html') as header, open('pr-data/tail.html') as tail:
         return ('200 OK', [
-            header.read(),
-            success,
-            tail.read(),
+            get_asset('pr-data/header.html'),
+            success.encode(),
+            get_asset('pr-data/tail.html'),
         ]);
 
 def is_post_request(environ):
