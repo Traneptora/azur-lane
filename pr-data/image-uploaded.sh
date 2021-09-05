@@ -1,35 +1,5 @@
-#!/bin/sh
-
-begin_sow(){
-    printf 'mkstemp(template)' | m4 -D template="${1:-/tmp}/tmpfile-XXXXXX"
-}
-
-sow(){
-    eval "$@"
-    status="$?"
-    printf '%08x' "$status" | xxd -r -p >>"$comm_file"
-    return 0
-}
-
-reap(){
-    status="$(printf '%d\n' "0x$(printf 0; xxd -p -c 4 <"$comm_file" | while read -r line; do
-        if ! [ "$line" = "00000000" ] ; then
-            printf '%s\n' "$line"
-        fi
-    done | tail -n1)")"
-    rm -f -- "$comm_file"
-    return $status
-}
-
-sha384_base64(){
-    sha384sum - | xxd -r -p | base64 --wrap=0 | tr '+/' '-_' | tr -d '='
-}
-
-image_checksum(){
-    comm_file="$(begin_sow)"
-    sow convert <"$1" 2>/dev/null - RGBA:- | sow sha384_base64
-    reap
-}
+#!/usr/bin/env bash
+set -o pipefail
 
 check_and_push(){
     filename="$1"
@@ -39,10 +9,10 @@ check_and_push(){
     project_type="$5"
     project_name="$6"
     filesize="$(stat -c%s "$filename")"
-    checksum="$(image_checksum "$filename")"
+    checksum="$(convert <"$filename" 2>/dev/null - RGBA:- | sha384sum - | xxd -r -p | base64 --wrap=0 | tr '+/' '-_')"
     status="$?"
     # OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb is the checksum of an empty file
-    if ! [ "$status" = "0" ] || [ "$checksum" = "OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb" ] || [ -z "$checksum" ] ; then
+    if ! [ "$status" = "0" ] || [ -z "$checksum" ] || [ "$checksum" = "OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb" ] ; then
         rm >&2 -f -v -- "$filename"
         printf >&2 'image-checksum failed: %s\n' "$original"
         printf 'color: %s\nstatus: %s\nextra: %s\n' 'error' 'Invalid upload.' 'Unsupported file.'
