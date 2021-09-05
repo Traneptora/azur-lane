@@ -1,11 +1,34 @@
 #!/bin/sh
 
+begin_sow(){
+    printf 'mkstemp(template)' | m4 -D template="${1:-/tmp}/tmpfile-XXXXXX"
+}
+
+sow(){
+    eval "$@"
+    status="$?"
+    printf '%08x' "$status" | xxd -r -p >>"$comm_file"
+    return 0
+}
+
+reap(){
+    status="$(printf '%d\n' "0x$(printf 0; xxd -p -c 4 <"$comm_file" | while read -r line; do
+        if ! [ "$line" = "00000000" ] ; then
+            printf '%s\n' "$line"
+        fi
+    done | tail -n1)")"
+    rm -f -- "$comm_file"
+    return $status
+}
+
 sha384_base64(){
-    sha384sum "$1" | awk '{print $1}' | xxd -r -p | base64 --wrap=0 | tr '+/' '-_' | tr -d '='
+    sha384sum - | xxd -r -p | base64 --wrap=0 | tr '+/' '-_' | tr -d '='
 }
 
 image_checksum(){
-    convert "$1" RGBA:- | sha384_base64 -
+    comm_file="$(begin_sow)"
+    sow convert <"$1" 2>/dev/null - RGBA:- | sow sha384_base64
+    reap
 }
 
 check_and_push(){
