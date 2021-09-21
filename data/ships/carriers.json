@@ -120,6 +120,13 @@
             "dataJSON": "ships/by-id/30002/ship.json"
         },
         {
+            "DataDir": "ships/by-id/30004",
+            "Name": "Souryuu META",
+            "ShipID": "30004",
+            "carrierJSON": "ships/by-id/30004/carrier.json",
+            "dataJSON": "ships/by-id/30004/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/Plan019",
             "Name": "Hakuryuu",
             "ShipID": "Plan019",
@@ -549,6 +556,13 @@
             "ShipID": "511",
             "carrierJSON": "ships/by-id/511/carrier.json",
             "dataJSON": "ships/by-id/511/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/520",
+            "Name": "Katsuragi",
+            "ShipID": "520",
+            "carrierJSON": "ships/by-id/520/carrier.json",
+            "dataJSON": "ships/by-id/520/ship.json"
         }
     ]
 }

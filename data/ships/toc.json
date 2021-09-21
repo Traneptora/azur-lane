@@ -357,6 +357,13 @@
             "dataJSON": "ships/by-id/30003/ship.json"
         },
         {
+            "DataDir": "ships/by-id/30004",
+            "Name": "Souryuu META",
+            "ShipID": "30004",
+            "carrierJSON": "ships/by-id/30004/carrier.json",
+            "dataJSON": "ships/by-id/30004/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/Plan001",
             "Name": "Neptune",
             "ShipID": "Plan001",
@@ -1430,6 +1437,12 @@
             "dataJSON": "ships/by-id/183/ship.json"
         },
         {
+            "DataDir": "ships/by-id/185",
+            "Name": "Yura",
+            "ShipID": "185",
+            "dataJSON": "ships/by-id/185/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/186",
             "Name": "Kinu",
             "ShipID": "186",
@@ -1476,6 +1489,12 @@
             "Name": "Kinugasa",
             "ShipID": "193",
             "dataJSON": "ships/by-id/193/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/195",
+            "Name": "Chikuma",
+            "ShipID": "195",
+            "dataJSON": "ships/by-id/195/ship.json"
         },
         {
             "DataDir": "ships/by-id/196",
@@ -1884,6 +1903,12 @@
             "dataJSON": "ships/by-id/267/ship.json"
         },
         {
+            "DataDir": "ships/by-id/268",
+            "Name": "Shimakaze",
+            "ShipID": "268",
+            "dataJSON": "ships/by-id/268/ship.json"
+        },
+        {
             "DataDir": "ships/by-id/269",
             "Name": "Kamikaze",
             "ShipID": "269",
@@ -1936,6 +1961,18 @@
             "Name": "Mikazuki",
             "ShipID": "280",
             "dataJSON": "ships/by-id/280/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/286",
+            "Name": "Umikaze",
+            "ShipID": "286",
+            "dataJSON": "ships/by-id/286/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/287",
+            "Name": "Yamakaze",
+            "ShipID": "287",
+            "dataJSON": "ships/by-id/287/ship.json"
         },
         {
             "DataDir": "ships/by-id/288",
@@ -3203,6 +3240,13 @@
             "Name": "Nautilus",
             "ShipID": "519",
             "dataJSON": "ships/by-id/519/ship.json"
+        },
+        {
+            "DataDir": "ships/by-id/520",
+            "Name": "Katsuragi",
+            "ShipID": "520",
+            "carrierJSON": "ships/by-id/520/carrier.json",
+            "dataJSON": "ships/by-id/520/ship.json"
         }
     ]
 }
